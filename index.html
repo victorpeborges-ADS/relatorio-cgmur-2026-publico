@@ -281,18 +281,34 @@ async function generateEditablePdf(){
  addInput(pdf.getForm(),p1,"situacao",model.status,margin,473,W-2*margin,49,12,true);
  p1.drawText("Resumo",{x:margin,y:453,size:10,font:bold});
  addInput(pdf.getForm(),p1,"resumo",model.summary,margin,152,W-2*margin,292,11,true);
- const p2=pageOf("Indicadores e ressalvas");
- let y=708;
+ const p2=pageOf("Indicadores de producao e resultados");
+ let y=711;
  for(let i=0;i<model.metrics.length;i++){
-  if(y<270)break;
-  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_valor",model.metrics[i].value,margin,y-34,115,34,16);
-  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_rotulo",model.metrics[i].label,margin+130,y-34,W-2*margin-130,34,10,true);
-  y-=56;
+  if(y<194)break;
+  p2.drawText("Indicador "+(i+1),{x:margin,y:y+12,size:9,font:bold,color:rgb(.23,.38,.49)});
+  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_valor",model.metrics[i].value,margin,y-31,105,34,15);
+  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_rotulo",model.metrics[i].label,margin+118,y-31,W-2*margin-118,34,10,true);
+  y-=67;
  }
- p2.drawText("Limites de interpretacao e metodologia",{x:margin,y:453,size:11,font:bold});
- addInput(pdf.getForm(),p2,"ressalvas",model.caveats,margin,241,W-2*margin,203,10,true);
- p2.drawText("Informacoes de publicacao",{x:margin,y:223,size:11,font:bold});
- addInput(pdf.getForm(),p2,"informacoes",model.footer,margin,89,W-2*margin,125,10,true);
+ const p3=pageOf("Serie mensal e composicao documental");
+ p3.drawText("Documentos internos por periodo",{x:margin,y:722,size:11,font:bold});
+ for(let i=0;i<model.monthly.length&&i<12;i++){
+  const m=model.monthly[i];
+  const x=margin+(i%2)*258,yy=674-Math.floor(i/2)*61;
+  addInput(pdf.getForm(),p3,"mes_"+(i+1)+"_nome",m.label,x,yy,125,31,10);
+  addInput(pdf.getForm(),p3,"mes_"+(i+1)+"_quantidade",String(m.value),x+134,yy,92,31,12);
+ }
+ p3.drawText("Documentos internos por tipo",{x:margin,y:286,size:11,font:bold});
+ for(let i=0;i<model.documentTypes.length&&i<6;i++){
+  const m=model.documentTypes[i],yy=248-i*36;
+  addInput(pdf.getForm(),p3,"tipo_"+(i+1)+"_rotulo",m.label,margin,yy,346,31,10);
+  addInput(pdf.getForm(),p3,"tipo_"+(i+1)+"_quantidade",String(m.value),margin+360,yy,145,31,12);
+ }
+ const p4=pageOf("Metodologia, limites e publicacao");
+ p4.drawText("Limites de interpretacao e metodologia",{x:margin,y:722,size:11,font:bold});
+ addInput(pdf.getForm(),p4,"ressalvas",model.caveats,margin,344,W-2*margin,365,11,true);
+ p4.drawText("Informacoes de publicacao",{x:margin,y:324,size:11,font:bold});
+ addInput(pdf.getForm(),p4,"informacoes",model.footer,margin,93,W-2*margin,220,11,true);
  for(let i=0;i<model.sections.length;i++){
   const sec=model.sections[i],p=pageOf("Secao "+(i+1)+" de "+model.sections.length);
   p.drawText("Estagio",{x:margin,y:721,size:10,font:bold});
