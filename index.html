@@ -39,7 +39,8 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <body>
 <nav class="toolbar" aria-label="Ferramentas do relatório">
 <button id="btnedit" class="primary">Editar relatório</button>
-<button id="btnprint">Gerar / atualizar PDF</button>
+<button id="btnprint">Gerar PDF para impressão</button>
+<button id="btnformpdf">Baixar PDF editável</button>
 <button id="btndraft" class="edit-only">Salvar rascunho neste navegador</button>
 <button id="btnrestore" class="edit-only">Restaurar rascunho</button>
 <button id="btnpublish" class="edit-only accent">Publicar alterações para todos</button>
@@ -54,7 +55,8 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <div id="help" aria-label="Instruções de edição">
 <strong>Como editar, publicar e atualizar o PDF</strong>
 <p>Selecione <b>Editar relatório</b>, clique diretamente em títulos, valores e parágrafos para modificar. Use os botões para acrescentar ou remover indicadores e seções. <b>Salvar rascunho</b> fica apenas neste navegador; <b>Publicar</b> grava no repositório e atualiza o endereço público após a publicação do GitHub Pages.</p>
-<p>Para publicar, utilize um token pessoal do GitHub com permissão <code>Contents: read/write</code> restrita ao repositório <code>victorpeborges-ADS/relatorio-cgmur-2026-publico</code>. A credencial <b>não é gravada no site nem no navegador</b>. Como segurança adicional, não cole dados sigilosos do SEI ou links para arquivos internos.</p>
+<p>Para gerar um <b>PDF com campos editáveis</b>, clique em <b>Baixar PDF editável</b>. O arquivo contém campos AcroForm que permitem modificar os textos em leitores de PDF compatíveis, inclusive Adobe Acrobat. O PDF para impressão é gerado a partir do visual do site.
+</p><p>Para publicar, utilize um token pessoal do GitHub com permissão <code>Contents: read/write</code> restrita ao repositório <code>victorpeborges-ADS/relatorio-cgmur-2026-publico</code>. A credencial <b>não é gravada no site nem no navegador</b>. Como segurança adicional, não cole dados sigilosos do SEI ou links para arquivos internos.</p>
 <label for="gh-token">Token do GitHub (necessário apenas para publicar)</label>
 <input id="gh-token" type="password" autocomplete="off" spellcheck="false" placeholder="GitHub personal access token">
 <p id="publishstatus" role="status"></p>
@@ -71,6 +73,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <section class="footbox"><h2>Informações de publicação</h2><p data-field="footer"></p></section>
 <p class="meta">Panorama de 2026 · versão pública resumida, sem inventário nominal de processos do SEI e sem anexos internos do SharePoint.</p>
 </main>
+<script src="pdf-lib.min.js"></script>
 <script>
 "use strict";
 const REPO="victorpeborges-ADS/relatorio-cgmur-2026-publico",FILE="content.json";
@@ -130,6 +133,75 @@ $("#btncancel").onclick=()=>{if(!confirm("Encerrar a edição e descartar altera
 $("#btnaddsection").onclick=()=>{snapshot();model.sections.push({id:"sec-"+Date.now(),stage:"Em revisão",title:"Nova seção",body:"Insira aqui o texto desta seção."});render();$("#sections").lastElementChild.scrollIntoView({behavior:"smooth",block:"center"})};
 $("#btnaddmetric").onclick=()=>{snapshot();model.metrics.push({value:"—",label:"Novo indicador"});render()};
 $("#btnprint").onclick=()=>{snapshot();const was=editing;editing=false;render();window.print();editing=was;render()};
+
+function ansi(s){return String(s??"").normalize("NFC").replace(/[\u2013\u2014\u2011]/g,"-").replace(/[\u2018\u2019]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\u2022/g,"-").replace(/\u2192/g,"->").replace(/[\u200B-\u200D]/g,"")}
+function addInput(form,page,name,value,x,y,w,h,size=11,multiline=false){
+ const {rgb}=window.PDFLib;
+ const f=form.createTextField(name);
+ if(multiline)f.enableMultiline();
+ f.addToPage(page,{x,y,width:w,height:h,borderWidth:1,borderColor:rgb(.78,.86,.90),backgroundColor:rgb(.97,.99,1),textColor:rgb(.11,.23,.33)});
+ f.setFontSize(size);
+ f.setText(ansi(value));
+ return f;
+}
+async function generateEditablePdf(){
+ if(!window.PDFLib)throw Error("Módulo PDF não carregado. Atualize esta página e tente novamente.");
+ snapshot();
+ const {PDFDocument,StandardFonts,rgb}=window.PDFLib;
+ const pdf=await PDFDocument.create();
+ const font=await pdf.embedFont(StandardFonts.Helvetica),bold=await pdf.embedFont(StandardFonts.HelveticaBold);
+ const W=595.28,H=841.89,margin=44;
+ pdf.setTitle("CGMUR - Relatorio 2026 - PDF editavel");
+ pdf.setAuthor("Editor do Relatorio CGMUR 2026");
+ function pageOf(label){
+  const p=pdf.addPage([W,H]);
+  p.drawRectangle({x:0,y:H-86,width:W,height:86,color:rgb(.06,.18,.29)});
+  p.drawText("CGMUR   /   PANORAMA 2026",{x:margin,y:H-42,size:16,font:bold,color:rgb(1,1,1)});
+  p.drawText(ansi(label).slice(0,75),{x:margin,y:H-66,size:10,font,color:rgb(.76,.90,.96)});
+  p.drawText("Versao publica   |   PDF com campos editaveis",{x:margin,y:22,size:9,font,color:rgb(.40,.50,.58)});
+  return p;
+ }
+ const p1=pageOf("Identificacao e resumo do relatorio");
+ p1.drawText("Titulo",{x:margin,y:721,size:10,font:bold});
+ addInput(pdf.getForm(),p1,"titulo",model.title,margin,656,W-2*margin,60,19,true);
+ p1.drawText("Secretaria / unidade",{x:margin,y:638,size:10,font:bold});
+ addInput(pdf.getForm(),p1,"subtitulo",model.subtitle,margin,597,W-2*margin,35,11,true);
+ p1.drawText("Periodo",{x:margin,y:579,size:10,font:bold});
+ addInput(pdf.getForm(),p1,"periodo",model.period,margin,546,W-2*margin,28,11);
+ p1.drawText("Situacao",{x:margin,y:528,size:10,font:bold});
+ addInput(pdf.getForm(),p1,"situacao",model.status,margin,473,W-2*margin,49,12,true);
+ p1.drawText("Resumo",{x:margin,y:453,size:10,font:bold});
+ addInput(pdf.getForm(),p1,"resumo",model.summary,margin,152,W-2*margin,292,11,true);
+ const p2=pageOf("Indicadores e ressalvas");
+ let y=708;
+ for(let i=0;i<model.metrics.length;i++){
+  if(y<270)break;
+  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_valor",model.metrics[i].value,margin,y-34,115,34,16);
+  addInput(pdf.getForm(),p2,"indicador_"+(i+1)+"_rotulo",model.metrics[i].label,margin+130,y-34,W-2*margin-130,34,10,true);
+  y-=56;
+ }
+ p2.drawText("Limites de interpretacao e metodologia",{x:margin,y:453,size:11,font:bold});
+ addInput(pdf.getForm(),p2,"ressalvas",model.caveats,margin,241,W-2*margin,203,10,true);
+ p2.drawText("Informacoes de publicacao",{x:margin,y:223,size:11,font:bold});
+ addInput(pdf.getForm(),p2,"informacoes",model.footer,margin,89,W-2*margin,125,10,true);
+ for(let i=0;i<model.sections.length;i++){
+  const sec=model.sections[i],p=pageOf("Secao "+(i+1)+" de "+model.sections.length);
+  p.drawText("Estagio",{x:margin,y:721,size:10,font:bold});
+  addInput(pdf.getForm(),p,"sec_"+(i+1)+"_estagio",sec.stage,margin,688,W-2*margin,27,10);
+  p.drawText("Titulo da secao",{x:margin,y:670,size:10,font:bold});
+  addInput(pdf.getForm(),p,"sec_"+(i+1)+"_titulo",sec.title,margin,621,W-2*margin,43,15,true);
+  p.drawText("Descricao (campo de texto multilinha)",{x:margin,y:603,size:10,font:bold});
+  addInput(pdf.getForm(),p,"sec_"+(i+1)+"_texto",sec.body,margin,94,W-2*margin,501,11,true);
+ }
+ const bytes=await pdf.save();
+ const blob=new Blob([bytes],{type:"application/pdf"});
+ const url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="Relatorio_CGMUR_2026_EDITAVEL.pdf";a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),6000);
+ status("PDF editável gerado. Os campos podem ser modificados no Adobe Acrobat ou leitor compatível.");
+}
+$("#btnformpdf").onclick=async()=>{const btn=$("#btnformpdf");btn.disabled=true;try{await generateEditablePdf()}catch(e){status("Erro ao gerar PDF editável: "+e.message,true)}finally{btn.disabled=false}};
+
 $("#btnhelp").onclick=()=>{$("#help").classList.toggle("open")};
 $("#btndraft").onclick=()=>{snapshot();localStorage.setItem("cgmur-2026-draft",JSON.stringify(model));status("Rascunho salvo SOMENTE neste navegador. Use Publicar para atualizar o site para todos.")};
 $("#btnrestore").onclick=()=>{try{const raw=localStorage.getItem("cgmur-2026-draft");if(!raw)throw Error("Não existe rascunho salvo neste navegador.");if(!confirm("Restaurar o rascunho local substituindo as alterações em edição?"))return;model=validate(JSON.parse(raw));render();status("Rascunho restaurado. Para disponibilizar aos visitantes, use Publicar.")}catch(e){status(e.message,true)}};

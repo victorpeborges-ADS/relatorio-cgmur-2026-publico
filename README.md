@@ -16,10 +16,13 @@ utilizado em memória e não é salvo na página, no armazenamento local, nos co
 nem no repositório. Antes de publicar, confira a classificação de cada novo conteúdo.
 
 ## PDF
-Clique em **Gerar / atualizar PDF**, escolha no navegador `Salvar como PDF`.
+Clique em **Gerar PDF para impressão** e escolha no navegador `Salvar como PDF`.
+Para um PDF que continue editável depois de baixado, use **Baixar PDF editável**,
+que gera campos de formulário AcroForm para cada seção e indicador.
 O PDF usa os mesmos campos editáveis do HTML. Para correções textuais, altere o HTML
-e gere o PDF novamente. Isso não significa que um PDF já exportado tenha campos
-AcroForm nem permite editar objetos arbitrários dentro de um PDF preexistente.
+e gere o PDF novamente. O PDF com campos editáveis pode ser alterado em leitores compatíveis com
+AcroForm, como o Adobe Acrobat. Edição de páginas arbitrárias de um PDF externo
+não está incluída nesta aplicação. Biblioteca de geração: pdf-lib 1.17.1 (MIT).
 
 ## Hospedagem
 GitHub Pages, branch `main`, raiz `/`, site HTML estático.
