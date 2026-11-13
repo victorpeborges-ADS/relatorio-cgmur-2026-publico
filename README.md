@@ -1,34 +1,33 @@
-# Relatório CGMUR 2026 — versão pública editável
+# Relatório CGMUR 2026 — edição pública sem token adicional
 
-Publicação informativa baseada em versão **sanitizada** do relatório CGMUR/COAMU 2026.
-Não contém números individualizados de processos, identificadores de documentos do SEI,
-informações pessoais da equipe, nem URLs de SharePoint privado.
+Painel de divulgação com estética e gráficos do relatório original, sem identificação
+nominal de processos, acesso ao SEI ou endereços internos do SharePoint. Fonte interna
+continua preservada no Mac mini.
 
-## Alterar
-Acesse a página e clique em **Editar relatório**. Modifique textos diretamente, inclua
-ou remova seções e indicadores. Use **Salvar rascunho** para guardar o conteúdo
-somente no navegador; **Restaurar rascunho** permite recuperar esse conteúdo. **Exportar JSON** para backup e **Publicar alterações para
-todos** para atualizar `content.json` no GitHub.
+## Editar e publicar
+1. Abra o site no navegador e clique em **Editar relatório**.
+2. Altere diretamente textos, indicadores, meses e composição documental; adicione e
+   remova seções e métricas. Use **Salvar rascunho** e **Restaurar rascunho**.
+3. Clique em **Publicar alterações para todos**. O site abre uma solicitação
+   pré-preenchida no GitHub.
+4. Acesse o GitHub como `victorpeborges-ADS` e clique em **Submit new issue**.
+5. A automação `publicar-relatorio.yml` valida a autoria e conteúdo, atualiza
+   `content.json`, fecha a solicitação e o GitHub Pages publica a alteração.
 
-O botão Publicar precisa de um *Fine-grained Personal Access Token* (PAT) do GitHub,
-limitado a este repositório, com permissão `Contents: Read and write`. O token é
-utilizado em memória e não é salvo na página, no armazenamento local, nos commits
-nem no repositório. Antes de publicar, confira a classificação de cada novo conteúdo.
+**Não é necessário criar token pessoal.** A publicação usa a sessão do GitHub para
+identificar a conta e um `GITHUB_TOKEN` próprio do GitHub Actions, limitado ao
+repositório. A edição só é aplicada para pedidos do proprietário da conta.
+As solicitações de edição são públicas; não escreva dados internos ou sensíveis.
 
 ## PDF
-Clique em **Gerar PDF para impressão** e escolha no navegador `Salvar como PDF`.
-Para um PDF que continue editável depois de baixado, use **Baixar PDF editável**,
-que gera campos de formulário AcroForm para cada seção e indicador.
-O PDF usa os mesmos campos editáveis do HTML. Para correções textuais, altere o HTML
-e gere o PDF novamente. O PDF com campos editáveis pode ser alterado em leitores compatíveis com
-AcroForm, como o Adobe Acrobat. Edição de páginas arbitrárias de um PDF externo
-não está incluída nesta aplicação. Biblioteca de geração: pdf-lib 1.17.1 (MIT).
+- **Gerar PDF para impressão**: documento com estilo visual do painel.
+- **Baixar PDF editável**: PDF AcroForm que permite alterar campos de texto no Acrobat
+  ou em leitor compatível. A biblioteca usada é pdf-lib 1.17.1 (MIT).
+- O PDF institucional completo (SEI + SharePoint, 12 páginas) é separado da
+  versão pública e não foi publicado neste repositório.
 
-## Hospedagem
-GitHub Pages, branch `main`, raiz `/`, site HTML estático.
-A URL pode ser aberta por qualquer pessoa; um link público não impõe autenticação.
-O arquivo `robots.txt` e a tag `noindex` desencorajam indexação, mas não garantem sigilo.
-
-## Fontes de trabalho
-Os extratos completos do SEI e documentos internos permanecem somente no Mac:
-`~/Documents/Relatorio_CGMUR_2026`.
+## Dados e limitações
+Contagens anuais SEI com recorte até 13/11/2026. Um processo pode ter mais de um
+documento e um andamento fechado na CGMUR não significa processo concluído.
+Metadados e referências do SharePoint foram verificados apenas internamente.
+O relatório público é informativo, não substitui a homologação institucional.

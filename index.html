@@ -34,6 +34,37 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 @media(max-width:850px){.metrics{grid-template-columns:repeat(2,1fr)}.sectiongrid{grid-template-columns:1fr}}
 @media(max-width:480px){.metrics{gap:9px}.metric{padding:15px}.metric strong{font-size:26px}}
 @media print{@page{size:A4;margin:14mm}body{background:#fff;color:#111}.toolbar,#help,#notice,.edit-only{display:none!important}.hero{background:#fff!important;color:#14273b;padding:0 0 16px;border-bottom:3px solid #16617e}.eyebrow{color:#195975}.hero p{color:#32475c}.shell{padding:16px 0 0;max-width:100%}.metric,.section,.intro,.footbox{break-inside:avoid;box-shadow:none;border-color:#cad2d8}.sectiongrid{display:block}.section{margin-bottom:12px}.metrics{grid-template-columns:repeat(4,1fr)}.metric strong{font-size:23px}.meta{margin-top:12px}a{color:#111}}
+
+.dashboard-title{font-size:20px;letter-spacing:-.35px;margin:25px 0 13px;color:#142f48}
+.dashboard-sub{font-size:12px;color:#607388;margin:-5px 0 14px}
+.dash-two{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-bottom:18px}
+.dash-panel{background:#fff;border:1px solid var(--line);box-shadow:0 4px 20px #0c335609;border-radius:14px;padding:22px;min-width:0}
+.dash-panel h2{font-size:18px;color:#173f5f;margin:0 0 5px}
+.dash-panel .dash-caption{font-size:12px;color:#637286;margin:0 0 16px;line-height:1.5}
+.chart-bars{display:flex;align-items:flex-end;gap:10px;min-height:214px;border-bottom:1px solid #dce6ee;padding:8px 2px 0}
+.bar-col{display:flex;align-items:center;justify-content:flex-end;flex-direction:column;flex:1;min-width:0;gap:5px;height:202px}
+.bar-value{font-size:12px;color:#173f5f;font-weight:750;line-height:1.3}
+.bar-rect{width:62%;max-width:38px;min-width:12px;flex:none;background:linear-gradient(180deg,#23b8a9,#166a91);border-radius:7px 7px 0 0;transition:height .2s}
+.bar-label{font-size:11px;color:#677a8d;line-height:1.1}
+.doc-row{display:grid;grid-template-columns:minmax(125px,1.2fr) 2fr 40px;align-items:center;column-gap:12px;padding:8px 0;font-size:12px;color:#344a5f}
+.doc-track{background:#edf2f6;height:10px;border-radius:30px;overflow:hidden}
+.doc-fill{height:100%;background:linear-gradient(90deg,#14678f,#21b1a7);border-radius:30px}
+.doc-row strong{font-variant-numeric:tabular-nums;text-align:right}
+.dash-number{font-size:31px;letter-spacing:-1px;color:#135b83;font-weight:750;margin:5px 0}
+.dash-unit{font-size:12px;color:#667c8f;margin:0 0 15px}
+.status-meter{display:flex;width:100%;height:19px;border-radius:22px;overflow:hidden;background:#f5d8bd;margin:18px 0 12px}
+.status-meter .filled{background:#18a38f;min-width:1px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#526d81}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.continuity-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:5px 0}
+.continuity-box{background:#f4f8fb;padding:14px;border-radius:10px;border:1px solid #e0eaf1}
+.continuity-box strong{display:block;font-size:29px;color:#125782}
+.continuity-box span{font-size:12px;color:#5b7082}
+.chart-add{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.bar-col button,.doc-row button{font-size:9px;padding:3px 5px}
+.tiny-restricted-note{font-size:12px;line-height:1.5;background:#eff7f8;color:#476779;padding:13px 17px;border-left:3px solid #15a699;border-radius:6px;margin:8px 0 18px}
+@media(max-width:850px){.dash-two{grid-template-columns:1fr}.chart-bars{gap:7px}.dash-panel{padding:17px}}
+@media print{.dash-two{grid-template-columns:1fr 1fr;gap:11px}.dash-panel{break-inside:avoid;box-shadow:none;padding:14px}.chart-bars{min-height:155px}.bar-col{height:140px}.metric{break-inside:avoid}.bar-rect{max-width:29px}.tiny-restricted-note{border-color:#ccc}}
 </style>
 </head>
 <body>
@@ -56,9 +87,8 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <strong>Como editar, publicar e atualizar o PDF</strong>
 <p>Selecione <b>Editar relatório</b>, clique diretamente em títulos, valores e parágrafos para modificar. Use os botões para acrescentar ou remover indicadores e seções. <b>Salvar rascunho</b> fica apenas neste navegador; <b>Publicar</b> grava no repositório e atualiza o endereço público após a publicação do GitHub Pages.</p>
 <p>Para gerar um <b>PDF com campos editáveis</b>, clique em <b>Baixar PDF editável</b>. O arquivo contém campos AcroForm que permitem modificar os textos em leitores de PDF compatíveis, inclusive Adobe Acrobat. O PDF para impressão é gerado a partir do visual do site.
-</p><p>Para publicar, utilize um token pessoal do GitHub com permissão <code>Contents: read/write</code> restrita ao repositório <code>victorpeborges-ADS/relatorio-cgmur-2026-publico</code>. A credencial <b>não é gravada no site nem no navegador</b>. Como segurança adicional, não cole dados sigilosos do SEI ou links para arquivos internos.</p>
-<label for="gh-token">Token do GitHub (necessário apenas para publicar)</label>
-<input id="gh-token" type="password" autocomplete="off" spellcheck="false" placeholder="GitHub personal access token">
+</p><p><b>Publicação por sua conta GitHub, sem criar outro token:</b> clique em <b>Publicar alterações para todos</b>. Uma página do GitHub abrirá com os dados preparados. Estando conectado à sua conta <code>victorpeborges-ADS</code>, clique em <b>Submit new issue</b> (Criar solicitação). Uma automação do próprio repositório verificará a autoria, atualizará o relatório e fechará a solicitação após concluir.</p>
+<p><b>Segurança:</b> somente solicitações abertas pelo proprietário da conta autorizada podem alterar o site. O conteúdo enviado à solicitação é público. Não inclua números individuais de processos nem informações restritas do SEI ou do SharePoint.</p>
 <p id="publishstatus" role="status"></p>
 </div>
 <header class="hero">
@@ -68,10 +98,43 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <main class="shell" id="report">
 <section class="intro"><h2 data-field="status"></h2><p data-field="summary"></p><p class="date">Atualização: <time id="updated"></time></p></section>
 <div class="metrics" id="metrics"></div>
+
+<h2 class="dashboard-title" data-field="dashboardTitle">Produção e resultados — recorte de 2026</h2>
+<p class="dashboard-sub" data-field="dashboardSubtitle">Dados do SEI CGMUR e evidências documentais. Indicadores consolidados por unidade, sem acesso ao inventário nominal.</p>
+<div class="dash-two">
+  <section class="dash-panel">
+    <h2 data-field="monthlyTitle"></h2><p class="dash-caption" data-field="monthlyCaption"></p>
+    <div id="monthchart" class="chart-bars" role="img" aria-label="Documentos internos por mês de 2026"></div>
+    <div class="chart-add edit-only"><button id="btnaddmonth">+ Mês ou período</button></div>
+  </section>
+  <section class="dash-panel">
+    <h2 data-field="mixTitle"></h2><p class="dash-caption" data-field="mixCaption"></p>
+    <div id="mixchart"></div>
+    <div class="chart-add edit-only"><button id="btnaddtype">+ Tipo documental</button></div>
+  </section>
+</div>
+<div class="dash-two">
+  <section class="dash-panel">
+    <h2 data-field="statusTitle"></h2><p class="dash-caption" data-field="statusCaption"></p>
+    <p class="dash-number" data-field="tempoMedio"></p><p class="dash-unit">Tempo médio de tramitação informado pelo SEI; não corresponde a horas efetivas trabalhadas.</p>
+    <div class="status-meter" role="img" aria-label="Proporção de andamentos fechados no recorte"><div id="meterclosed" class="filled"></div></div>
+    <div class="legend"><span><i style="background:#18a38f"></i><span id="closedCount"></span> andamentos fechados</span><span><i style="background:#e9b481"></i><span id="openCount"></span> abertos</span></div>
+  </section>
+  <section class="dash-panel">
+    <h2 data-field="continuityTitle"></h2><p class="dash-caption" data-field="continuityCaption"></p>
+    <div class="continuity-grid">
+      <div class="continuity-box"><strong data-field="continuidade2026"></strong><span>Processos com ano 2026 no número de protocolo</span></div>
+      <div class="continuity-box"><strong data-field="continuidadeAnterior"></strong><span>Processos com protocolo de ano anterior</span></div>
+    </div>
+    <p class="dash-unit" style="margin-top:14px">A contagem por ano do protocolo não é uma medição de processos criados no exercício.</p>
+  </section>
+</div>
+<div class="tiny-restricted-note">A versão pública mantém os indicadores agregados e as evidências qualitativas. A relação individual de processos e os documentos internos continuam disponíveis apenas na versão institucional autorizada.</div>
+<h2 class="dashboard-title" data-field="findingsTitle"></h2>
 <div class="sectiongrid" id="sections"></div>
 <section class="footbox"><h2>Metodologia e limites</h2><p data-field="caveats"></p></section>
 <section class="footbox"><h2>Informações de publicação</h2><p data-field="footer"></p></section>
-<p class="meta">Panorama de 2026 · versão pública resumida, sem inventário nominal de processos do SEI e sem anexos internos do SharePoint.</p>
+<p class="meta">Panorama de 2026 · versão pública com indicadores agregados; inventários e documentos internos permanecem restritos.</p>
 </main>
 <script src="pdf-lib.min.js"></script>
 <script>
@@ -84,6 +147,36 @@ function text(tag,value,cls){const n=document.createElement(tag);if(cls)n.classN
 function field(n,key,val){n.dataset.key=key;n.textContent=val??"";n.contentEditable=editing?"true":"false";return n}
 function control(label,action,cls=""){const b=text("button",label,"edit-only "+cls);b.type="button";b.addEventListener("click",action);return b}
 function copy(o){return JSON.parse(JSON.stringify(o))}
+
+function reportMetric(id){let o=(model?.metrics||[]).find(x=>x.id===id);let v=Number(String(o?.value||"0").replace(/[^0-9.-]/g,""));return Number.isFinite(v)?v:0}
+function drawAnalytics(){
+ const mchart=$("#monthchart");mchart.replaceChildren();
+ const months=model.monthly||[];
+ const max=Math.max(1,...months.map(x=>x.value));
+ months.forEach((x,i)=>{
+  const n=document.createElement("div");n.className="bar-col";
+  n.append(field(text("b",x.value,"bar-value"),"value",x.value));
+  const bar=document.createElement("div");bar.className="bar-rect";bar.style.height=Math.max(4,Math.round(x.value/max*147))+"px";bar.title=x.label+": "+x.value+" documentos";
+  n.append(bar,field(text("span",x.label,"bar-label"),"label",x.label));
+  n.append(control("×",()=>{snapshot();model.monthly.splice(i,1);render()},"danger"));
+  mchart.append(n);
+ });
+ const mix=$("#mixchart");mix.replaceChildren();
+ const types=model.documentTypes||[];const biggest=Math.max(1,...types.map(x=>x.value));
+ types.forEach((x,i)=>{
+  const n=document.createElement("div");n.className="doc-row";
+  n.append(field(text("span",x.label),"label",x.label));
+  const track=document.createElement("div");track.className="doc-track";
+  const fill=document.createElement("div");fill.className="doc-fill";fill.style.width=Math.round(100*x.value/biggest)+"%";track.append(fill);
+  n.append(track,field(text("strong",x.value),"value",x.value));
+  const btn=control("×",()=>{snapshot();model.documentTypes.splice(i,1);render()},"danger");
+  btn.style.gridColumn="1 / -1";btn.style.justifySelf="end";n.append(btn);
+  mix.append(n);
+ });
+ const closed=reportMetric("closed"),open=reportMetric("open");
+ $("#meterclosed").style.width=(closed+open>0?Math.min(100,100*closed/(closed+open)):0)+"%";
+ $("#closedCount").textContent=closed;$("#openCount").textContent=open;
+}
 function render(){
  if(!model)return;
  for(const el of document.querySelectorAll("[data-field]"))field(el,el.dataset.field,model[el.dataset.field]);
@@ -100,6 +193,7 @@ function render(){
   ctl.append(control("Subir",()=>{snapshot();if(i>0){[model.sections[i-1],model.sections[i]]=[model.sections[i],model.sections[i-1]];render()}}));
   ctl.append(control("Descer",()=>{snapshot();if(i<model.sections.length-1){[model.sections[i+1],model.sections[i]]=[model.sections[i],model.sections[i+1]];render()}}));
   n.append(ctl);sections.append(n)});
+ drawAnalytics();
  document.body.classList.toggle("editing",editing);
 }
 function snapshot(){
@@ -111,12 +205,24 @@ function snapshot(){
  document.querySelectorAll("#sections .section").forEach((el,i)=>{
   const s=model.sections[i];if(s)for(const key of ["title","stage","body"])s[key]=el.querySelector('[data-key="'+key+'"]').innerText.trim();
  });
+
+ for(const [sel,key] of [["#monthchart .bar-col","monthly"],["#mixchart .doc-row","documentTypes"]]){
+  document.querySelectorAll(sel).forEach((el,i)=>{
+   const x=model[key][i];if(!x)return;
+   x.label=el.querySelector('[data-key="label"]').innerText.trim();
+   const raw=el.querySelector('[data-key="value"]').innerText.trim();
+   const n=Number(raw);
+   x.value=Number.isInteger(n)&&n>=0?n:-1;
+  });
+ }
  model.updated=new Date().toISOString().slice(0,10);
 }
 function validate(m){
  if(!m||typeof m.title!=="string"||!Array.isArray(m.metrics)||!Array.isArray(m.sections))throw Error("Dados do relatório inválidos");
  if(m.metrics.length>40||m.sections.length>80||JSON.stringify(m).length>100000)throw Error("Tamanho não suportado");
  for(const item of m.sections)if(typeof item.title!=="string"||typeof item.body!=="string")throw Error("Uma seção não contém texto válido");
+ for(const chart of ["monthly","documentTypes"])if(!Array.isArray(m[chart])||m[chart].length>24||m[chart].some(x=>typeof x.label!=="string"||!Number.isInteger(x.value)||x.value<0))throw Error("Informe valores numéricos não negativos nos gráficos.");
+
  return m;
 }
 async function published(){
@@ -131,7 +237,10 @@ async function startup(){
 $("#btnedit").onclick=()=>{editing=true;render();status("Modo edição: clique diretamente no texto que deseja alterar. Rascunhos não ficam públicos automaticamente.")};
 $("#btncancel").onclick=()=>{if(!confirm("Encerrar a edição e descartar alterações não publicadas?"))return;editing=false;model=copy(original);render();status("Edição encerrada. Versão publicada restaurada.")};
 $("#btnaddsection").onclick=()=>{snapshot();model.sections.push({id:"sec-"+Date.now(),stage:"Em revisão",title:"Nova seção",body:"Insira aqui o texto desta seção."});render();$("#sections").lastElementChild.scrollIntoView({behavior:"smooth",block:"center"})};
-$("#btnaddmetric").onclick=()=>{snapshot();model.metrics.push({value:"—",label:"Novo indicador"});render()};
+$("#btnaddmonth").onclick=()=>{snapshot();model.monthly.push({label:"Novo",value:0});render()};
+$("#btnaddtype").onclick=()=>{snapshot();model.documentTypes.push({label:"Outro tipo",value:0});render()};
+document.addEventListener("focusout",e=>{if(editing&&e.target.closest("#monthchart,#mixchart")){snapshot();if(model.monthly.every(x=>x.value>=0)&&model.documentTypes.every(x=>x.value>=0))render()}});
+$("#btnaddmetric").onclick=()=>{snapshot();model.metrics.push({id:"user_"+Date.now(),value:"—",label:"Novo indicador"});render()};
 $("#btnprint").onclick=()=>{snapshot();const was=editing;editing=false;render();window.print();editing=was;render()};
 
 function ansi(s){return String(s??"").normalize("NFC").replace(/[\u2013\u2014\u2011]/g,"-").replace(/[\u2018\u2019]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/\u2022/g,"-").replace(/\u2192/g,"->").replace(/[\u200B-\u200D]/g,"")}
@@ -207,25 +316,25 @@ $("#btndraft").onclick=()=>{snapshot();localStorage.setItem("cgmur-2026-draft",J
 $("#btnrestore").onclick=()=>{try{const raw=localStorage.getItem("cgmur-2026-draft");if(!raw)throw Error("Não existe rascunho salvo neste navegador.");if(!confirm("Restaurar o rascunho local substituindo as alterações em edição?"))return;model=validate(JSON.parse(raw));render();status("Rascunho restaurado. Para disponibilizar aos visitantes, use Publicar.")}catch(e){status(e.message,true)}};
 $("#btnexport").onclick=()=>{snapshot();const blob=new Blob([JSON.stringify(model,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="CGMUR_2026_relatorio_editavel.json";a.click();URL.revokeObjectURL(url)};
 $("#fileimport").onchange=async(e)=>{try{const f=e.target.files[0];if(!f)return;const m=validate(JSON.parse(await f.text()));model=m;render();status("JSON importado para edição. Publique para tornar permanente.")}catch(err){status(err.message,true)}e.target.value=""};
-$("#btnpublish").onclick=async()=>{
- snapshot();$("#help").classList.add("open");
- const token=$("#gh-token").value.trim();if(!token){status("Insira no campo Ajuda/publicar um token GitHub com acesso ao repositório para publicar.",true);$("#gh-token").focus();return}
- if(!confirm("Publicar estas informações na INTERNET, com acesso público por link? Confirme que não há dados institucionais restritos."))return;
- $("#btnpublish").disabled=true;$("#publishstatus").textContent="Publicando...";
- try{
-  const headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
-  const uri="https://api.github.com/repos/"+REPO+"/contents/"+FILE;
-  const get=await fetch(uri,{headers,cache:"no-store"});if(!get.ok)throw Error("Não foi possível consultar o GitHub (HTTP "+get.status+")");
-  const info=await get.json();
-  const json=JSON.stringify(model,null,2)+"\n";
-  const encoded=btoa(Array.from(new TextEncoder().encode(json),b=>String.fromCharCode(b)).join(""));
-  const res=await fetch(uri,{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:"Atualização editorial do relatório CGMUR 2026",content:encoded,sha:info.sha,branch:"main"})});
-  if(!res.ok){const e=await res.json().catch(()=>({}));throw Error("GitHub HTTP "+res.status+": "+(e.message||"falha ao salvar"))}
-  original=copy(model);publishedSha=(await res.json().catch(()=>({})).content?.sha)||null;
-  $("#gh-token").value="";status("Alterações publicadas no GitHub. A versão pública será atualizada após processamento do GitHub Pages.");
-  $("#publishstatus").textContent="Gravação confirmada; a atualização pública pode levar alguns minutos.";
- }catch(e){status("Não publicado: "+e.message,true);$("#publishstatus").textContent=e.message}
- finally{$("#btnpublish").disabled=false}
+$("#btnpublish").onclick=()=>{
+ snapshot();
+ try{validate(model)}catch(e){status(e.message,true);return}
+ const payload=JSON.stringify(model);
+ if(/sei\.mi\.gov\.br|mcidades\.sharepoint\.com|\b\d{5}\.\d{6}\/\d{4}-\d{2}\b/i.test(payload)){
+   status("Há um identificador ou endereço interno no texto. Retire a informação restrita antes de publicar.",true);return;
+ }
+ if(!confirm("O relatório será PUBLICAMENTE acessível. Confirmar que o conteúdo não contém informações restritas?"))return;
+ const body="CGMUR_REPORT_UPDATE_V1\n"+payload;
+ const title="Atualizar conteúdo do relatório CGMUR "+new Date().toISOString().slice(0,10);
+ const link="https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body);
+ $("#help").classList.add("open");
+ const fresh=window.open(link.length<14000?link:("https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title)),"_blank","noopener,noreferrer");
+ if(link.length>=14000){
+   if(navigator.clipboard?.writeText)navigator.clipboard.writeText(body).then(()=>status("Conteúdo copiado. Cole no campo de descrição do GitHub e envie a solicitação.")).catch(()=>status("URL extensa: exporte JSON e peça a publicação pelo GitHub.",true));
+ }else{
+   status("Pedido de publicação preparado no GitHub. Na aba aberta, clique em Submit new issue. A atualização será publicada automaticamente após verificação.");
+ }
+ $("#publishstatus").textContent=fresh===null?"Se a nova aba foi bloqueada, permita pop-ups para este site.":"Somente solicitações da conta proprietária são aceitas; não precisa de token adicional.";
 };
 startup();
 </script>

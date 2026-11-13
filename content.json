@@ -8,19 +8,43 @@
   "metrics": [
     {
       "value": "365",
-      "label": "Processos com tramitação na CGMUR"
+      "label": "Processos distintos com tramitação na CGMUR",
+      "id": "processos"
+    },
+    {
+      "value": "43",
+      "label": "Processos iniciados pela CGMUR",
+      "id": "iniciados"
     },
     {
       "value": "524",
-      "label": "Documentos gerados na unidade"
+      "label": "Documentos internos gerados na unidade",
+      "id": "internos"
     },
     {
       "value": "91",
-      "label": "Notas técnicas e pareceres de mérito"
+      "label": "Notas técnicas e pareceres de mérito (58 + 33)",
+      "id": "tecnicos"
+    },
+    {
+      "value": "325",
+      "label": "Registros de documentos externos no período",
+      "id": "externos"
+    },
+    {
+      "value": "358",
+      "label": "Andamentos fechados na unidade no recorte",
+      "id": "closed"
+    },
+    {
+      "value": "7",
+      "label": "Andamentos abertos na unidade no recorte",
+      "id": "open"
     },
     {
       "value": "22",
-      "label": "Municípios selecionados para apoio em transformação digital urbana"
+      "label": "Municípios selecionados para apoio em TDU",
+      "id": "municipios"
     }
   ],
   "sections": [
@@ -56,5 +80,91 @@
     }
   ],
   "caveats": "Dados processuais agregados referem-se à CGMUR, conforme consultas ao SEI até 13/11/2026. A cobertura estatística da COAMU não é integral. A seleção de municípios não significa estratégias finalizadas; pareceres técnicos não significam contratação; carteiras acumuladas não equivalem a resultados exclusivos de 2026.",
-  "footer": "Material informativo em desenvolvimento. A disponibilização deste endereço não constitui homologação formal, aprovação de conteúdo institucional nem publicação oficial do Ministério das Cidades."
+  "footer": "Material informativo em desenvolvimento. A disponibilização deste endereço não constitui homologação formal, aprovação de conteúdo institucional nem publicação oficial do Ministério das Cidades.",
+  "monthly": [
+    {
+      "label": "Jan",
+      "value": 51
+    },
+    {
+      "label": "Fev",
+      "value": 31
+    },
+    {
+      "label": "Mar",
+      "value": 49
+    },
+    {
+      "label": "Abr",
+      "value": 40
+    },
+    {
+      "label": "Mai",
+      "value": 103
+    },
+    {
+      "label": "Jun",
+      "value": 42
+    },
+    {
+      "label": "Jul",
+      "value": 39
+    },
+    {
+      "label": "Ago",
+      "value": 44
+    },
+    {
+      "label": "Set",
+      "value": 57
+    },
+    {
+      "label": "Out",
+      "value": 44
+    },
+    {
+      "label": "Nov",
+      "value": 24
+    }
+  ],
+  "documentTypes": [
+    {
+      "label": "Despachos",
+      "value": 186
+    },
+    {
+      "label": "E-mails",
+      "value": 150
+    },
+    {
+      "label": "Notas técnicas",
+      "value": 58
+    },
+    {
+      "label": "Pareceres de mérito",
+      "value": 33
+    },
+    {
+      "label": "Ofícios",
+      "value": 29
+    },
+    {
+      "label": "Demais espécies",
+      "value": 68
+    }
+  ],
+  "tempoMedio": "9d 11h 36m 51s",
+  "continuidade2026": "296",
+  "continuidadeAnterior": "69",
+  "monthlyTitle": "Documentos gerados por mês",
+  "monthlyCaption": "Dados consolidados do SEI de janeiro a 13/11/2026. Novembro é parcial.",
+  "mixTitle": "Composição da produção documental",
+  "mixCaption": "Classificação de documentos internos gerados no SEI, por tipo; não representa complexidade equivalente.",
+  "statusTitle": "Fluxo processual no recorte",
+  "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
+  "continuityTitle": "Continuidade de processos",
+  "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
+  "findingsTitle": "Frentes de trabalho e resultados documentados",
+  "dashboardTitle": "Produção e resultados — recorte de 2026",
+  "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade."
 }
