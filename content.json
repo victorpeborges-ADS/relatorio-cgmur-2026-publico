@@ -4,7 +4,7 @@
   "period": "Janeiro a 13 de novembro de 2026",
   "status": "Versão de divulgação — conteúdo selecionado e sujeito à revisão institucional",
   "updated": "2026-11-13",
-  "summary": "Panorama das atividades registradas em 2026, com foco nas frentes de modernização urbana, transformação digital, financiamento de projetos e desenvolvimento de ferramentas de apoio ao planejamento. Este material não substitui os processos oficiais e não divulga documentação interna do SEI.",
+  "summary": "O trabalho técnico da CGMUR em 2026 combina produção analítica, instrução e acompanhamento de investimentos urbanos, apoio a municípios e estudos aplicados. Na carteira Pró-Cidades M2 atualizada em setembro, foram identificados 21 processos com parecer referenciado (17 com protocolo em 2026), distribuídos por 11 UFs e cinco macrorregiões. Os montantes são valores declarados em projetos, não execução financeira atribuível à coordenação.",
   "metrics": [
     {
       "value": "365",
@@ -154,19 +154,19 @@
       "body": "A atuação em 2026 incluiu participação em encontros especializados sobre cidades inteligentes, diálogo com instituições de pesquisa, interlocução com governos locais e preparação de materiais de comunicação e apoio técnico. Entre os registros documentais estão atividades no Smart City Business Brazil Congress e reuniões técnicas com instituições acadêmicas."
     }
   ],
-  "caveats": "Dados processuais agregados referem-se à CGMUR, conforme consultas ao SEI até 13/11/2026. A cobertura estatística da COAMU não é integral. A seleção de municípios não significa estratégias finalizadas; pareceres técnicos não significam contratação; carteiras acumuladas não equivalem a resultados exclusivos de 2026.",
+  "caveats": "Dados processuais agregados referem-se à CGMUR, conforme consultas ao SEI até 13/11/2026. A cobertura estatística da COAMU não é integral. A seleção de municípios não significa estratégias finalizadas; pareceres técnicos não significam contratação; carteiras acumuladas não equivalem a resultados exclusivos de 2026. A carteira Pró-Cidades em setembro inclui processos de 2025 e 2026, uma possível reapresentação em Foz do Iguaçu e apenas seis conclusões favoráveis verificadas. As informações do BI nacional não são atribuíveis integralmente à CGMUR.",
   "footer": "Material informativo em desenvolvimento. A disponibilização deste endereço não constitui homologação formal, aprovação de conteúdo institucional nem publicação oficial do Ministério das Cidades.",
   "impact": {
     "heading": "Alcance das iniciativas acompanhadas",
     "intro": "Além do trabalho documental, a equipe contribuiu para instruir projetos de investimentos urbanos com metas físicas e expressão financeira relevantes. Os indicadores retratam o porte dos projetos examinados e acompanhados, não obras ou pagamentos executados diretamente pela coordenação.",
     "pointsTitle": "Iluminação pública · modernização prevista em 2026",
     "pointsSubtitle": "Projetos com análise ou acompanhamento técnico documentado em 2026. Somente quantidades explicitadas nas propostas e no painel.",
-    "moneyTitle": "Dimensão financeira · recorte de 2026",
-    "moneySubtitle": "Somatório analítico de propostas e projetos com estágios financeiros distintos; não representa captação, contratação ou execução.",
+    "moneyTitle": "Projetos analisados em 2026 · valores por instrumento",
+    "moneySubtitle": "Pró-Cidades: financiamento solicitado nos 17 protocolos de 2026. Debêntures: valor declarado dos sete projetos com portarias no exercício. Categorias não somáveis sem reconciliação.",
     "historicalTitle": "Carteira histórica identificada",
-    "historicalSubtitle": "Série acumulada de projetos acompanhados em anos distintos. Os quantitativos de 2026 já integram o histórico e não devem ser somados novamente.",
-    "financialOtherTitle": "Referências financeiras, sem dupla contagem",
-    "financialOtherSubtitle": "Indicadores com naturezas diferentes do porte bruto de projetos. Não devem ser adicionados ao montante de R$ 770,54 milhões.",
+    "historicalSubtitle": "Carteira histórica de iluminação pública, inclusive recorte de 2026. A dimensão financeira do Pró-Cidades está detalhada no painel territorial acima.",
+    "financialOtherTitle": "Outros valores de referência — categorias não somáveis",
+    "financialOtherSubtitle": "Carteira total M2 da CGMUR em 2025–2026, teto de debêntures e TED UFRGS; não são desembolsos.",
     "historicalMoneyTitle": "Valores registrados na carteira de debêntures até setembro de 2026",
     "historicalMoneySubtitle": "Estoque histórico em três estágios distintos. Não é fluxo financeiro novo de 2026 e as barras não são somáveis.",
     "points2026": [
@@ -184,12 +184,12 @@
     "money2026": [
       {
         "id": "profinance",
-        "label": "Pró-Cidades · financiamento pretendido",
-        "value": 382640410.68
+        "label": "Pró-Cidades · financiamento solicitado em 17 protocolos de 2026",
+        "value": 1223675097.18
       },
       {
         "id": "debprojects",
-        "label": "Debêntures · valor declarado dos projetos",
+        "label": "Debêntures · sete projetos com portarias de 2026",
         "value": 387899312.68
       }
     ],
@@ -215,6 +215,16 @@
         "id": "ted",
         "label": "TED UFRGS · orçamento global pactuado (2025–2026)",
         "value": 2461457
+      },
+      {
+        "id": "proc-vi-total",
+        "label": "Pró-Cidades · investimento proposto, carteira CGMUR 2025–2026",
+        "value": 1428266478.03
+      },
+      {
+        "id": "proc-vf-total",
+        "label": "Pró-Cidades · financiamento solicitado, carteira CGMUR 2025–2026",
+        "value": 1335314350.96
       }
     ],
     "moneyHistorical": [
@@ -236,8 +246,28 @@
     ],
     "physicalNote": "Os 307.293 pontos de 2026 correspondem a 213.407 em seis projetos de debêntures com quantitativos disponíveis, 59.803 em Aparecida de Goiânia e 34.083 pontos convencionais em Foz do Iguaçu. O sétimo projeto de debêntures de 2026 não apresentou número comparável. Metas de modernização e instalação não comprovam entregas físicas concluídas.",
     "historicalNote": "Aproximadamente 1.293.910 pontos quantificados na carteira histórica: 1.194.461 nos projetos enquadrados de debêntures e 99.449 em três propostas do Pró-Cidades. Não é inventário exaustivo nem total de pontos efetivamente modernizados; os valores de 2026 estão incluídos neste acumulado.",
-    "financialNote": "R$ 382.640.410,68 correspondem a financiamento pretendido nas propostas do Pró-Cidades, com processos também iniciados em 2025. R$ 387.899.312,68 representam o valor declarado de sete projetos de debêntures com portarias publicadas em 2026. O somatório bruto de R$ 770.539.723,36 mede porte das carteiras em estágios distintos e não volume executado ou captado. As carteiras usadas para estimar pontos e as usadas para valores financeiros não são necessariamente formadas pelos mesmos projetos; portanto, os dois indicadores não devem ser utilizados para calcular custo médio por ponto.",
-    "sourcesNote": "Referências: painel de debêntures de 22/10/2026; briefing e painel do Pró-Cidades; propostas técnicas nº 165 (Aparecida de Goiânia), nº 172 (Rio Negro), nº 180 (Foz do Iguaçu) e nº 167 (Nova Lima); balanço da carteira de debêntures de setembro de 2026; TED UFRGS nº 978205/2025. Recorte do relatório até 13/11/2026. Dados agregados para comunicação pública, sujeitos à homologação."
+    "financialNote": "A carteira da CGMUR de 23/09/2026 identifica 21 processos Pró-Cidades M2, dos quais 17 têm protocolo de 2026 (R$ 1.223.675.097,18 de financiamento solicitado). Os sete projetos de debêntures com portarias de 2026 somam R$ 387.899.312,68 em valor declarado. Trata-se de instrumentos e estágios diferentes; os valores não foram somados para evitar a aparência de captação ou execução. Os dois processos de Foz do Iguaçu têm valores idênticos e podem representar reapresentação. O subtotal de R$ 382,64 milhões do briefing de maio não era a carteira completa.",
+    "sourcesNote": "Fontes: painel de Pró-Cidades (carteira CGMUR em 23/09/2026; BI em 29/09/2026); briefing de maio; painel de debêntures de 12/08/2026 e planilha atualizada em 22/10/2026 para os atos de 2026; TED UFRGS nº 978205/2025. Os dados físicos provêm de propostas técnicas e planilha mais recente. Indicadores parciais e sujeitos a conciliação documental.",
+    "debTerritoryTitle": "Debêntures · distribuição territorial dos atos de 2026",
+    "debTerritorySubtitle": "Sete projetos com portarias ministeriais publicadas até 22/10/2026, em cinco UFs e três macrorregiões. É enquadramento, não emissão nem execução física.",
+    "debTerritoryNote": "O painel HTML fornecido para debêntures está datado de 12/08/2026 e contém 29 projetos em dez UFs (11 do Sudeste, 11 do Sul e sete do Nordeste), além de R$ 2,124 bilhões em valores de projeto. Esse retrato não substitui a planilha mais recente de 22/10/2026, que registra sete atos publicados em 2026 e embasa o gráfico acima. Não somar estoques e fluxos de fotografias diferentes.",
+    "debTerritory": [
+      {
+        "id": "sul",
+        "label": "Sul · PR (2) e SC (1)",
+        "value": 3
+      },
+      {
+        "id": "sudeste",
+        "label": "Sudeste · SP (2) e RJ (1)",
+        "value": 3
+      },
+      {
+        "id": "nordeste",
+        "label": "Nordeste · BA (1)",
+        "value": 1
+      }
+    ]
   },
   "dashboardTitle": "Produção e resultados — recorte de 2026",
   "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade.",
@@ -249,5 +279,64 @@
   "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
   "continuityTitle": "Continuidade de processos",
   "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
-  "findingsTitle": "Frentes de trabalho e resultados documentados"
+  "findingsTitle": "Frentes de trabalho e resultados documentados",
+  "procidadesAnalytics": {
+    "title": "Pró-Cidades · dimensão do trabalho técnico da CGMUR",
+    "intro": "A carteira da Modalidade 2 em 23/09/2026 mostra o volume de processos tecnicamente acompanhados, sua distribuição territorial e a relevância financeira das propostas. Os marcos de avaliação, enquadramento e contratação são tratados separadamente.",
+    "regionHeading": "Presença nas cinco macrorregiões",
+    "regionSub": "Quantidade de processos na carteira CGMUR, classificados pela UF do projeto. A contagem não representa obras concluídas.",
+    "moneyHeading": "Investimento proposto por macrorregião",
+    "moneySub": "Soma dos investimentos declarados, por UF; os dois registros de Foz do Iguaçu integram o total até conciliação.",
+    "favorableHeading": "Da instrução técnica à manifestação de mérito",
+    "qualityNote": "Todos os 21 processos da carteira têm parecer referenciado; seis conclusões favoráveis foram conferidas nos documentos acessíveis. Os demais 15 pareceres ainda exigem verificação do teor. Nenhum dos três marcos equivale à aprovação de financiamento ou à execução do projeto.",
+    "dedupNote": "Há dois processos registrados para Foz do Iguaçu, ambos com investimento proposto de R$ 35 milhões. O total sem uma possível reapresentação seria R$ 1.393.266.478,03, mas essa deduplicação é apenas uma análise de sensibilidade: os processos podem representar objetos distintos.",
+    "biNote": "O BI geral registra 210 propostas nas modalidades 1 e 2 desde 2019, sendo 90 de M2. Essas 90 propostas não são automaticamente atribuíveis à CGMUR. O recorte específico da unidade aqui apresentado contém 21 processos em 2025–2026, dos quais 17 protocolados em 2026.",
+    "sourceNote": "Fontes: painel Pró-Cidades visão geral (BI de 29/09/2026; carteira CGMUR de 23/09/2026); briefing de 06/05/2026 para comparação. Painel de debêntures enviado datado de 12/08/2026, cotejado com a planilha de 22/10/2026 para as portarias mais recentes. Indicadores financeiros e geográficos são de propostas, não contratos nem obras executadas.",
+    "protocol2026": 17,
+    "states": 11,
+    "favorableVerified": 6,
+    "financing": 1335314350.96,
+    "investment2026": 1306176230.2,
+    "financing2026": 1223675097.18,
+    "possibleOverlapAmount": 35000000,
+    "biAll": 210,
+    "biM2": 90,
+    "regions": [
+      {
+        "id": "centro-oeste",
+        "label": "Centro-Oeste",
+        "ufs": "GO · MT · MS",
+        "count": 8,
+        "investment": 237390000.0
+      },
+      {
+        "id": "norte",
+        "label": "Norte",
+        "ufs": "PA · RR",
+        "count": 3,
+        "investment": 579947278.8
+      },
+      {
+        "id": "sul",
+        "label": "Sul",
+        "ufs": "PR · SC",
+        "count": 5,
+        "investment": 152023831.7
+      },
+      {
+        "id": "sudeste",
+        "label": "Sudeste",
+        "ufs": "MG · ES · RJ",
+        "count": 4,
+        "investment": 415905367.53
+      },
+      {
+        "id": "nordeste",
+        "label": "Nordeste",
+        "ufs": "AL",
+        "count": 1,
+        "investment": 43000000.0
+      }
+    ]
+  }
 }

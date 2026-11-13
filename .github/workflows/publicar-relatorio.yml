@@ -51,11 +51,18 @@ jobs:
 
           const impact=data.impact;
           if(!impact||typeof impact!=='object'||Array.isArray(impact))throw Error('Bloco de impacto inválido');
-          const impactTextKeys=['heading','intro','pointsTitle','pointsSubtitle','moneyTitle','moneySubtitle','historicalTitle','historicalSubtitle','financialOtherTitle','financialOtherSubtitle','historicalMoneyTitle','historicalMoneySubtitle','physicalNote','historicalNote','financialNote','sourcesNote'];
+          const impactTextKeys=['heading','intro','pointsTitle','pointsSubtitle','moneyTitle','moneySubtitle','historicalTitle','historicalSubtitle','financialOtherTitle','financialOtherSubtitle','historicalMoneyTitle','historicalMoneySubtitle','physicalNote','historicalNote','financialNote','sourcesNote','debTerritoryTitle','debTerritorySubtitle','debTerritoryNote'];
           if(!impactTextKeys.every(k=>str(impact[k],5500)))throw Error('Legendas de impacto inválidas');
           for(const k of ['points2026','money2026','pointsHistorical','financialOther','moneyHistorical']){
             if(!Array.isArray(impact[k])||impact[k].length>12||!impact[k].every(x=>str(x.id,100)&&str(x.label,280)&&typeof x.value==='number'&&Number.isFinite(x.value)&&x.value>=0&&x.value<=1e11))throw Error('Série de impacto inválida: '+k);
           }
+          const pc=data.procidadesAnalytics;
+          const pcTextKeys=['title','intro','regionHeading','regionSub','moneyHeading','moneySub','favorableHeading','qualityNote','dedupNote','biNote','sourceNote'];
+          const pcNumKeys=['protocol2026','states','favorableVerified','financing','investment2026','financing2026','possibleOverlapAmount','biAll','biM2'];
+          if(!pc||!pcTextKeys.every(k=>str(pc[k],5500))||!pcNumKeys.every(k=>typeof pc[k]==='number'&&Number.isFinite(pc[k])&&pc[k]>=0&&pc[k]<=1e12))throw Error('Pró-Cidades: campos inválidos');
+          if(!Array.isArray(pc.regions)||pc.regions.length!==5||pc.regions.some(x=>!str(x.id,100)||!str(x.label,150)||!str(x.ufs,120)||!Number.isInteger(x.count)||x.count<0||x.count>1000||typeof x.investment!=='number'||!Number.isFinite(x.investment)||x.investment<0))throw Error('Pró-Cidades: macrorregiões inválidas');
+          if(pc.favorableVerified>pc.regions.reduce((s,x)=>s+x.count,0))throw Error('Conferências excedem a carteira');
+          if(!Array.isArray(impact.debTerritory)||impact.debTerritory.length>6||!impact.debTerritory.every(x=>str(x.id,100)&&str(x.label,280)&&Number.isInteger(x.value)&&x.value>=0))throw Error('Distribuição territorial de debêntures inválida');
           // Impede inclusão inadvertida dos identificadores nominais na versão pública.
           if(/sei\.mi\.gov\.br|mcidades\.sharepoint\.com|\b(?:\d{5}\.\d{6}\/\d{4}-\d{2})\b/i.test(raw))throw Error('Referência interna detectada; publicação recusada');
           data.updated=new Date().toISOString().slice(0,10);
@@ -63,7 +70,7 @@ jobs:
             title:data.title,subtitle:data.subtitle,period:data.period,status:data.status,updated:data.updated,
             summary:data.summary,metrics:data.metrics,monthly:data.monthly,documentTypes:data.documentTypes,
             tempoMedio:data.tempoMedio,continuidade2026:data.continuidade2026,continuidadeAnterior:data.continuidadeAnterior,
-            sections:data.sections,caveats:data.caveats,footer:data.footer,impact:data.impact,
+            sections:data.sections,caveats:data.caveats,footer:data.footer,impact:data.impact,procidadesAnalytics:data.procidadesAnalytics,
             ...Object.fromEntries(textKeys.map(k=>[k,data[k]]))
           };
           const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/content.json';

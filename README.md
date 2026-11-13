@@ -76,3 +76,43 @@ não se deve inferir custo médio por ponto.
 Fontes da curadoria (não incorporadas ao repositório público): painel de
 debêntures de 22/10/2026, balanço ministerial de 22/09/2026, painel e briefing
 Pró-Cidades, propostas técnicas nº 165/172/180/167 e TED 978205/2025.
+
+## 13/11/2026 — reconciliação com painéis detalhados de Pró-Cidades e debêntures
+
+A versão anterior de R$ 382,64 milhões no Pró-Cidades correspondia ao subtotal
+de um briefing de maio, **não** à carteira completa de processos da CGMUR.
+
+Os indicadores agregados publicados foram derivados dos painéis HTML fornecidos
+pela equipe: Pró-Cidades (carteira CGMUR em 23/09/2026; BI geral em 29/09/2026)
+e debêntures (fotografia de 12/08/2026), confrontados com a planilha institucional
+de debêntures de 22/10/2026 anteriormente apurada.
+
+**Pró-Cidades, Modalidade 2, carteira CGMUR 2025–2026:** 21 registros de processos,
+17 protocolados em 2026, 11 UFs, cinco macrorregiões, referências a pareceres em
+todos os registros e seis conclusões favoráveis documentalmente verificadas.
+Investimento proposto de R$ 1.428.266.478,03, financiamento solicitado de
+R$ 1.335.314.350,96 e contrapartidas de R$ 92.952.127,07.
+Os 17 registros de protocolo 2026 concentram investimento de R$ 1.306.176.230,20
+e financiamento de R$ 1.223.675.097,18. O painel já distingue números de
+propostas, indicadores de mérito e registros do BI nacional: 210 propostas
+das duas modalidades, 90 da modalidade 2 no programa, não atribuíveis
+integralmente à CGMUR.
+
+**Cuidado com a soma:** os dois registros de Foz do Iguaçu possuem processos
+diferentes e valor de R$ 35 milhões cada. Uma exclusão hipotética diminui
+o valor total em R$ 35 milhões, mas a identidade do objeto não foi comprovada.
+Os 21 registros representam 20 territórios cadastrados (19 municípios e uma
+iniciativa estadual). Não se apresentam efeitos causais, contratação, valores
+pagos ou resultados físicos como comprovados.
+
+**Debêntures:** o HTML datado de agosto retrata 29 projetos de dez UFs e três
+macrorregiões; não substitui o balanço de setembro nem os sete projetos com
+portarias publicadas até outubro de 2026. Estes últimos se distribuem por cinco
+UFs: três portarias no Sul, três no Sudeste e uma no Nordeste. O painel de
+agosto não registra números de pontos físicos comparáveis; o indicador
+de 213.407 pontos no recorte 2026 continua fundamentado na planilha de outubro.
+
+**Apresentação:** painel público mantém os indicadores agregados, inclui
+barras territoriais e cartões de valores e não publica cópias de processos,
+dados nominais, IDs processuais ou documentação interna. A geração de PDF
+editável inclui os novos campos de Pró-Cidades e a distribuição de debêntures.

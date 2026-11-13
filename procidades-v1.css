@@ -1,0 +1,53 @@
+/* Pró-Cidades — carteira e abrangência territorial CGMUR */
+.procins{margin:42px 0;scroll-margin-top:96px}
+.pc-head{margin:0 0 22px}
+.pc-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--aqua);font-weight:850;margin:0 0 8px}
+.pc-head h2{font-weight:830;letter-spacing:-.045em;font-size:clamp(25px,3.1vw,35px);line-height:1.24;color:var(--ink);margin:0 0 9px}
+.pc-head p{color:var(--sub);font-size:13px;line-height:1.78;max-width:96ch;margin:0}
+.pc-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:0 0 17px}
+.pc-kpi{background:var(--surface);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);padding:19px 21px;display:flex;flex-direction:column;gap:7px;min-height:124px}
+.pc-kpi strong{font-size:clamp(27px,3vw,37px);font-variant-numeric:tabular-nums;letter-spacing:-.05em;line-height:1.14;color:var(--blue);font-weight:850}
+.pc-kpi span{font-size:12px;color:var(--sub);line-height:1.53}
+.pc-kpi-primary{background:linear-gradient(125deg,#133a54,#16718a);border-color:transparent}
+.pc-kpi-primary strong{color:#fff}.pc-kpi-primary span{color:#d9edf4}
+.pc-finance,.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:0 0 17px}
+.pc-finance{grid-template-columns:1.12fr 1fr}
+.pc-finance-card,.pc-chart,.pc-quality{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:23px 25px;box-shadow:var(--shadow);break-inside:avoid}
+.pc-finance-card h3,.pc-chart h3,.pc-quality h3{font-size:17px;font-weight:800;letter-spacing:-.025em;line-height:1.36;color:var(--ink);margin:0 0 8px}
+.pc-finance-card p,.pc-chart-desc{font-size:12px;line-height:1.63;color:var(--sub);margin:0 0 15px}
+.pc-amount{font-size:clamp(30px,3.2vw,43px);font-weight:850;letter-spacing:-.055em;color:var(--blue);line-height:1.15;margin:14px 0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.pc-moneyline{display:flex;gap:12px;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line);padding:12px 0}
+.pc-moneyline span{font-size:12px;color:var(--sub);line-height:1.5;max-width:48%}
+.pc-moneyline strong{font-size:14px;font-weight:810;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pc-finance .pc-special{background:var(--surface-soft)}
+.pc-note{background:var(--surface-raised);border-left:3px solid #12949e;border-radius:0 10px 10px 0;padding:16px 20px;font-size:12px;line-height:1.77;color:var(--sub);margin:0 0 17px}
+.pc-region-bars{display:grid;gap:16px}
+.pc-region-row{min-width:0}
+.pc-region-labels{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 4px}
+.pc-region-labels span{font-size:12px;line-height:1.4;color:var(--sub)}
+.pc-region-labels strong{font-size:13px;color:var(--ink);font-weight:840;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pc-region-uf{display:block;font-size:10px;color:var(--sub);line-height:1.45;margin:0 0 9px}
+.pc-region-track{height:12px;background:var(--surface-raised);overflow:hidden;border-radius:9px}
+.pc-region-fill{background:linear-gradient(90deg,#16738b,#31bdb3);height:100%;border-radius:9px;transition:width .2s ease}
+.pc-region-fill.money{background:linear-gradient(90deg,#087c80,#5bc5b4)}
+.pc-quality{margin:0 0 17px}
+.pc-quality-numbers{display:flex;align-items:stretch;gap:20px;flex-wrap:wrap;margin:14px 0}
+.pc-quality-metric{flex:1;min-width:120px;display:flex;flex-direction:column;gap:3px}
+.pc-quality-metric strong{font-size:31px;color:var(--blue);font-weight:850;letter-spacing:-.05em}
+.pc-quality-metric span{font-size:11px;color:var(--sub);line-height:1.45}
+.pc-quality-track{height:12px;background:var(--surface-raised);border-radius:9px;overflow:hidden;margin:14px 0 12px}
+.pc-quality-track div{height:100%;background:linear-gradient(90deg,#0c7e84,#28b8ae);border-radius:9px}
+.pc-quality p{color:var(--sub);font-size:12px;line-height:1.7;margin:10px 0 0}
+.pc-scope{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 22px;border:1px solid var(--line);border-radius:13px;background:var(--surface-soft);align-items:flex-start;margin:0 0 17px}
+.pc-scope strong{font-size:30px;color:var(--blue);letter-spacing:-.05em;white-space:nowrap;font-weight:850}
+.pc-scope div{font-size:12px;color:var(--sub);line-height:1.7}
+.pc-source{padding:14px 1px 0;border-top:1px solid var(--line);font-size:11px;color:var(--sub);line-height:1.8}
+.editing .procins [contenteditable=true]{outline:2px dashed #1399a1;outline-offset:3px;background:rgba(20,154,161,.09);border-radius:3px;cursor:text}
+.editing .pc-kpi-primary [contenteditable=true]{color:#fff}
+.editing .procins strong[contenteditable=true]{white-space:normal;overflow-wrap:anywhere}
+html[data-theme=dark] .pc-kpi-primary{background:linear-gradient(125deg,#0c384c,#146175)}
+html[data-theme=dark] .pc-kpi-primary strong{color:#fff}
+@media(max-width:900px){.pc-finance,.pc-grid{grid-template-columns:1fr}.pc-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.pc-amount{font-size:34px}}
+@media(max-width:600px){.procins{margin:30px 0}.pc-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pc-kpi{padding:18px 15px;min-height:125px}.pc-kpi strong{font-size:31px}.pc-finance-card,.pc-chart,.pc-quality{padding:20px 18px}.pc-moneyline{align-items:flex-start;gap:6px;flex-direction:column}.pc-moneyline span{max-width:none}.pc-scope{grid-template-columns:1fr;gap:6px}.pc-region-labels{flex-direction:column;align-items:flex-start;gap:3px}.pc-region-labels strong{white-space:normal;font-size:14px}.pc-quality-metric{min-width:80px}.pc-amount{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.pc-region-fill{transition:none}}
+@media print{.procins{break-before:page;margin:18px 0}.pc-kpis{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.pc-finance,.pc-grid{grid-template-columns:1fr 1fr;gap:10px}.pc-kpi,.pc-finance-card,.pc-chart,.pc-quality{padding:13px;box-shadow:none;break-inside:avoid}.pc-kpi-primary,.pc-region-fill{print-color-adjust:exact;-webkit-print-color-adjust:exact}.pc-amount{font-size:26px}.pc-kpi strong{font-size:26px}.pc-head p,.pc-note,.pc-chart-desc,.pc-source{font-size:10px}}

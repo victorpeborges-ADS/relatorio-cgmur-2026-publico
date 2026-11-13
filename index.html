@@ -68,6 +68,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 </style>
 <link rel="stylesheet" href="design-v3.css">
 <link rel="stylesheet" href="impact-v1.css">
+<link rel="stylesheet" href="procidades-v1.css">
 <meta name="theme-color" content="#102a45">
 <meta name="description" content="Panorama público e editável das atividades da CGMUR em 2026: indicadores, produção documental, Pró-Cidades, transformação digital e SINIDU.">
 </head>
@@ -120,6 +121,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
   <a href="#indicadores">Indicadores</a>
   <a href="#analises">Análises</a>
   <a href="#impacto">Impacto dos projetos</a>
+  <a href="#procidades-carteira">Pró-Cidades</a>
   <a href="#frentes">Frentes de trabalho</a>
   <a href="#metodologia">Metodologia</a>
  </div>
@@ -180,10 +182,10 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
       <span class="impact-kpi-footnote">Projetos com quantidade identificada · não são obras concluídas</span>
     </article>
     <article class="impact-kpi impact-kpi-blue">
-      <div class="impact-kpi-label">DIMENSÃO FINANCEIRA · CARTEIRAS 2026</div>
+      <div class="impact-kpi-label">PRÓ-CIDADES · FINANCIAMENTO SOLICITADO EM 2026</div>
       <strong id="impact-money-total">—</strong>
-      <span class="impact-unit">porte bruto combinado dos projetos</span>
-      <span class="impact-kpi-footnote">Propostas e projetos em fases distintas · não é desembolso</span>
+      <span class="impact-unit">17 protocolos da Modalidade 2 no exercício</span>
+      <span class="impact-kpi-footnote">Inclui possível reapresentação em Foz · não é contratação ou desembolso</span>
     </article>
   </div>
   <div class="impact-charts-grid">
@@ -235,7 +237,60 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
     <div class="impact-bars impact-bars-wide" id="impact-money-historical" role="group" aria-label="Valores históricos em diferentes estágios, não somáveis"></div>
     <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-moneyHistorical">+ Valor histórico</button></div>
   </div>
-  <p class="impact-source" data-impact="sourcesNote"></p>
+  <article class="impact-graph-card" style="margin-top:17px">
+  <div class="impact-card-eyebrow">CAPILARIDADE TERRITORIAL · ILUMINAÇÃO PÚBLICA</div>
+  <h3 data-impact="debTerritoryTitle"></h3>
+  <p class="impact-chart-subtitle" data-impact="debTerritorySubtitle"></p>
+  <div id="impact-deb-territory" class="impact-bars" role="group" aria-label="Portarias de debêntures de 2026 por macrorregião"></div>
+  <p class="impact-graph-note" data-impact="debTerritoryNote"></p>
+</article>
+<p class="impact-source" data-impact="sourcesNote"></p>
+</section>
+
+<section id="procidades-carteira" class="procins" aria-label="Distribuição territorial e econômica da carteira Pró-Cidades na CGMUR">
+ <div class="pc-head"><div class="pc-kicker">Análise qualitativa · modalidade 2</div><h2 data-pc="title"></h2><p data-pc="intro"></p></div>
+ <div class="pc-kpis">
+  <article class="pc-kpi pc-kpi-primary"><strong id="pc-cases">—</strong><span>Processos M2 na carteira da CGMUR · 2025–2026</span></article>
+  <article class="pc-kpi"><strong id="pc-2026" data-pc="protocol2026" data-pc-numeric="true"></strong><span>Processos com protocolo em 2026</span></article>
+  <article class="pc-kpi"><strong id="pc-states" data-pc="states" data-pc-numeric="true"></strong><span>Unidades da Federação alcançadas</span></article>
+  <article class="pc-kpi"><strong id="pc-macroregions">—</strong><span>Macrorregiões brasileiras representadas</span></article>
+  <article class="pc-kpi"><strong id="pc-favorable" data-pc="favorableVerified" data-pc-numeric="true"></strong><span>Pareceres favoráveis com teor confirmado</span></article>
+  <article class="pc-kpi"><strong id="pc-territories">—</strong><span>Territórios distintos (inclui uma iniciativa estadual)</span></article>
+ </div>
+ <div class="pc-finance">
+  <article class="pc-finance-card">
+   <h3>Dimensão de investimentos propostos</h3>
+   <p>Carteira M2 da CGMUR com 21 registros de processos em 2025–2026.</p>
+   <div class="pc-amount" id="pc-investment-total"></div>
+   <div class="pc-moneyline"><span>Financiamento solicitado</span><strong id="pc-financing" data-pc="financing" data-pc-numeric="true"></strong></div>
+   <div class="pc-moneyline"><span>Contrapartidas propostas (por diferença)</span><strong id="pc-counterpart"></strong></div>
+  </article>
+  <article class="pc-finance-card pc-special">
+   <div>
+    <h3>Propostas com protocolo em 2026</h3>
+    <p>17 processos no exercício; não equivale a aprovação, contratação ou pagamento.</p>
+    <div class="pc-amount" id="pc-investment-2026" data-pc="investment2026" data-pc-numeric="true"></div>
+    <div class="pc-moneyline"><span>Financiamento solicitado em 2026</span><strong id="pc-financing-2026" data-pc="financing2026" data-pc-numeric="true"></strong></div>
+   </div>
+  </article>
+ </div>
+ <p class="pc-note" data-pc="dedupNote"></p>
+ <div class="pc-grid">
+  <article class="pc-chart"><h3 data-pc="regionHeading"></h3><p class="pc-chart-desc" data-pc="regionSub"></p><div class="pc-region-bars" id="pc-region-counts" role="group" aria-label="Processos por macrorregião"></div></article>
+  <article class="pc-chart"><h3 data-pc="moneyHeading"></h3><p class="pc-chart-desc" data-pc="moneySub"></p><div class="pc-region-bars" id="pc-region-money" role="group" aria-label="Investimentos propostos por macrorregião"></div></article>
+ </div>
+ <article class="pc-quality">
+  <h3 data-pc="favorableHeading"></h3>
+  <div class="pc-quality-numbers">
+    <div class="pc-quality-metric"><strong id="pc-refs">—</strong><span>Processos com referência a parecer</span></div>
+    <div class="pc-quality-metric"><strong id="pc-confirmed">—</strong><span>Conclusões favoráveis conferidas</span></div>
+    <div class="pc-quality-metric"><strong id="pc-unverified">—</strong><span>Conclusões ainda não validadas individualmente</span></div>
+  </div>
+  <div class="pc-quality-track" aria-label="Proporção de conclusões favoráveis com teor confirmado"><div id="pc-quality-fill"></div></div>
+  <p data-pc="qualityNote"></p>
+ </article>
+ <div class="pc-scope"><strong id="pc-bi-count"></strong><div data-pc="biNote"></div></div>
+ <p class="pc-source" data-pc="sourceNote"></p>
 </section>
 
 <h2 class="dashboard-title" id="frentes" data-field="findingsTitle"></h2>
@@ -296,7 +351,7 @@ function impactRenderBars(selector,collection,type){
   fill.setAttribute("aria-hidden","true");
   track.append(fill);
   row.append(head,track);
-  row.setAttribute("aria-label",item.label+": "+(type==="money"?fmtImpactMoney(item.value):fmtImpactPoints(item.value))+(type==="money"?" valor de referência":" pontos previstos"));
+  row.setAttribute("aria-label",item.label+": "+(type==="money"?fmtImpactMoney(item.value):fmtImpactPoints(item.value))+(type==="money"?" valor de referência":type==="acts"?" atos ministeriais publicados em 2026":" pontos previstos"));
   if(editing)row.append(control("Remover grupo",()=>{snapshot();model.impact[collection].splice(i,1);render()},"danger"));
   target.append(row);
  });
@@ -323,13 +378,14 @@ function renderImpact(){
   }
  }
  $("#impact-points-total").textContent=fmtImpactPoints(impactSum(model.impact.points2026));
- $("#impact-money-total").textContent=impactCompactBRL(impactSum(model.impact.money2026));
+ $("#impact-money-total").textContent=impactCompactBRL((model.impact.money2026||[]).find(x=>x.id==="profinance")?.value||0);
  $("#impact-points-historical-total").textContent="≈ "+fmtImpactPoints(impactSum(model.impact.pointsHistorical));
  impactRenderBars("#impact-points-2026","points2026","points");
  impactRenderBars("#impact-money-2026","money2026","money");
  impactRenderBars("#impact-points-historical","pointsHistorical","points");
  impactRenderReferences();
  impactRenderBars("#impact-money-historical","moneyHistorical","money");
+ impactRenderBars("#impact-deb-territory","debTerritory","acts");
 }
 function snapshotImpact(){
  if(!model?.impact)return;
@@ -349,15 +405,90 @@ function validateImpact(m){
  if(!m.impact&&original?.impact)m.impact=copy(original.impact);
  const a=m.impact;
  if(!a||typeof a!=="object"||Array.isArray(a))throw Error("Dados de impacto ausentes.");
- for(const key of ["heading","intro","pointsTitle","pointsSubtitle","moneyTitle","moneySubtitle","historicalTitle","historicalSubtitle","financialOtherTitle","financialOtherSubtitle","historicalMoneyTitle","historicalMoneySubtitle","physicalNote","historicalNote","financialNote","sourcesNote"]){
+ for(const key of ["heading","intro","pointsTitle","pointsSubtitle","moneyTitle","moneySubtitle","historicalTitle","historicalSubtitle","financialOtherTitle","financialOtherSubtitle","historicalMoneyTitle","historicalMoneySubtitle","physicalNote","historicalNote","financialNote","sourcesNote","debTerritoryTitle","debTerritorySubtitle","debTerritoryNote"]){
   if(typeof a[key]!=="string"||a[key].length>5500)throw Error("Legenda de impacto inválida: "+key);
  }
- for(const key of ["points2026","money2026","pointsHistorical","financialOther","moneyHistorical"]){
+ for(const key of ["points2026","money2026","pointsHistorical","financialOther","moneyHistorical","debTerritory"]){
   const list=a[key];if(!Array.isArray(list)||list.length>12)throw Error("Conjunto de impacto inválido: "+key);
   for(const el of list){
    if(typeof el.id!=="string"||el.id.length>100||typeof el.label!=="string"||el.label.length>280||typeof el.value!=="number"||!Number.isFinite(el.value)||el.value<0||el.value>100000000000)throw Error("Valor de impacto inválido em "+key+".");
   }
  }
+ return a;
+}
+
+
+const pcKeys=["title","intro","regionHeading","regionSub","moneyHeading","moneySub","favorableHeading","qualityNote","dedupNote","biNote","sourceNote"];
+const pcNumberKeys=["protocol2026","states","favorableVerified","financing","investment2026","financing2026"];
+function pcNumericVal(el){return impactNumberRaw(el.innerText.trim())}
+function pcTotal(){return (model.procidadesAnalytics?.regions||[]).reduce((s,r)=>s+r.count,0)}
+function pcInvestment(){return (model.procidadesAnalytics?.regions||[]).reduce((s,r)=>s+r.investment,0)}
+function pcField(node,path,val,numeric=false){
+ node.dataset.pc=path;if(numeric)node.dataset.pcNumeric="true";
+ node.textContent=String(val??"");node.contentEditable=editing?"true":"false";
+ if(editing)node.setAttribute("aria-label","Editar "+path.split(".").at(-1));else node.removeAttribute("aria-label");
+ return node;
+}
+function renderPCRegions(sel,key){
+ const target=$(sel);target.replaceChildren();
+ const a=model.procidadesAnalytics.regions||[];
+ const big=Math.max(1,...a.map(r=>r[key]));
+ for(let i=0;i<a.length;i++){
+  const x=a[i],row=document.createElement("div");row.className="pc-region-row";
+  const head=document.createElement("div");head.className="pc-region-labels";
+  head.append(pcField(text("span",x.label),"regions."+i+".label",x.label),pcField(text("strong",editing?String(x[key]):key==="count"?String(x[key]):fmtImpactMoney(x[key])),"regions."+i+"."+key,editing?String(x[key]):key==="count"?String(x[key]):fmtImpactMoney(x[key]),true));
+  const uf=pcField(text("span",x.ufs,"pc-region-uf"),"regions."+i+".ufs",x.ufs);
+  const track=document.createElement("div");track.className="pc-region-track";
+  const fill=document.createElement("div");fill.className="pc-region-fill"+(key==="investment"?" money":"");
+  fill.style.width=Math.max(0,Math.min(100,x[key]/big*100))+"%";track.append(fill);
+  row.append(head,uf,track);target.append(row);
+ }
+}
+function renderProcidades(){
+ const a=model?.procidadesAnalytics;if(!a)return;
+ for(const el of document.querySelectorAll("#procidades-carteira [data-pc]")){
+  const key=el.dataset.pc;
+  if(pcKeys.includes(key))pcField(el,key,a[key]);
+  else if(pcNumberKeys.includes(key))pcField(el,key,editing?String(a[key]):["financing","investment2026","financing2026"].includes(key)?fmtImpactMoney(a[key]):String(a[key]),true);
+ }
+ $("#pc-cases").textContent=fmtImpactPoints(pcTotal());
+ $("#pc-macroregions").textContent=fmtImpactPoints(a.regions.length);
+ $("#pc-territories").textContent=fmtImpactPoints(Math.max(0,pcTotal()-1)); // Foz appears twice; one initiative estadual (RR)
+ $("#pc-investment-total").textContent=impactCompactBRL(pcInvestment());
+ $("#pc-counterpart").textContent=fmtImpactMoney(Math.max(0,pcInvestment()-a.financing));
+ $("#pc-refs").textContent=pcTotal();
+ $("#pc-confirmed").textContent=a.favorableVerified;
+ $("#pc-unverified").textContent=Math.max(0,pcTotal()-a.favorableVerified);
+ $("#pc-quality-fill").style.width=Math.max(0,Math.min(100,pcTotal()?100*a.favorableVerified/pcTotal():0))+"%";
+ $("#pc-bi-count").textContent=fmtImpactPoints(a.biAll)+" / "+fmtImpactPoints(a.biM2);
+ renderPCRegions("#pc-region-counts","count");
+ renderPCRegions("#pc-region-money","investment");
+}
+function snapshotProcidades(){
+ const a=model?.procidadesAnalytics;if(!a)return;
+ const selectors=["#procidades-carteira [data-pc]:not(.pc-region-row [data-pc])"];
+ for(const el of document.querySelectorAll("#procidades-carteira [data-pc]")){
+  const parts=el.dataset.pc.split(".");
+  if(parts.length===1){
+    if(pcKeys.includes(parts[0]))a[parts[0]]=el.innerText.trim();
+    else if(pcNumberKeys.includes(parts[0]))a[parts[0]]=pcNumericVal(el);
+  }else if(parts.length===3 && parts[0]==="regions"){
+    const i=Number(parts[1]),field=parts[2];
+    if(!Number.isInteger(i)||!a.regions[i])continue;
+    if(field==="label"||field==="ufs")a.regions[i][field]=el.innerText.trim();
+    if(field==="count"||field==="investment")a.regions[i][field]=pcNumericVal(el);
+  }
+ }
+}
+function validateProcidades(m){
+ const a=m.procidadesAnalytics;
+ if(!a||typeof a!=="object")throw Error("Análise territorial Pró-Cidades ausente.");
+ for(const k of pcKeys)if(typeof a[k]!=="string"||a[k].length>5500)throw Error("Legenda territorial inválida: "+k);
+ for(const k of [...pcNumberKeys,"possibleOverlapAmount","biAll","biM2"]){
+  const v=a[k];if(typeof v!=="number"||!Number.isFinite(v)||v<0||v>1e12)throw Error("Número territorial inválido: "+k);
+ }
+ if(!Array.isArray(a.regions)||a.regions.length!==5||a.regions.some(x=>typeof x.id!=="string"||typeof x.label!=="string"||typeof x.ufs!=="string"||x.label.length>150||x.ufs.length>120||typeof x.count!=="number"||!Number.isInteger(x.count)||x.count<0||x.count>1000||typeof x.investment!=="number"||!Number.isFinite(x.investment)||x.investment<0))throw Error("Macrorregiões inválidas.");
+ if(a.favorableVerified>a.regions.reduce((s,x)=>s+x.count,0))throw Error("Pareceres favoráveis excedem processos da carteira.");
  return a;
 }
 
@@ -408,6 +539,7 @@ function render(){
   n.append(ctl);sections.append(n)});
  drawAnalytics();
  renderImpact();
+ renderProcidades();
  document.body.classList.toggle("editing",editing);
  $("#btnedit").setAttribute("aria-pressed",String(editing));
 }
@@ -431,6 +563,7 @@ function snapshot(){
   });
  }
  snapshotImpact();
+ snapshotProcidades();
  model.updated=new Date().toISOString().slice(0,10);
 }
 function validate(m){
@@ -438,6 +571,7 @@ function validate(m){
  if(m.metrics.length>40||m.sections.length>80||JSON.stringify(m).length>100000)throw Error("Tamanho não suportado");
  for(const item of m.sections)if(typeof item.title!=="string"||typeof item.body!=="string")throw Error("Uma seção não contém texto válido");
  validateImpact(m);
+ validateProcidades(m);
  for(const chart of ["monthly","documentTypes"])if(!Array.isArray(m[chart])||m[chart].length>24||m[chart].some(x=>typeof x.label!=="string"||!Number.isInteger(x.value)||x.value<0))throw Error("Informe valores numéricos não negativos nos gráficos.");
 
  return m;
@@ -532,7 +666,30 @@ async function generateEditablePdf(){
   addInput(pdf.getForm(),p3,"tipo_"+(i+1)+"_quantidade",String(m.value),margin+360,yy,145,31,12);
  }
  const impact=model.impact;
- const pIp=pageOf("Pontos de iluminacao publica - metas e historico");
+ const pc=model.procidadesAnalytics;
+ const pDeb=pageOf("Debentures - enquadramentos territoriais 2026");
+ pDeb.drawText("Sete atos publicados em 2026 nas cinco UFs identificadas",{x:margin,y:720,size:12,font:bold});
+ pDeb.drawText("Contagem por macrorregiao (sem inferir emissao):",{x:margin,y:690,size:11,font});
+ model.impact.debTerritory.forEach((r,i)=>{
+  addInput(pdf.getForm(),pDeb,"deb_regiao_"+(i+1),r.label,margin,622-i*62,335,38,12,true);
+  addInput(pdf.getForm(),pDeb,"deb_portarias_"+(i+1),String(r.value),margin+349,622-i*62,158,38,12);
+ });
+ addInput(pdf.getForm(),pDeb,"deb_ressalvas",model.impact.debTerritoryNote,margin,117,W-2*margin,252,11,true);
+ const pPC=pageOf("Pro-Cidades - carteira CGMUR e macrorregioes");
+ pPC.drawText("Processos M2 na carteira: "+pcTotal()+"   |   2026: "+pc.protocol2026,{x:margin,y:718,size:12,font:bold});
+ pPC.drawText("Investimento proposto total: "+impactCompactBRL(pcInvestment()),{x:margin,y:687,size:11,font:bold});
+ pPC.drawText("Financiamento solicitado: "+fmtImpactMoney(pc.financing),{x:margin,y:659,size:10,font});
+ pPC.drawText("UFs: "+pc.states+"   |   Macrorregioes: "+pc.regions.length+"   |   Favoraveis conferidos: "+pc.favorableVerified,{x:margin,y:635,size:10,font});
+ pPC.drawText("Propostas por macrorregiao - quantidade e investimento",{x:margin,y:597,size:11,font:bold});
+ pc.regions.forEach((r,i)=>{
+  const y=534-i*66;
+  addInput(pdf.getForm(),pPC,"pc_regiao_"+(i+1),r.label+" ("+r.ufs+")",margin,y,242,38,9,true);
+  addInput(pdf.getForm(),pPC,"pc_processos_"+(i+1),String(r.count),margin+251,y,70,38,11);
+  addInput(pdf.getForm(),pPC,"pc_investimento_"+(i+1),String(r.investment),margin+332,y,175,38,10);
+ });
+ pPC.drawText("Limites de atribuição e duplicidade potencial de Foz:",{x:margin,y:183,size:10,font:bold});
+ addInput(pdf.getForm(),pPC,"pc_limites",pc.dedupNote,margin,78,W-2*margin,93,10,true);
+  const pIp=pageOf("Pontos de iluminacao publica - metas e historico");
  pIp.drawText("Metas fisicas 2026 (nao sao obras concluidas)",{x:margin,y:721,size:11,font:bold});
  pIp.drawText("Total previsto: "+fmtImpactPoints(impactSum(impact.points2026)),{x:margin,y:695,size:12,font:bold,color:rgb(.07,.43,.5)});
  function addPdfRows(page,arr,prefix,top){
