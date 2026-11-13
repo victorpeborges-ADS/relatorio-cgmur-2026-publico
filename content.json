@@ -269,17 +269,6 @@
       }
     ]
   },
-  "dashboardTitle": "Produção e resultados — recorte de 2026",
-  "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade.",
-  "monthlyTitle": "Documentos gerados por mês",
-  "monthlyCaption": "Dados consolidados do SEI de janeiro a 13/11/2026. Novembro é parcial.",
-  "mixTitle": "Composição da produção documental",
-  "mixCaption": "Classificação de documentos internos gerados no SEI, por tipo; não representa complexidade equivalente.",
-  "statusTitle": "Fluxo processual no recorte",
-  "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
-  "continuityTitle": "Continuidade de processos",
-  "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
-  "findingsTitle": "Frentes de trabalho e resultados documentados",
   "procidadesAnalytics": {
     "title": "Pró-Cidades · dimensão do trabalho técnico da CGMUR",
     "intro": "A carteira da Modalidade 2 em 23/09/2026 mostra o volume de processos tecnicamente acompanhados, sua distribuição territorial e a relevância financeira das propostas. Os marcos de avaliação, enquadramento e contratação são tratados separadamente.",
@@ -307,7 +296,7 @@
         "label": "Centro-Oeste",
         "ufs": "GO · MT · MS",
         "count": 8,
-        "investment": 237390000.0
+        "investment": 237390000
       },
       {
         "id": "norte",
@@ -335,8 +324,19 @@
         "label": "Nordeste",
         "ufs": "AL",
         "count": 1,
-        "investment": 43000000.0
+        "investment": 43000000
       }
     ]
-  }
+  },
+  "dashboardTitle": "Produção e resultados — recorte de 2026",
+  "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade.",
+  "monthlyTitle": "Documentos gerados por mês",
+  "monthlyCaption": "Dados consolidados do SEI de janeiro a 13/11/2026. Novembro é parcial.",
+  "mixTitle": "Composição da produção documental",
+  "mixCaption": "Classificação de documentos internos gerados no SEI, por tipo; não representa complexidade equivalente.",
+  "statusTitle": "Fluxo processual no recorte",
+  "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
+  "continuityTitle": "Continuidade de processos",
+  "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
+  "findingsTitle": "Frentes de trabalho e resultados documentados"
 }
