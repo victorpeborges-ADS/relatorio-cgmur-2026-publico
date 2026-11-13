@@ -156,17 +156,6 @@
   ],
   "caveats": "Dados processuais agregados referem-se à CGMUR, conforme consultas ao SEI até 13/11/2026. A cobertura estatística da COAMU não é integral. A seleção de municípios não significa estratégias finalizadas; pareceres técnicos não significam contratação; carteiras acumuladas não equivalem a resultados exclusivos de 2026.",
   "footer": "Material informativo em desenvolvimento. A disponibilização deste endereço não constitui homologação formal, aprovação de conteúdo institucional nem publicação oficial do Ministério das Cidades.",
-  "dashboardTitle": "Produção e resultados — recorte de 2026",
-  "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade.",
-  "monthlyTitle": "Documentos gerados por mês",
-  "monthlyCaption": "Dados consolidados do SEI de janeiro a 13/11/2026. Novembro é parcial.",
-  "mixTitle": "Composição da produção documental",
-  "mixCaption": "Classificação de documentos internos gerados no SEI, por tipo; não representa complexidade equivalente.",
-  "statusTitle": "Fluxo processual no recorte",
-  "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
-  "continuityTitle": "Continuidade de processos",
-  "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
-  "findingsTitle": "Frentes de trabalho e resultados documentados",
   "impact": {
     "heading": "Alcance das iniciativas acompanhadas",
     "intro": "Além do trabalho documental, a equipe contribuiu para instruir projetos de investimentos urbanos com metas físicas e expressão financeira relevantes. Os indicadores retratam o porte dos projetos examinados e acompanhados, não obras ou pagamentos executados diretamente pela coordenação.",
@@ -249,5 +238,16 @@
     "historicalNote": "Aproximadamente 1.293.910 pontos quantificados na carteira histórica: 1.194.461 nos projetos enquadrados de debêntures e 99.449 em três propostas do Pró-Cidades. Não é inventário exaustivo nem total de pontos efetivamente modernizados; os valores de 2026 estão incluídos neste acumulado.",
     "financialNote": "R$ 382.640.410,68 correspondem a financiamento pretendido nas propostas do Pró-Cidades, com processos também iniciados em 2025. R$ 387.899.312,68 representam o valor declarado de sete projetos de debêntures com portarias publicadas em 2026. O somatório bruto de R$ 770.539.723,36 mede porte das carteiras em estágios distintos e não volume executado ou captado. As carteiras usadas para estimar pontos e as usadas para valores financeiros não são necessariamente formadas pelos mesmos projetos; portanto, os dois indicadores não devem ser utilizados para calcular custo médio por ponto.",
     "sourcesNote": "Referências: painel de debêntures de 22/10/2026; briefing e painel do Pró-Cidades; propostas técnicas nº 165 (Aparecida de Goiânia), nº 172 (Rio Negro), nº 180 (Foz do Iguaçu) e nº 167 (Nova Lima); balanço da carteira de debêntures de setembro de 2026; TED UFRGS nº 978205/2025. Recorte do relatório até 13/11/2026. Dados agregados para comunicação pública, sujeitos à homologação."
-  }
+  },
+  "dashboardTitle": "Produção e resultados — recorte de 2026",
+  "dashboardSubtitle": "Dados do SEI CGMUR e evidências documentais, com contagens por unidade e ressalvas sobre os estágios de cada atividade.",
+  "monthlyTitle": "Documentos gerados por mês",
+  "monthlyCaption": "Dados consolidados do SEI de janeiro a 13/11/2026. Novembro é parcial.",
+  "mixTitle": "Composição da produção documental",
+  "mixCaption": "Classificação de documentos internos gerados no SEI, por tipo; não representa complexidade equivalente.",
+  "statusTitle": "Fluxo processual no recorte",
+  "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
+  "continuityTitle": "Continuidade de processos",
+  "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
+  "findingsTitle": "Frentes de trabalho e resultados documentados"
 }
