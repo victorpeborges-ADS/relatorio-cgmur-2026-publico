@@ -166,5 +166,88 @@
   "statusCaption": "Andamento fechado na unidade não significa que a demanda foi definitivamente concluída.",
   "continuityTitle": "Continuidade de processos",
   "continuityCaption": "Ano registrado no número de protocolo; não equivale à data de autuação nem à duração total do processo.",
-  "findingsTitle": "Frentes de trabalho e resultados documentados"
+  "findingsTitle": "Frentes de trabalho e resultados documentados",
+  "impact": {
+    "heading": "Alcance das iniciativas acompanhadas",
+    "intro": "Além do trabalho documental, a equipe contribuiu para instruir projetos de investimentos urbanos com metas físicas e expressão financeira relevantes. Os indicadores retratam o porte dos projetos examinados e acompanhados, não obras ou pagamentos executados diretamente pela coordenação.",
+    "pointsTitle": "Iluminação pública · modernização prevista em 2026",
+    "pointsSubtitle": "Projetos com análise ou acompanhamento técnico documentado em 2026. Somente quantidades explicitadas nas propostas e no painel.",
+    "moneyTitle": "Dimensão financeira · recorte de 2026",
+    "moneySubtitle": "Somatório analítico de propostas e projetos com estágios financeiros distintos; não representa captação, contratação ou execução.",
+    "historicalTitle": "Carteira histórica identificada",
+    "historicalSubtitle": "Série acumulada de projetos acompanhados em anos distintos. Os quantitativos de 2026 já integram o histórico e não devem ser somados novamente.",
+    "financialOtherTitle": "Referências financeiras, sem dupla contagem",
+    "financialOtherSubtitle": "Indicadores com naturezas diferentes do porte bruto de projetos. Não devem ser adicionados ao montante de R$ 770,54 milhões.",
+    "historicalMoneyTitle": "Valores registrados na carteira de debêntures até setembro de 2026",
+    "historicalMoneySubtitle": "Estoque histórico em três estágios distintos. Não é fluxo financeiro novo de 2026 e as barras não são somáveis.",
+    "points2026": [
+      {
+        "id": "deb2026",
+        "label": "Debêntures · 6 projetos quantificados",
+        "value": 213407
+      },
+      {
+        "id": "pro2026",
+        "label": "Pró-Cidades · Aparecida de Goiânia e Foz do Iguaçu",
+        "value": 93886
+      }
+    ],
+    "money2026": [
+      {
+        "id": "profinance",
+        "label": "Pró-Cidades · financiamento pretendido",
+        "value": 382640410.68
+      },
+      {
+        "id": "debprojects",
+        "label": "Debêntures · valor declarado dos projetos",
+        "value": 387899312.68
+      }
+    ],
+    "pointsHistorical": [
+      {
+        "id": "debHistory",
+        "label": "Debêntures · 32 projetos quantificados",
+        "value": 1194461
+      },
+      {
+        "id": "proHistory",
+        "label": "Pró-Cidades · 3 propostas quantificadas",
+        "value": 99449
+      }
+    ],
+    "financialOther": [
+      {
+        "id": "eligible",
+        "label": "Debêntures · valor máximo enquadrado (subconjunto de 2026)",
+        "value": 319338009.15
+      },
+      {
+        "id": "ted",
+        "label": "TED UFRGS · orçamento global pactuado (2025–2026)",
+        "value": 2461457
+      }
+    ],
+    "moneyHistorical": [
+      {
+        "id": "projects",
+        "label": "Valor acumulado dos projetos",
+        "value": 2240000000
+      },
+      {
+        "id": "eligibleHistory",
+        "label": "Valor enquadrado acumulado",
+        "value": 1170000000
+      },
+      {
+        "id": "emittedHistory",
+        "label": "Emissões registradas em diferentes anos",
+        "value": 497300000
+      }
+    ],
+    "physicalNote": "Os 307.293 pontos de 2026 correspondem a 213.407 em seis projetos de debêntures com quantitativos disponíveis, 59.803 em Aparecida de Goiânia e 34.083 pontos convencionais em Foz do Iguaçu. O sétimo projeto de debêntures de 2026 não apresentou número comparável. Metas de modernização e instalação não comprovam entregas físicas concluídas.",
+    "historicalNote": "Aproximadamente 1.293.910 pontos quantificados na carteira histórica: 1.194.461 nos projetos enquadrados de debêntures e 99.449 em três propostas do Pró-Cidades. Não é inventário exaustivo nem total de pontos efetivamente modernizados; os valores de 2026 estão incluídos neste acumulado.",
+    "financialNote": "R$ 382.640.410,68 correspondem a financiamento pretendido nas propostas do Pró-Cidades, com processos também iniciados em 2025. R$ 387.899.312,68 representam o valor declarado de sete projetos de debêntures com portarias publicadas em 2026. O somatório bruto de R$ 770.539.723,36 mede porte das carteiras em estágios distintos e não volume executado ou captado. As carteiras usadas para estimar pontos e as usadas para valores financeiros não são necessariamente formadas pelos mesmos projetos; portanto, os dois indicadores não devem ser utilizados para calcular custo médio por ponto.",
+    "sourcesNote": "Referências: painel de debêntures de 22/10/2026; briefing e painel do Pró-Cidades; propostas técnicas nº 165 (Aparecida de Goiânia), nº 172 (Rio Negro), nº 180 (Foz do Iguaçu) e nº 167 (Nova Lima); balanço da carteira de debêntures de setembro de 2026; TED UFRGS nº 978205/2025. Recorte do relatório até 13/11/2026. Dados agregados para comunicação pública, sujeitos à homologação."
+  }
 }

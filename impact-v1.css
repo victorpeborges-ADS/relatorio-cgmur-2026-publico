@@ -1,0 +1,130 @@
+/* CGMUR — Indicadores de impacto físico e econômico, editorial 2026. */
+.impact-section{margin:45px 0 43px;scroll-margin-top:100px}
+.impact-introduction{padding:3px 0 19px;max-width:1020px}
+.impact-tag{display:inline-flex;align-items:center;gap:8px;color:var(--aqua);text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}
+.impact-tag-dot{display:inline-block;height:8px;width:8px;border-radius:100%;background:#1397a2;box-shadow:0 0 0 4px rgba(19,151,162,.11)}
+.impact-introduction h2{font-size:clamp(25px,3.3vw,35px);line-height:1.24;letter-spacing:-.05em;font-weight:800;color:var(--ink);margin:10px 0 11px}
+.impact-introduction p{max-width:89ch;color:var(--sub);font-size:14px;line-height:1.79;margin:0}
+.impact-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:8px 0 17px}
+.impact-kpi{border-radius:18px;min-height:235px;padding:29px 32px;position:relative;display:flex;flex-direction:column;isolation:isolate;overflow:hidden;color:#fff}
+.impact-kpi::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse 55% 115% at 90% 25%,rgba(255,255,255,.18),transparent 72%)}
+.impact-kpi::after{content:"";position:absolute;z-index:-1;right:-38px;top:-47px;width:225px;height:225px;border:1px solid rgba(255,255,255,.19);border-radius:50%;box-shadow:0 0 0 35px rgba(255,255,255,.045),0 0 0 75px rgba(255,255,255,.034);pointer-events:none}
+.impact-kpi-teal{background:linear-gradient(128deg,#09696f 0%,#0c818b 58%,#17a2a1 100%)}
+.impact-kpi-blue{background:linear-gradient(128deg,#123653,#155b81 65%,#217a9b)}
+.impact-kpi-label{font-size:10px;font-weight:800;letter-spacing:.14em;color:#d7ffff;max-width:90%}
+.impact-kpi strong{font-size:clamp(38px,4.35vw,59px);font-weight:850;line-height:1.10;letter-spacing:-.063em;margin:19px 0 2px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.impact-unit{font-size:14px;font-weight:670;color:#eafcfc;margin-bottom:15px}
+.impact-kpi-footnote{margin-top:auto;font-size:11px;color:#daecf3;max-width:85%;line-height:1.6}
+.impact-charts-grid,.impact-history-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-bottom:17px}
+.impact-graph-card{border-radius:16px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);padding:25px 27px;min-width:0;break-inside:avoid}
+.impact-card-eyebrow{font-size:10px;color:var(--aqua);letter-spacing:.13em;font-weight:800;margin-bottom:8px}
+.impact-graph-card h3{font-size:17px;line-height:1.35;color:var(--ink);letter-spacing:-.02em;font-weight:790;margin:0 0 7px}
+.impact-chart-subtitle{font-size:12px;color:var(--sub);line-height:1.65;margin:0 0 20px;min-height:35px}
+.impact-bars{display:grid;gap:20px;min-height:80px;margin:9px 0 3px}
+.impact-bar-row{min-width:0}
+.impact-bar-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:11px}
+.impact-bar-label{font-size:12px;color:var(--sub);line-height:1.5;max-width:67%;min-width:0}
+.impact-bar-value{font-size:15px;font-weight:800;letter-spacing:-.024em;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.impact-bar-track{height:14px;background:var(--surface-raised);border-radius:7px;overflow:hidden}
+.impact-bar-fill{height:100%;border-radius:7px;transition:width .25s ease;min-width:0}
+.impact-bar-fill.is-points{background:linear-gradient(90deg,#0c7e83,#2eb8ac)}
+.impact-bar-fill.is-money{background:linear-gradient(90deg,#155881,#3c99b8)}
+.impact-explain{padding:18px 23px;border-left:3px solid #178993;background:var(--surface-raised);border-radius:0 12px 12px 0;margin:0 0 31px}
+.impact-explain p{color:var(--sub);font-size:12px;line-height:1.7;margin:2px 0 8px}
+.impact-explain p:last-child{margin-bottom:0}
+.impact-history-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:25px 0 17px}
+.impact-mini-rule{width:37px;height:3px;border-radius:3px;display:block;background:#138c91;margin-bottom:12px}
+.impact-history-heading h3{font-size:23px;letter-spacing:-.035em;color:var(--ink);font-weight:800;line-height:1.3;margin:0 0 6px}
+.impact-history-heading p{font-size:12px;color:var(--sub);line-height:1.7;margin:0;max-width:85ch}
+.impact-history-badge{border:1px solid var(--line);border-radius:30px;background:var(--surface);color:var(--sub);font-size:11px;font-weight:700;padding:8px 13px;white-space:nowrap;flex-shrink:0}
+.impact-historic-primary{display:flex;flex-direction:column;gap:4px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:18px}
+.impact-historic-primary span{font-size:10px;letter-spacing:.11em;font-weight:800;color:var(--aqua)}
+.impact-historic-primary strong{font-size:34px;font-weight:850;line-height:1.23;letter-spacing:-.06em;color:var(--blue);font-variant-numeric:tabular-nums}
+.impact-graph-note{font-size:11px;line-height:1.7;margin:18px 0 0;border-top:1px solid var(--line);padding-top:15px;color:var(--sub)}
+.impact-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:17px 0 3px}
+.impact-reference{display:flex;flex-direction:column;gap:13px;padding:17px 15px;background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;min-width:0;justify-content:space-between}
+.impact-reference-label{font-size:11px;color:var(--sub);line-height:1.55}
+.impact-reference-value{color:var(--blue);font-weight:830;font-size:clamp(18px,2vw,26px);letter-spacing:-.045em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.impact-money-history{margin-top:17px}
+.impact-money-history .impact-bars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin-top:22px;min-height:0}
+.impact-money-history .impact-bar-row{display:flex;flex-direction:column;gap:10px}
+.impact-money-history .impact-bar-head{flex-direction:column;align-items:flex-start;gap:3px;min-height:70px;margin:0}
+.impact-money-history .impact-bar-label{max-width:none;font-size:12px}
+.impact-money-history .impact-bar-value{font-size:17px;color:var(--blue);white-space:normal}
+.impact-money-history .impact-bar-track{width:100%}
+.impact-source{margin:17px 2px 0;font-size:11px;line-height:1.74;color:var(--sub);border-top:1px solid var(--line);padding:13px 2px 0}
+.impact-edit-tools{display:none;gap:8px;margin-top:13px}
+.editing .impact-edit-tools.edit-only{display:flex}
+.editing .impact-section [contenteditable=true]{outline:2px dashed #1999a2;outline-offset:4px;background:rgba(34,175,182,.08);border-radius:3px;cursor:text}
+.editing .impact-kpi [contenteditable=true]{color:#fff}
+.editing .impact-bar-value,.editing .impact-reference-value{min-width:65px;white-space:normal;overflow-wrap:anywhere}
+.editing .impact-bar-row button,.editing .impact-reference button{align-self:flex-start;margin-top:8px;font-size:11px}
+.impact-empty{color:var(--sub);font-size:12px;padding:15px;background:var(--surface-soft);border-radius:8px}
+html[data-theme=dark] .impact-kpi-teal{background:linear-gradient(125deg,#0b5a65,#107b80)}
+html[data-theme=dark] .impact-kpi-blue{background:linear-gradient(125deg,#12314e,#1a597a)}
+html[data-theme=dark] .impact-kpi-label{color:#d1f8f8}
+html[data-theme=dark] .impact-bar-value,html[data-theme=dark] .impact-graph-card h3{color:var(--ink)}
+html[data-theme=dark] .impact-historic-primary strong,html[data-theme=dark] .impact-reference-value{color:var(--blue)}
+html[data-theme=dark] .impact-reference{background:var(--surface-raised)}
+@media(max-width:1080px){
+ .impact-reference-grid{grid-template-columns:1fr}
+ .impact-kpi strong{font-size:clamp(35px,4.2vw,49px)}
+ .impact-kpi{padding:26px 26px}
+ .impact-graph-card{padding:22px}
+ .impact-bar-head{flex-direction:column;gap:3px}
+ .impact-bar-label{max-width:none}
+ .impact-bar-value{font-size:16px}
+}
+@media(max-width:800px){
+ .impact-section{margin-top:34px}
+ .impact-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .impact-kpi{padding:22px 20px;min-height:215px}
+ .impact-kpi strong{font-size:clamp(28px,4.5vw,42px)}
+ .impact-charts-grid,.impact-history-grid{grid-template-columns:1fr}
+ .impact-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .impact-money-history .impact-bars{gap:16px}
+}
+@media(max-width:610px){
+ .impact-section{margin:30px 0}
+ .impact-introduction h2{font-size:27px}
+ .impact-introduction p{font-size:13px}
+ .impact-kpis{grid-template-columns:1fr}
+ .impact-kpi{min-height:197px;padding:24px 24px}
+ .impact-kpi strong{font-size:clamp(37px,9.7vw,52px)}
+ .impact-kpi-footnote{max-width:92%}
+ .impact-chart-subtitle{min-height:0}
+ .impact-history-heading{align-items:flex-start;flex-direction:column;gap:10px}
+ .impact-history-heading h3{font-size:22px}
+ .impact-graph-card{padding:21px 18px}
+ .impact-bar-head{align-items:flex-start;flex-direction:column;gap:5px}
+ .impact-bar-value{white-space:normal}
+ .impact-reference-grid{grid-template-columns:1fr}
+ .impact-money-history .impact-bars{display:grid;grid-template-columns:1fr;gap:20px}
+ .impact-money-history .impact-bar-head{min-height:0}
+ .impact-explain{padding:16px}
+}
+@media print{
+ .impact-section{break-before:page;margin:20px 0 15px}
+ .impact-introduction{padding-bottom:9px}
+ .impact-introduction h2{font-size:23px}
+ .impact-introduction p{font-size:11px}
+ .impact-kpis,.impact-charts-grid,.impact-history-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:9px}
+ .impact-kpi{min-height:125px;padding:15px;color:#fff!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .impact-kpi strong{font-size:29px}
+ .impact-kpi-label{font-size:9px}
+ .impact-unit{font-size:10px}
+ .impact-kpi-footnote{font-size:9px}
+ .impact-graph-card{box-shadow:none;padding:15px;break-inside:avoid}
+ .impact-graph-card h3{font-size:13px}
+ .impact-bar-track{height:9px}
+ .impact-bar-fill{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .impact-chart-subtitle,.impact-explain p,.impact-history-heading p,.impact-source{font-size:10px}
+ .impact-reference-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .impact-reference{padding:10px}
+ .impact-reference-value{font-size:18px}
+ .impact-money-history .impact-bars{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .impact-money-history .impact-bar-label{font-size:10px}
+ .impact-money-history .impact-bar-value{font-size:13px}
+ .impact-edit-tools{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){.impact-bar-fill{transition:none}}

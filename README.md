@@ -40,3 +40,39 @@ O relatório público é informativo, não substitui a homologação institucion
 - Modo claro/escuro persistente por navegador, com estilos próprios para impressão em PDF;
 - Botões de edição ocultos no modo de leitura; foco visível e opção para reduzir movimento;
 - Mantidos o conteúdo, o histórico, a publicação via GitHub autenticado e o PDF editável.
+
+## Indicadores de impacto físico e financeiro (recorte de 13/11/2026)
+O painel público apresenta dois gráficos para o recorte documentado de 2026 e
+indicadores históricos separados, sem dados pessoais, identificadores internos ou
+documentos restritos.
+
+- **307.293 pontos previstos em 2026**: debêntures (213.407, seis projetos
+  quantificados com portarias de 2026) e Pró-Cidades (93.886, propostas de
+  Aparecida de Goiânia e Foz do Iguaçu encaminhadas à análise da CGMUR).
+- **≈ 1.293.910 pontos na carteira histórica**: debêntures (≈ 1.194.461) e
+  Pró-Cidades (99.449, três propostas com quantitativos identificados). Inclui
+  pontos do recorte de 2026; não somar ao indicador anual.
+- **R$ 770.539.723,36 de porte bruto de carteiras**: R$ 382.640.410,68
+  em financiamento pretendido no Pró-Cidades e R$ 387.899.312,68 em valores
+  declarados de sete projetos de debêntures com portarias de 2026.
+- **R$ 319.338.009,15** em teto de debêntures enquadrado nos mesmos sete projetos
+  e **R$ 2.461.457,00** no TED UFRGS: referências de outra natureza, não somáveis
+  ao porte bruto.
+- **Histórico de debêntures até setembro de 2026**: valor de projetos de cerca
+  de R$ 2,24 bi, teto enquadrado de cerca de R$ 1,17 bi e emissões registradas
+  de cerca de R$ 497,3 mi; categorias distintas e acumuladas, não somáveis.
+
+O editor visual permite mudar os textos e números dos novos gráficos, adicionar e
+excluir grupos; os totais de cada conjunto são derivados automaticamente.
+O GitHub Actions valida e persiste os novos campos em `content.json`.
+O PDF editável passa a conter campos relativos a impacto físico e financeiro.
+
+**Critério de comunicação**: trata-se de metas físicas declaradas e de dimensão
+financeira de propostas e projetos; não afirma modernização física concluída,
+captação, execução ou desembolso atribuíveis à CGMUR. Os subconjuntos físicos e
+monetários não necessariamente correspondem aos mesmos projetos, de modo que
+não se deve inferir custo médio por ponto.
+
+Fontes da curadoria (não incorporadas ao repositório público): painel de
+debêntures de 22/10/2026, balanço ministerial de 22/09/2026, painel e briefing
+Pró-Cidades, propostas técnicas nº 165/172/180/167 e TED 978205/2025.

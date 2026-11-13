@@ -67,6 +67,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 @media print{.dash-two{grid-template-columns:1fr 1fr;gap:11px}.dash-panel{break-inside:avoid;box-shadow:none;padding:14px}.chart-bars{min-height:155px}.bar-col{height:140px}.metric{break-inside:avoid}.bar-rect{max-width:29px}.tiny-restricted-note{border-color:#ccc}}
 </style>
 <link rel="stylesheet" href="design-v3.css">
+<link rel="stylesheet" href="impact-v1.css">
 <meta name="theme-color" content="#102a45">
 <meta name="description" content="Panorama público e editável das atividades da CGMUR em 2026: indicadores, produção documental, Pró-Cidades, transformação digital e SINIDU.">
 </head>
@@ -118,6 +119,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
   <a href="#visao-geral">Visão geral</a>
   <a href="#indicadores">Indicadores</a>
   <a href="#analises">Análises</a>
+  <a href="#impacto">Impacto dos projetos</a>
   <a href="#frentes">Frentes de trabalho</a>
   <a href="#metodologia">Metodologia</a>
  </div>
@@ -163,6 +165,79 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
   </section>
 </div>
 <div class="tiny-restricted-note">A versão pública mantém os indicadores agregados e as evidências qualitativas. A relação individual de processos e os documentos internos continuam disponíveis apenas na versão institucional autorizada.</div>
+<!-- Indicadores de impacto físico e porte financeiro: valores agregados e não realizados -->
+<section id="impacto" class="impact-section" aria-labelledby="impact-heading">
+  <div class="impact-introduction">
+    <div class="impact-tag"><span class="impact-tag-dot" aria-hidden="true"></span> Porte físico e financeiro</div>
+    <h2 id="impact-heading" data-impact="heading">Alcance das iniciativas acompanhadas</h2>
+    <p data-impact="intro"></p>
+  </div>
+  <div class="impact-kpis" aria-label="Indicadores de referência do recorte de 2026">
+    <article class="impact-kpi impact-kpi-teal">
+      <div class="impact-kpi-label">ILUMINAÇÃO PÚBLICA · RECORTE 2026</div>
+      <strong id="impact-points-total">—</strong>
+      <span class="impact-unit">pontos com modernização prevista</span>
+      <span class="impact-kpi-footnote">Projetos com quantidade identificada · não são obras concluídas</span>
+    </article>
+    <article class="impact-kpi impact-kpi-blue">
+      <div class="impact-kpi-label">DIMENSÃO FINANCEIRA · CARTEIRAS 2026</div>
+      <strong id="impact-money-total">—</strong>
+      <span class="impact-unit">porte bruto combinado dos projetos</span>
+      <span class="impact-kpi-footnote">Propostas e projetos em fases distintas · não é desembolso</span>
+    </article>
+  </div>
+  <div class="impact-charts-grid">
+    <article class="impact-graph-card">
+      <div class="impact-card-eyebrow">ALCANCE FÍSICO</div>
+      <h3 data-impact="pointsTitle"></h3>
+      <p class="impact-chart-subtitle" data-impact="pointsSubtitle"></p>
+      <div class="impact-bars" id="impact-points-2026" role="group" aria-label="Pontos de iluminação pública previstos em projetos de 2026"></div>
+      <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-points2026">+ Grupo físico</button></div>
+    </article>
+    <article class="impact-graph-card">
+      <div class="impact-card-eyebrow">PORTE ECONÔMICO</div>
+      <h3 data-impact="moneyTitle"></h3>
+      <p class="impact-chart-subtitle" data-impact="moneySubtitle"></p>
+      <div class="impact-bars" id="impact-money-2026" role="group" aria-label="Composição do porte financeiro de propostas e projetos em 2026"></div>
+      <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-money2026">+ Categoria financeira</button></div>
+    </article>
+  </div>
+  <div class="impact-explain">
+    <p data-impact="physicalNote"></p>
+    <p data-impact="financialNote"></p>
+  </div>
+  <div class="impact-history-heading">
+    <div><span class="impact-mini-rule" aria-hidden="true"></span><h3 data-impact="historicalTitle"></h3><p data-impact="historicalSubtitle"></p></div>
+    <span class="impact-history-badge">Inclui o recorte de 2026</span>
+  </div>
+  <div class="impact-history-grid">
+    <article class="impact-graph-card">
+      <div class="impact-historic-primary">
+        <span>PONTOS NO HISTÓRICO IDENTIFICADO</span>
+        <strong id="impact-points-historical-total">—</strong>
+      </div>
+      <div class="impact-bars" id="impact-points-historical" role="group" aria-label="Pontos de iluminação pública na carteira histórica"></div>
+      <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-pointsHistorical">+ Grupo histórico</button></div>
+      <p class="impact-graph-note" data-impact="historicalNote"></p>
+    </article>
+    <article class="impact-graph-card">
+      <div class="impact-card-eyebrow">VALORES DE REFERÊNCIA</div>
+      <h3 data-impact="financialOtherTitle"></h3>
+      <p class="impact-chart-subtitle" data-impact="financialOtherSubtitle"></p>
+      <div class="impact-reference-grid" id="impact-money-other" aria-label="Valores de referência não somáveis ao total de projetos"></div>
+      <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-financialOther">+ Referência</button></div>
+    </article>
+  </div>
+  <div class="impact-graph-card impact-money-history">
+    <div class="impact-card-eyebrow">ESTOQUE HISTÓRICO · NÃO SOMÁVEL</div>
+    <h3 data-impact="historicalMoneyTitle"></h3>
+    <p class="impact-chart-subtitle" data-impact="historicalMoneySubtitle"></p>
+    <div class="impact-bars impact-bars-wide" id="impact-money-historical" role="group" aria-label="Valores históricos em diferentes estágios, não somáveis"></div>
+    <div class="impact-edit-tools edit-only"><button type="button" id="impact-add-moneyHistorical">+ Valor histórico</button></div>
+  </div>
+  <p class="impact-source" data-impact="sourcesNote"></p>
+</section>
+
 <h2 class="dashboard-title" id="frentes" data-field="findingsTitle"></h2>
 <div class="sectiongrid" id="sections"></div>
 <section class="footbox" id="metodologia"><h2>Metodologia e limites</h2><p data-field="caveats"></p></section>
@@ -180,6 +255,111 @@ function text(tag,value,cls){const n=document.createElement(tag);if(cls)n.classN
 function field(n,key,val){n.dataset.key=key;n.textContent=val??"";n.contentEditable=editing?"true":"false";if(editing)n.setAttribute("aria-label","Editar "+key);else n.removeAttribute("aria-label");return n}
 function control(label,action,cls=""){const b=text("button",label,"edit-only "+cls);b.type="button";b.addEventListener("click",action);return b}
 function copy(o){return JSON.parse(JSON.stringify(o))}
+
+
+const fmtImpactPoints=n=>new Intl.NumberFormat("pt-BR",{maximumFractionDigits:0}).format(n);
+const fmtImpactMoney=n=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+function impactCompactBRL(n){
+ if(n>=1000000000)return "R$ "+(n/1000000000).toLocaleString("pt-BR",{maximumFractionDigits:2,minimumFractionDigits:2})+" bi";
+ if(n>=1000000)return "R$ "+(n/1000000).toLocaleString("pt-BR",{maximumFractionDigits:2,minimumFractionDigits:2})+" mi";
+ return fmtImpactMoney(n);
+}
+function impactSum(arr){return (arr||[]).reduce((s,x)=>s+Number(x.value||0),0)}
+function impactField(node,path,value,numeric=false){
+ node.dataset.impact=path;
+ if(numeric)node.dataset.impactNumeric="true";
+ node.textContent=String(value??"");
+ node.contentEditable=editing?"true":"false";
+ if(editing)node.setAttribute("aria-label","Editar "+path.split(".").at(-1));
+ return node;
+}
+function impactNumberRaw(raw){
+ const s=String(raw).replace(/\s+/g,"").replace(/^R\$/,"");
+ if(!s)return NaN;
+ let normalized=s;
+ if(s.includes(","))normalized=s.replace(/\./g,"").replace(",",".");
+ else if(s.split(".").length===2 && s.split(".")[1].length===3 && s.split(".")[0].length<=3)normalized=s.replace(/\./g,"");
+ const value=Number(normalized);
+ return Number.isFinite(value)?value:NaN;
+}
+function impactRenderBars(selector,collection,type){
+ const a=model.impact[collection]||[],target=$(selector);target.replaceChildren();
+ const biggest=Math.max(1,...a.map(x=>x.value));
+ a.forEach((item,i)=>{
+  const row=document.createElement("div");row.className="impact-bar-row";
+  const head=document.createElement("div");head.className="impact-bar-head";
+  const label=impactField(text("span",item.label,"impact-bar-label"),collection+"."+i+".label",item.label);
+  const value=impactField(text("strong",editing?String(item.value):(type==="money"?fmtImpactMoney(item.value):fmtImpactPoints(item.value)),"impact-bar-value"),collection+"."+i+".value",editing?String(item.value):(type==="money"?fmtImpactMoney(item.value):fmtImpactPoints(item.value)),true);
+  head.append(label,value);
+  const track=document.createElement("div");track.className="impact-bar-track";
+  const fill=document.createElement("div");fill.className="impact-bar-fill "+(type==="money"?"is-money":"is-points");fill.style.width=(Math.max(0,Math.min(100,100*item.value/biggest)))+"%";
+  fill.setAttribute("aria-hidden","true");
+  track.append(fill);
+  row.append(head,track);
+  row.setAttribute("aria-label",item.label+": "+(type==="money"?fmtImpactMoney(item.value):fmtImpactPoints(item.value))+(type==="money"?" valor de referência":" pontos previstos"));
+  if(editing)row.append(control("Remover grupo",()=>{snapshot();model.impact[collection].splice(i,1);render()},"danger"));
+  target.append(row);
+ });
+ if(!a.length)target.append(text("p","Nenhum indicador registrado.","impact-empty"));
+}
+function impactRenderReferences(){
+ const target=$("#impact-money-other");target.replaceChildren();
+ (model.impact.financialOther||[]).forEach((item,i)=>{
+  const box=document.createElement("div");box.className="impact-reference";
+  box.append(
+    impactField(text("span",item.label,"impact-reference-label"),"financialOther."+i+".label",item.label),
+    impactField(text("strong",editing?String(item.value):impactCompactBRL(item.value),"impact-reference-value"),"financialOther."+i+".value",editing?String(item.value):impactCompactBRL(item.value),true)
+  );
+  if(editing)box.append(control("Remover referência",()=>{snapshot();model.impact.financialOther.splice(i,1);render()},"danger"));
+  target.append(box);
+ });
+}
+function renderImpact(){
+ if(!model?.impact)return;
+ for(const el of document.querySelectorAll("#impacto [data-impact]:not([data-impact-numeric])")){
+  // Dynamic chart rows are refreshed below.
+  if(!el.closest(".impact-bars")&&!el.closest("#impact-money-other")){
+   impactField(el,el.dataset.impact,model.impact[el.dataset.impact]);
+  }
+ }
+ $("#impact-points-total").textContent=fmtImpactPoints(impactSum(model.impact.points2026));
+ $("#impact-money-total").textContent=impactCompactBRL(impactSum(model.impact.money2026));
+ $("#impact-points-historical-total").textContent="≈ "+fmtImpactPoints(impactSum(model.impact.pointsHistorical));
+ impactRenderBars("#impact-points-2026","points2026","points");
+ impactRenderBars("#impact-money-2026","money2026","money");
+ impactRenderBars("#impact-points-historical","pointsHistorical","points");
+ impactRenderReferences();
+ impactRenderBars("#impact-money-historical","moneyHistorical","money");
+}
+function snapshotImpact(){
+ if(!model?.impact)return;
+ for(const el of document.querySelectorAll("#impacto [data-impact]")){
+  const path=el.dataset.impact,parts=path.split(".");
+  if(parts.length!==1&&parts.length!==3)continue;
+  let dest=model.impact;
+  if(parts.length===1)dest[parts[0]]=el.innerText.trim();
+  else{
+   const group=parts[0],idx=Number(parts[1]),fieldName=parts[2];
+   if(!Array.isArray(dest[group])||!Number.isInteger(idx)||!dest[group][idx]||!["label","value"].includes(fieldName))continue;
+   dest[group][idx][fieldName]=fieldName==="value"?impactNumberRaw(el.innerText.trim()):el.innerText.trim();
+  }
+ }
+}
+function validateImpact(m){
+ if(!m.impact&&original?.impact)m.impact=copy(original.impact);
+ const a=m.impact;
+ if(!a||typeof a!=="object"||Array.isArray(a))throw Error("Dados de impacto ausentes.");
+ for(const key of ["heading","intro","pointsTitle","pointsSubtitle","moneyTitle","moneySubtitle","historicalTitle","historicalSubtitle","financialOtherTitle","financialOtherSubtitle","historicalMoneyTitle","historicalMoneySubtitle","physicalNote","historicalNote","financialNote","sourcesNote"]){
+  if(typeof a[key]!=="string"||a[key].length>5500)throw Error("Legenda de impacto inválida: "+key);
+ }
+ for(const key of ["points2026","money2026","pointsHistorical","financialOther","moneyHistorical"]){
+  const list=a[key];if(!Array.isArray(list)||list.length>12)throw Error("Conjunto de impacto inválido: "+key);
+  for(const el of list){
+   if(typeof el.id!=="string"||el.id.length>100||typeof el.label!=="string"||el.label.length>280||typeof el.value!=="number"||!Number.isFinite(el.value)||el.value<0||el.value>100000000000)throw Error("Valor de impacto inválido em "+key+".");
+  }
+ }
+ return a;
+}
 
 function reportMetric(id){let o=(model?.metrics||[]).find(x=>x.id===id);let v=Number(String(o?.value||"0").replace(/[^0-9.-]/g,""));return Number.isFinite(v)?v:0}
 function drawAnalytics(){
@@ -227,6 +407,7 @@ function render(){
   ctl.append(control("Descer",()=>{snapshot();if(i<model.sections.length-1){[model.sections[i+1],model.sections[i]]=[model.sections[i],model.sections[i+1]];render()}}));
   n.append(ctl);sections.append(n)});
  drawAnalytics();
+ renderImpact();
  document.body.classList.toggle("editing",editing);
  $("#btnedit").setAttribute("aria-pressed",String(editing));
 }
@@ -249,12 +430,14 @@ function snapshot(){
    x.value=Number.isInteger(n)&&n>=0?n:-1;
   });
  }
+ snapshotImpact();
  model.updated=new Date().toISOString().slice(0,10);
 }
 function validate(m){
  if(!m||typeof m.title!=="string"||!Array.isArray(m.metrics)||!Array.isArray(m.sections))throw Error("Dados do relatório inválidos");
  if(m.metrics.length>40||m.sections.length>80||JSON.stringify(m).length>100000)throw Error("Tamanho não suportado");
  for(const item of m.sections)if(typeof item.title!=="string"||typeof item.body!=="string")throw Error("Uma seção não contém texto válido");
+ validateImpact(m);
  for(const chart of ["monthly","documentTypes"])if(!Array.isArray(m[chart])||m[chart].length>24||m[chart].some(x=>typeof x.label!=="string"||!Number.isInteger(x.value)||x.value<0))throw Error("Informe valores numéricos não negativos nos gráficos.");
 
  return m;
@@ -274,6 +457,16 @@ $("#btnaddsection").onclick=()=>{snapshot();model.sections.push({id:"sec-"+Date.
 $("#btnaddmonth").onclick=()=>{snapshot();model.monthly.push({label:"Novo",value:0});render()};
 $("#btnaddtype").onclick=()=>{snapshot();model.documentTypes.push({label:"Outro tipo",value:0});render()};
 document.addEventListener("focusout",e=>{if(editing&&e.target.closest("#monthchart,#mixchart")){snapshot();if(model.monthly.every(x=>x.value>=0)&&model.documentTypes.every(x=>x.value>=0))render()}});
+for(const [id,key,label] of [
+ ["impact-add-points2026","points2026","Novo grupo físico"],
+ ["impact-add-money2026","money2026","Nova categoria financeira"],
+ ["impact-add-pointsHistorical","pointsHistorical","Novo grupo histórico"],
+ ["impact-add-financialOther","financialOther","Nova referência financeira"],
+ ["impact-add-moneyHistorical","moneyHistorical","Novo valor histórico"]
+]){
+ const b=$("#"+id);
+ if(b)b.onclick=()=>{snapshot();model.impact[key].push({id:"manual_"+Date.now()+"_"+key,label,value:0});render();};
+}
 $("#btnaddmetric").onclick=()=>{snapshot();model.metrics.push({id:"user_"+Date.now(),value:"—",label:"Novo indicador"});render()};
 $("#btnprint").onclick=()=>{snapshot();const was=editing;editing=false;render();window.print();editing=was;render()};
 
@@ -338,7 +531,33 @@ async function generateEditablePdf(){
   addInput(pdf.getForm(),p3,"tipo_"+(i+1)+"_rotulo",m.label,margin,yy,346,31,10);
   addInput(pdf.getForm(),p3,"tipo_"+(i+1)+"_quantidade",String(m.value),margin+360,yy,145,31,12);
  }
- const p4=pageOf("Metodologia, limites e publicacao");
+ const impact=model.impact;
+ const pIp=pageOf("Pontos de iluminacao publica - metas e historico");
+ pIp.drawText("Metas fisicas 2026 (nao sao obras concluidas)",{x:margin,y:721,size:11,font:bold});
+ pIp.drawText("Total previsto: "+fmtImpactPoints(impactSum(impact.points2026)),{x:margin,y:695,size:12,font:bold,color:rgb(.07,.43,.5)});
+ function addPdfRows(page,arr,prefix,top){
+  arr.slice(0,5).forEach((item,i)=>{
+   const yy=top-i*52;
+   addInput(pdf.getForm(),page,prefix+"_"+(i+1)+"_nome",item.label,margin,yy,338,36,10,true);
+   addInput(pdf.getForm(),page,prefix+"_"+(i+1)+"_valor",String(item.value),margin+350,yy,158,36,11);
+  });
+ }
+ addPdfRows(pIp,impact.points2026,"pontos_2026",633);
+ pIp.drawText("Carteira historica (ja inclui 2026)",{x:margin,y:352,size:11,font:bold});
+ pIp.drawText("Total aproximado: "+fmtImpactPoints(impactSum(impact.pointsHistorical)),{x:margin,y:328,size:12,font:bold});
+ addPdfRows(pIp,impact.pointsHistorical,"pontos_historico",262);
+ const pFin=pageOf("Valores economicos - fases financeiras distintas");
+ pFin.drawText("Porte bruto conjunto 2026: "+impactCompactBRL(impactSum(impact.money2026)),{x:margin,y:721,size:12,font:bold});
+ pFin.drawText("Nao representa credito contratado ou desembolso",{x:margin,y:699,size:10,font,color:rgb(.3,.4,.48)});
+ addPdfRows(pFin,impact.money2026,"valor_2026",630);
+ pFin.drawText("Outras referencias - NAO somar ao porte bruto",{x:margin,y:344,size:11,font:bold});
+ addPdfRows(pFin,impact.financialOther,"referencia_financeira",282);
+ const pHist=pageOf("Debentures - historico de diferentes estagios");
+ pHist.drawText("Estoque acumulado; valores nao somaveis",{x:margin,y:720,size:11,font:bold});
+ addPdfRows(pHist,impact.moneyHistorical,"historico_financeiro",650);
+ pHist.drawText("Notas metodologicas de impacto",{x:margin,y:373,size:11,font:bold});
+ addInput(pdf.getForm(),pHist,"notas_impacto",impact.physicalNote+"\n\n"+impact.historicalNote+"\n\n"+impact.financialNote,margin,105,W-2*margin,258,10,true);
+  const p4=pageOf("Metodologia, limites e publicacao");
  p4.drawText("Limites de interpretacao e metodologia",{x:margin,y:722,size:11,font:bold});
  addInput(pdf.getForm(),p4,"ressalvas",model.caveats,margin,344,W-2*margin,365,11,true);
  p4.drawText("Informacoes de publicacao",{x:margin,y:324,size:11,font:bold});
