@@ -1,0 +1,60 @@
+{
+  "title": "CGMUR · Panorama de Atividades 2026",
+  "subtitle": "Coordenação-Geral de Modernização Urbana · Ministério das Cidades",
+  "period": "Janeiro a 13 de novembro de 2026",
+  "status": "Versão de divulgação — conteúdo selecionado e sujeito à revisão institucional",
+  "updated": "2026-11-13",
+  "summary": "Panorama das atividades registradas em 2026, com foco nas frentes de modernização urbana, transformação digital, financiamento de projetos e desenvolvimento de ferramentas de apoio ao planejamento. Este material não substitui os processos oficiais e não divulga documentação interna do SEI.",
+  "metrics": [
+    {
+      "value": "365",
+      "label": "Processos com tramitação na CGMUR"
+    },
+    {
+      "value": "524",
+      "label": "Documentos gerados na unidade"
+    },
+    {
+      "value": "91",
+      "label": "Notas técnicas e pareceres de mérito"
+    },
+    {
+      "value": "22",
+      "label": "Municípios selecionados para apoio em transformação digital urbana"
+    }
+  ],
+  "sections": [
+    {
+      "id": "procidades",
+      "title": "Pró-Cidades: análise técnica de propostas",
+      "stage": "Trabalho técnico e recomendações",
+      "body": "A CGMUR atuou na avaliação de projetos da Modalidade 2 — Modernização Tecnológica Urbana, com instrução técnica de propostas e emissão de pareceres de mérito. Entre as iniciativas analisadas em 2026 figura o projeto de Vila Velha (ES), que recebeu manifestação técnica favorável. As recomendações técnicas não equivalem, por si, à contratação, liberação ou execução dos financiamentos."
+    },
+    {
+      "id": "tdu",
+      "title": "Cidades Mais Inteligentes e estratégias locais",
+      "stage": "Seleção e mobilização",
+      "body": "No âmbito do TED com a Universidade Federal do Rio Grande do Sul, foram selecionados 22 municípios, em maio de 2026, para receber apoio na elaboração de estratégias locais de transformação digital urbana. A iniciativa envolve uma rede de suporte acadêmico, mobilização institucional e acompanhamento técnico. O monitoramento de julho ainda não registrava instrumentos municipais concluídos, uma etapa distinta da seleção."
+    },
+    {
+      "id": "debentures",
+      "title": "Debêntures e modernização da iluminação pública",
+      "stage": "Instrução, enquadramento e acompanhamento",
+      "body": "Em 2026, a equipe deu continuidade ao exame técnico e ao acompanhamento de projetos de iluminação pública aptos a enquadramento no regime federal de benefícios fiscais. A carteira consolidada reúne projetos iniciados em anos diferentes. O painel de outubro registra sete projetos com portarias de enquadramento publicadas em 2026. Os atos são ministeriais e não devem ser atribuídos exclusivamente à coordenação."
+    },
+    {
+      "id": "sinidu",
+      "title": "SINIDU: pesquisa aplicada e metodologia",
+      "stage": "Estudo interno exploratório",
+      "body": "A área desenvolveu insumos técnicos para o Sistema Nacional de Informações do Desenvolvimento Urbano (SINIDU), incluindo um estudo exploratório de metodologias para leitura territorial de suscetibilidade a inundação. O trabalho analisou diferentes fontes e níveis de precisão e propôs critérios de transparência sobre dados, métodos e incertezas. Trata-se de contribuição metodológica em desenvolvimento, não de módulo institucional homologado."
+    },
+    {
+      "id": "articulacao",
+      "title": "Articulação institucional e disseminação",
+      "stage": "Agendas e cooperação técnica",
+      "body": "A atuação em 2026 incluiu participação em encontros especializados sobre cidades inteligentes, diálogo com instituições de pesquisa, interlocução com governos locais e preparação de materiais de comunicação e apoio técnico. Entre os registros documentais estão atividades no Smart City Business Brazil Congress e reuniões técnicas com instituições acadêmicas."
+    }
+  ],
+  "caveats": "Dados processuais agregados referem-se à CGMUR, conforme consultas ao SEI até 13/11/2026. A cobertura estatística da COAMU não é integral. A seleção de municípios não significa estratégias finalizadas; pareceres técnicos não significam contratação; carteiras acumuladas não equivalem a resultados exclusivos de 2026.",
+  "footer": "Material informativo em desenvolvimento. A disponibilização deste endereço não constitui homologação formal, aprovação de conteúdo institucional nem publicação oficial do Ministério das Cidades."
+}
