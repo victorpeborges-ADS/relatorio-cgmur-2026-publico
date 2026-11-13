@@ -2,7 +2,7 @@
   "title": "Da estruturação à consolidação",
   "subtitle": "CGMU/CGMUR | Síntese executiva de atuação, 2023–2026",
   "period": "1º de janeiro de 2023 a 13 de novembro de 2026",
-  "summary": "De 2023 a 2026, a equipe atuou na consolidação de uma agenda de modernização urbana que conecta iluminação pública, financiamento de infraestrutura, transformação digital das cidades, articulação com municípios e sistemas de informação. O volume registrado no SEI mostra a ampliação da operação; a documentação técnica permite identificar decisões subsidiadas, parcerias estruturadas e oportunidades criadas para os ciclos seguintes.",
+  "summary": "Entre janeiro de 2023 e 13 de novembro de 2026, a CGMU/CGMUR ampliou sua capacidade de instruir investimentos, dialogar com municípios e parceiros, elaborar diretrizes de transformação digital e acompanhar iniciativas de dados urbanos. O SEI registra 1.677 documentos internos produzidos e 1.110 documentos externos incorporados às rotinas, incluindo 250 notas técnicas e pareceres de diferentes classes. A documentação mostra a evolução de uma agenda inicialmente estruturante para instrumentos, acompanhamento territorial e decisões técnicas qualificadas.",
   "updated": "2026-11-13",
   "highlights": [
     {
@@ -43,7 +43,8 @@
       "label": "Organização e retomada da agenda",
       "summary": "A equipe estruturou interlocuções técnicas no novo Ministério das Cidades e examinou propostas de iluminação pública e possibilidades de concessões/PPPs para cidades inteligentes. Registros de reuniões com Itajaí, Canoas e Rio de Janeiro documentam a atuação de enquadramento e acompanhamento em construção.",
       "actions": "Reuniões técnicas com concessionárias e prefeituras; apresentação de atribuições da CGMU; diálogo com a SPPI sobre parcerias e tecnologias urbanas.",
-      "results": "Base institucional de trabalho e análise técnica documentada. Um projeto teve portaria publicada em 2023 no painel de debêntures consultado."
+      "results": "A rotina técnica de enquadramento ganhou evidências documentais, incluindo a reunião com o Smart RJ em dezembro de 2023. A proposta então apresentada registrou R$ 1,859 bilhão de valor de projeto; seu enquadramento ministerial foi publicado apenas em 2024 e não se confunde com execução em 2023.",
+      "analytical": 23
     },
     {
       "year": "2024",
@@ -57,7 +58,8 @@
       "label": "Articulação e desenho de instrumentos",
       "summary": "A CGMU ampliou a atuação junto a municípios, aperfeiçoou instrumentos relativos à iluminação pública e passou a mapear sistemas e parceiros para a futura estrutura nacional de informações urbanas.",
       "actions": "Interlocuções com municípios e concessionárias, inclusive Guarulhos; subsídios para o debate de cidades inteligentes e do PPI; mapeamento inicial de sistemas do SINIDU com parceiros técnicos.",
-      "results": "Três projetos de iluminação pública com portarias publicadas em 2024 na base consultada; material técnico sobre o Decreto nº 12.210/2024 e apresentações de estruturação do SINIDU."
+      "results": "Três portarias de projetos de iluminação pública foram publicadas em 2024, incluindo o Smart RJ, cuja portaria estabeleceu teto de R$ 710 milhões para debêntures. A equipe também avançou no mapeamento de sistemas do SINIDU e em interlocuções técnicas com municípios e concessionárias. Projetos enquadrados antes de 2023 continuaram a demandar acompanhamento.",
+      "analytical": 48
     },
     {
       "year": "2025",
@@ -71,7 +73,8 @@
       "label": "Normatização, cooperação e escala operacional",
       "summary": "O ano concentra forte crescimento da produção documental, orientação de soluções de cidades inteligentes, instrução de investimentos e formalização de cooperações de transformação digital urbana.",
       "actions": "Participação em diretrizes de concessões/PPPs inteligentes; instrução de propostas do Pró-Cidades; preparação do TED UFRGS e da cooperação MCTI–MCID para o SINIDU+Clima.",
-      "results": "Quinze portarias de debêntures registradas em 2025; TED UFRGS pactuado em R$ 2.461.457; agenda da Portaria MCID nº 1.012/2025 e do ACT SINIDU+Clima documentadas."
+      "results": "Quinze portarias publicadas; TED UFRGS pactuado em R$ 2.461.457,00; diretrizes de transformação digital e ACT do SINIDU+Clima estruturados. Relatórios registram vistorias técnicas em Itapecerica da Serra e Sumaré, além de participação em eventos e interlocução municipal.",
+      "analytical": 85
     },
     {
       "year": "2026",
@@ -85,7 +88,8 @@
       "label": "Acompanhamento territorial e maturação técnica",
       "summary": "A equipe intensificou a análise de propostas, o acompanhamento de projetos e a mobilização de municípios, com base mais robusta de dados e critérios técnicos para decisões públicas.",
       "actions": "Acompanhamento das propostas da Modalidade 2 do Pró-Cidades, seleção e mobilização de 22 municípios para apoio em transformação digital, instrução de debêntures e estudos exploratórios do SINIDU.",
-      "results": "Sete projetos de debêntures com portarias publicadas até outubro; 17 processos de Pró-Cidades M2 com protocolo em 2026 na carteira analisada e seis conclusões favoráveis conferidas em 2025–2026. Recorte do SEI até 13/11."
+      "results": "Sete portarias de projetos de iluminação pública até outubro, com vistorias documentadas em Ribeirão Preto e Fazenda Rio Grande; apoio a 22 municípios na agenda de TDU. O SINIDU+Clima teve quatro oficinas de levantamento/pactuação e avaliação técnica favorável ao encerramento da Meta 1, correspondente ao desenho do sistema. Dados do SEI até 13/11.",
+      "analytical": 94
     }
   ],
   "debentures": [
@@ -102,7 +106,7 @@
       "year": "2024",
       "acts": 3,
       "projectValue": 237201353.4,
-      "ceiling": 158336972,
+      "ceiling": 868336972.0,
       "plannedPoints": 153659,
       "quantified": 2,
       "cases": 3
@@ -132,16 +136,16 @@
       "tag": "01 · Iluminação pública e investimentos",
       "title": "Projetos melhor instruídos e acompanháveis",
       "action": "Análise de propostas e requisitos, reuniões com municípios e concessionárias, subsídios ao enquadramento ministerial e acompanhamento técnico ao longo da execução.",
-      "result": "26 projetos com portarias publicadas de 2023 a outubro de 2026, associados a cerca de R$ 1,73 bilhão em valores declarados de projetos e R$ 852,1 milhões em tetos de debêntures. Nos 24 projetos com quantificação comparável, aproximadamente 800,6 mil pontos estavam previstos para modernização.",
+      "result": "De 2023 a outubro de 2026, 26 projetos receberam portarias; em 25 registros o valor do projeto está preenchido (R$ 1,73 bilhão). A Portaria MCID nº 408/2024 confirma ainda R$ 710 milhões de teto de debêntures para o Smart RJ, não lançados na planilha: o teto total do período passa a R$ 1,562 bilhão. A apresentação técnica anterior do Smart RJ informa valor de projeto de R$ 1,859 bilhão, ainda sujeito à conciliação com a carteira. A planilha explicita aproximadamente 800,6 mil pontos previstos para modernização em 23 registros com valores positivos.",
       "evidence": "Apresentações técnicas de Itajaí, Canoas e Smart RJ (2023); Guarulhos (2024); painel de portarias atualizado em 22/10/2026.",
-      "boundary": "Portarias são atos ministeriais; enquadramento não comprova emissão, nem pontos previstos significam luminárias substituídas."
+      "boundary": "O teto enquadrado é um limite regulatório, não emissão efetiva. O somatório financeiro de R$ 1,73 bilhão exclui o valor do Smart RJ por ausência no campo oficial; acrescentar seus R$ 1,859 bilhão, extraídos de apresentação anterior, resulta apenas em cenário de sensibilidade. Pontos existentes ou com LED instalado não se confundem com pontos previstos para modernização; as metas físicas não comprovam obras concluídas."
     },
     {
       "id": "digital",
       "tag": "02 · Cidades inteligentes e transformação digital",
       "title": "Da formulação à assistência técnica municipal",
       "action": "Articulação com a SPPI e parceiros, produção de diretrizes, contribuição a políticas e organização de cooperação acadêmica para apoiar estratégias locais de transformação digital urbana.",
-      "result": "Agenda de cidades inteligentes discutida em 2023; instrumentos PPI e mapeamentos ampliados em 2024; diretrizes e TED estruturados em 2025; 22 municípios selecionados em 2026 para apoio ao planejamento local.",
+      "result": "Instrumentos de cidades inteligentes debatidos desde 2023; agenda PPI e mapeamentos ampliados em 2024; portaria de diretrizes locais e TED estruturados em 2025; 22 municípios selecionados em 2026 para apoio ao planejamento local, e lançamento da Rede de Cidades + Inteligentes documentado em junho.",
       "evidence": "Apresentação à SPPI (2023), briefing sobre Decreto nº 12.210 (2024), nota técnica conjunta e TED UFRGS (2025), edital e monitoramento PPA (2026).",
       "boundary": "Seleção municipal e apoio técnico não significam estratégias concluídas; o PPA registrava zero instrumentos concluídos até 17/07/2026."
     },
@@ -149,7 +153,7 @@
       "id": "procidades",
       "tag": "03 · Pró-Cidades e mérito técnico",
       "title": "Capilaridade territorial da carteira de propostas",
-      "action": "Instrução de processos, avaliação de mérito e emissão ou acompanhamento de manifestações para subsidiar decisões sobre financiamento urbano.",
+      "action": "Análise de mérito e instrução de propostas, incluindo articulação interna documentada em oficina de agosto de 2025 para aperfeiçoar o fluxo com o DAC e outras instâncias decisórias.",
       "result": "Na carteira M2 identificada para 2025–2026: 21 processos com referência a parecer, 17 com protocolo de 2026, 11 UFs e cinco macrorregiões; R$ 1,43 bilhão em investimentos propostos e R$ 1,34 bilhão em financiamento solicitado.",
       "evidence": "Painel Pró-Cidades (23/09/2026) e pareceres Rio Negro/PR e Estado do Pará elaborados em 2025, além do briefing de Vila Velha/ES (2026).",
       "boundary": "Seis conclusões favoráveis tiveram teor conferido; dois registros de Foz do Iguaçu podem representar reapresentação. Valores propostos não são contratações."
@@ -159,18 +163,18 @@
       "tag": "04 · SINIDU e cooperação para dados urbanos",
       "title": "Conhecimento aplicado para decisões futuras",
       "action": "Mapeamento de sistemas e articulação com MCTI e outras instituições; construção de requisitos; estudos exploratórios sobre dados urbanos e risco de inundação.",
-      "result": "Apresentação de mapeamento do SINIDU em 2024, ACT MCID–MCTI para SINIDU+Clima documentado em 2025 e estudo exploratório de inundação com comparação de bases altimétricas em 2026.",
+      "result": "A experiência inclui mapeamento de sistemas em 2024; ACT de 2025 com três fases e treze entregas previstas; quatro oficinas de levantamento e pactuação envolvendo Teresina, Florianópolis, Belém e Brasília; conclusão técnica da Meta 1 de desenho em nota de acompanhamento e avaliação crítica do Produto 3.3 em 2026. O sistema final não estava operacional no recorte.",
       "evidence": "Apresentação CGMU SINIDU/MCTI/IARA (2024); briefing ACT MCTI (2025); documento de estudo de inundação de Aracaju (2026).",
-      "boundary": "O ACT não prevê repasse entre os celebrantes na documentação examinada; estudo exploratório não equivale a sistema nacional homologado."
+      "boundary": "A nota técnica concluiu pela realização da Meta 1, mas não homologa a conclusão de todas as fases. O planejamento indica primeira versão pronta para uso em dezembro de 2027 e operacionalização ampliada a partir de 2028. A previsão interna histórica de R$ 3,5 milhões para um primeiro ano e R$ 1 milhão anuais não é orçamento executado; o ACT não prevê repasses entre celebrantes."
     },
     {
       "id": "gestao",
       "tag": "05 · Capacidade analítica e gestão institucional",
       "title": "Maior capacidade de responder, instruir e coordenar",
       "action": "Produção de notas técnicas, pareceres, despachos, ofícios, informações e acompanhamento de demandas jurídicas, técnicas e interinstitucionais.",
-      "result": "1.677 documentos internos gerados no SEI em quatro recortes anuais; notas técnicas anuais passaram de 20 (2023) a 58 (2026 parcial). Os registros de processos movimentados aumentaram de 172 a 365 entre os mesmos períodos.",
+      "result": "O SEI registra 1.677 documentos internos produzidos e 1.110 externos registrados ao longo dos quatro recortes anuais (2.787 registros documentais). Dentre os internos, identificam-se 250 notas técnicas e pareceres — 23 em 2023, 48 em 2024, 85 em 2025 e 94 em 2026 parcial. De janeiro a outubro, a produção cresceu de 461 em 2025 para 500 em 2026 (+8,5%).",
       "evidence": "SEI > Estatísticas da Unidade CGMUR-MCID, quatro consultas anuais realizadas em 13/11/2026.",
-      "boundary": "A soma de 1.061 processos é de contagens anuais e pode repetir processos que transitaram em mais de um ano. Não é produtividade individual nem medida de resultado final."
+      "boundary": "Indicadores documentais não equivalem a produtividade individual. As 1.061 tramitações são soma de contagens anuais, com possível reaparição do mesmo processo. A cobertura da COAMU permanece incompleta e os perfis administrativos podem ter mudado."
     }
   ],
   "territory": {
@@ -185,12 +189,49 @@
     "proFinancing": 1335314350.96
   },
   "notes": {
-    "comparability": "O exercício de 2026 termina em 13 de novembro nesta edição. Gráficos anuais comparando 2026 aos 12 meses de 2025 devem indicar o recorte parcial; a série janeiro–outubro é a alternativa comparável por meses equivalentes.",
-    "limitations": "Os dados do SEI se referem às estatísticas da unidade disponibilizadas pelo perfil de acesso e refletem CGMUR/CGMU conforme configuração histórica. A cobertura da COAMU não foi aferida integralmente. A biblioteca do SharePoint contém documentos com datas materiais de 2023, mas sem registro de criação no acervo antes de 2024. Portarias, contratos e entregas físicas dependem de atos e fontes de execução externos.",
-    "attribution": "O relatório distingue análises e entregas da equipe de deliberações ministeriais, investimentos pretendidos, valores enquadrados, emissão de títulos, contratos e obras executadas. Os montantes de Pró-Cidades e debêntures não são somados entre si por possível sobreposição e estágios financeiros distintos.",
+    "comparability": "O recorte de 2026 vai até 13/11; 2023–2025 são exercícios completos. No intervalo comparável janeiro–outubro, o SEI registra 210, 252, 461 e 500 documentos internos, respectivamente. A variação 2026/2025 em meses equivalentes é de +8,5%; não comparar diretamente 525 (2026 parcial) com 571 (2025 integral) para inferir queda de produtividade.",
+    "limitations": "As estatísticas do SEI dependem do perfil e unidade consultados, e não asseguram cobertura integral da COAMU. As 35 linhas da planilha de debêntures de outubro e os 37 projetos do balanço de setembro não estão reconciliados. O Smart RJ tem publicação de portaria mas lacunas financeiras e físicas na planilha de outubro; outras linhas têm datas/campos a validar. Pontos previstos e parques existentes não são obras concluídas. O SharePoint dispõe de material com referência a 2023, mas os metadados de criação da biblioteca começam em 2024.",
+    "attribution": "O Ministério e a CGMU/CGMUR participam de etapas distintas: instrução e acompanhamento técnico, ato ministerial de enquadramento, eventual emissão de títulos pela concessionária, contratação e realização física. Não se deve somar investimento proposto em Pró-Cidades, valor de projeto de iluminação, teto de debêntures, emissão e orçamento de TED. Quando houver documentação com valores para o mesmo empreendimento em momentos diferentes, a soma dependerá de conciliação do escopo.",
     "sourceSEI": "SEI, Estatísticas da Unidade CGMUR-MCID: consultas de 01/01 a 31/12/2023, 2024 e 2025; de 01/01 a 13/11/2026 (extração de 13/11/2026).",
-    "sourceSharePoint": "SharePoint CGMU/General: inventário de 1.494 arquivos; leitura seletiva de 19 documentos de 2023 a 2025, complementada por 22 evidências examinadas de 2026. A data do arquivo não substitui a data do fato relatado.",
-    "sourceDeb": "Painel de Debêntures Incentivadas, planilha institucional de 22/10/2026: 26 portarias com publicação em 2023–2026 (1, 3, 15, 7), valores declarados e quantidades previstas. Projetos anteriores a 2023 e sem publicação não integram o recorte.",
+    "sourceSharePoint": "SharePoint CGMU/General: inventário de 1.494 arquivos, análise focalizada de 19 documentos históricos na primeira rodada e 24 complementares nesta curadoria, além das 22 evidências já examinadas para 2026. A data de criação da cópia no SharePoint não equivale à data de realização da atividade. Foram cotejados relatórios de vistorias, notas técnicas de acompanhamento do SINIDU e documentos de cooperação.",
+    "sourceDeb": "Planilhas institucionais de debêntures de 22/10/2026 e arquivos de apoio ao Power BI; apresentação técnica da CGMU ao Smart RJ (14/12/2023); Portaria MCID nº 408/2024, publicada no DOU em 18/07/2024, com teto enquadrado de R$ 710 milhões. A fonte principal contém 35 registros; 26 portarias de 2023–2026, seis anteriores e três sem data de publicação. O balanço de setembro citava 37, com outro retrato e critérios a reconciliar.",
     "sourceProc": "Painel Pró-Cidades visão geral, carteira CGMUR atualizada em 23/09/2026, com 21 registros de processos M2 de 2025–2026; dois registros de Foz do Iguaçu exigem conciliação."
+  },
+  "curadoria": {
+    "title": "O que mudou após a revisão das bases",
+    "intro": "O cruzamento de estatísticas anuais do SEI, apresentações técnicas, notas de acompanhamento e planilhas de projetos mostrou que a dimensão do trabalho não se encerra no número de documentos produzidos ou de portarias publicadas. A leitura precisa separar esforço técnico, estoque da carteira, limites financeiros e execução.",
+    "metrics": [
+      {
+        "label": "Registros documentais no SEI",
+        "value": "2.787",
+        "detail": "1.677 documentos internos gerados + 1.110 externos registrados; naturezas diferentes."
+      },
+      {
+        "label": "Notas técnicas e pareceres",
+        "value": "250",
+        "detail": "Diferentes tipos de notas técnicas e pareceres da unidade no recorte, inclusive notas conjuntas."
+      },
+      {
+        "label": "Registros na carteira de debêntures",
+        "value": "35",
+        "detail": "26 portarias de 2023–2026, seis anteriores e três sem publicação informada na planilha."
+      },
+      {
+        "label": "Oficinas de desenho SINIDU+Clima",
+        "value": "4",
+        "detail": "Imersões e pactuação documentadas; a Meta 1 foi considerada concluída em nota técnica."
+      }
+    ],
+    "financialHeadline": "Smart RJ: lacuna de valor e teto na série histórica",
+    "financialText": "A carteira de 26 projetos com portarias de 2023–2026 apresentava R$ 1,734 bilhão de valores de projetos em 25 registros preenchidos. A apresentação da CGMU ao Smart RJ (14/12/2023) declara R$ 1,859 bilhão para o projeto, mas a planilha de outubro de 2026 mantém o campo vazio. A soma hipotética resultaria em R$ 3,593 bilhões; trata-se de cenário analítico não homologado, dependente de conciliação de escopo e atualização do valor.",
+    "ceilingText": "O teto de debêntures possui evidência normativa mais forte: a Portaria MCID nº 408/2024 registra R$ 710 milhões para o Smart RJ. Sua inclusão eleva o total dos limites enquadrados para os 26 atos de 2023–2026 a R$ 1.562.104.594,71. Esse valor não é captação efetiva nem gasto público.",
+    "pointsText": "O campo de pontos a modernizar contém quantidades positivas em apenas 23 das 26 entradas com portarias do período, somando aproximadamente 800.551 pontos previstos. No Smart RJ o campo está vazio; o material de 2023 indica 457 mil pontos já com LED e possível expansão da rede até 532 mil — grandezas diferentes das modernizações futuras. Guarulhos tem zero nessa coluna, apesar de registrar parque de 65 mil pontos. Alegrete não tem quantificação de modernização. A curadoria não somou esses parques à meta de substituições.",
+    "qualityTitle": "Por que não é seguro divulgar um total financeiro único",
+    "qualityText": "Há 35 registros na planilha de outubro e 37 projetos citados em balanço de setembro, com cortes e critérios não explicitamente reconciliados; um projeto de 2024 possui valor e teto em branco na planilha principal; uma planilha auxiliar atribui a Campinas a UF errada, e outra linha possui data de protocolo incompatível. Os números corrigidos são apresentados por fonte, estágio e grau de confirmação.",
+    "siniduTitle": "Contribuição operacional do SINIDU+Clima",
+    "siniduText": "A nota de acompanhamento documenta quatro oficinas/imersões e pactuação, relatórios de levantamento de requisitos, análise de plataformas e avaliação dos módulos propostos. A manifestação técnica considera concluída a Meta 1 — Desenho do Sistema. O ACT prevê três fases e treze entregas; a primeira versão utilizável é projetada para dezembro de 2027, sem evidência de sistema nacional plenamente operacional no período 2023–2026.",
+    "visitsTitle": "Vistorias e diálogo territorial documentados",
+    "visitsText": "Foram localizados relatórios de vistorias técnicas em Itapecerica da Serra e Sumaré (2025), Ribeirão Preto e Fazenda Rio Grande (2026), além de participação institucional associada a atividades em São Paulo e Curitiba. Essas ações não aparecem de forma explícita na contagem de portarias, mas mostram como a equipe verifica condições de projetos e dialoga com prefeituras e concessionárias.",
+    "sourceNote": "Bases examinadas: Estatísticas da Unidade do SEI (2023–13/11/2026); planilha institucional de debêntures de 22/10/2026 e arquivos auxiliares; apresentação Smart RJ de 14/12/2023; Portaria MCID nº 408/2024 (DOU, 18/07/2024); relatórios de vistorias e notas técnicas SINIDU do SharePoint."
   }
 }
