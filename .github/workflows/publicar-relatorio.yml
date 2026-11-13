@@ -23,14 +23,19 @@ jobs:
         run: |
           node <<'NODE'
           const fs=require('node:fs');
+          const zlib=require('node:zlib');
           const event=JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,'utf8'));
           const owner='victorpeborges-ADS';
           const repo='relatorio-cgmur-2026-publico';
-          const marker='CGMUR_REPORT_UPDATE_V1\n';
+          const markerV1='CGMUR_REPORT_UPDATE_V1\n';
+          const markerV2='CGMUR_REPORT_UPDATE_V2_GZIP\n';
           if(event.repository?.full_name!==owner+'/'+repo || event.issue?.user?.login!==owner) throw Error('Publicador não autorizado');
           const body=event.issue.body||'';
-          if(!body.startsWith(marker)) { console.log('Não é pedido de publicação; ignorado'); process.exit(0); }
-          const raw=body.slice(marker.length).trim();
+          if(!body.startsWith(markerV1)&&!body.startsWith(markerV2)) { console.log('Não é pedido de publicação; ignorado'); process.exit(0); }
+          if(body.length>150000)throw Error('Solicitação excessiva');
+          const raw=body.startsWith(markerV2)
+            ?zlib.gunzipSync(Buffer.from(body.slice(markerV2.length).trim(),'base64url'),{maxOutputLength:120000}).toString('utf8')
+            :body.slice(markerV1.length).trim();
           if(raw.length>120000) throw Error('Documento excede limite de tamanho');
           const data=JSON.parse(raw);
           const str=(v,max)=>typeof v==='string' && v.length<=max;

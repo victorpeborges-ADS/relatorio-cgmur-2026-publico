@@ -316,25 +316,44 @@ $("#btndraft").onclick=()=>{snapshot();localStorage.setItem("cgmur-2026-draft",J
 $("#btnrestore").onclick=()=>{try{const raw=localStorage.getItem("cgmur-2026-draft");if(!raw)throw Error("Não existe rascunho salvo neste navegador.");if(!confirm("Restaurar o rascunho local substituindo as alterações em edição?"))return;model=validate(JSON.parse(raw));render();status("Rascunho restaurado. Para disponibilizar aos visitantes, use Publicar.")}catch(e){status(e.message,true)}};
 $("#btnexport").onclick=()=>{snapshot();const blob=new Blob([JSON.stringify(model,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="CGMUR_2026_relatorio_editavel.json";a.click();URL.revokeObjectURL(url)};
 $("#fileimport").onchange=async(e)=>{try{const f=e.target.files[0];if(!f)return;const m=validate(JSON.parse(await f.text()));model=m;render();status("JSON importado para edição. Publique para tornar permanente.")}catch(err){status(err.message,true)}e.target.value=""};
-$("#btnpublish").onclick=()=>{
+$("#btnpublish").onclick=async()=>{
  snapshot();
  try{validate(model)}catch(e){status(e.message,true);return}
  const payload=JSON.stringify(model);
  if(/sei\.mi\.gov\.br|mcidades\.sharepoint\.com|\b\d{5}\.\d{6}\/\d{4}-\d{2}\b/i.test(payload)){
    status("Há um identificador ou endereço interno no texto. Retire a informação restrita antes de publicar.",true);return;
  }
- if(!confirm("O relatório será PUBLICAMENTE acessível. Confirmar que o conteúdo não contém informações restritas?"))return;
- const body="CGMUR_REPORT_UPDATE_V1\n"+payload;
- const title="Atualizar conteúdo do relatório CGMUR "+new Date().toISOString().slice(0,10);
- const link="https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body);
+ if(!confirm("O relatório ficará PUBLICAMENTE acessível. Confirma que não há dados institucionais restritos?"))return;
+ const title="Publicar edição do relatório CGMUR "+new Date().toISOString().slice(0,10);
+ const titleURL="https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title);
  $("#help").classList.add("open");
- const fresh=window.open(link.length<14000?link:("https://github.com/"+REPO+"/issues/new?title="+encodeURIComponent(title)),"_blank","noopener,noreferrer");
- if(link.length>=14000){
-   if(navigator.clipboard?.writeText)navigator.clipboard.writeText(body).then(()=>status("Conteúdo copiado. Cole no campo de descrição do GitHub e envie a solicitação.")).catch(()=>status("URL extensa: exporte JSON e peça a publicação pelo GitHub.",true));
- }else{
-   status("Pedido de publicação preparado no GitHub. Na aba aberta, clique em Submit new issue. A atualização será publicada automaticamente após verificação.");
- }
- $("#publishstatus").textContent=fresh===null?"Se a nova aba foi bloqueada, permita pop-ups para este site.":"Somente solicitações da conta proprietária são aceitas; não precisa de token adicional.";
+ const popup=window.open("about:blank","_blank");
+ if(!popup){status("O navegador bloqueou a nova aba. Permita pop-ups para este site e tente novamente.",true);return}
+ try{popup.opener=null}catch(e){}
+ $("#btnpublish").disabled=true;
+ try{
+   let body="CGMUR_REPORT_UPDATE_V1\n"+payload;
+   if(typeof CompressionStream!=="undefined"){
+      const zipped=await new Response(new Blob([payload],{type:"application/json"}).stream().pipeThrough(new CompressionStream("gzip"))).arrayBuffer();
+      const bytes=new Uint8Array(zipped);
+      let binary="";for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.slice(i,i+8192));
+      body="CGMUR_REPORT_UPDATE_V2_GZIP\n"+btoa(binary).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+   }
+   const issueURL=titleURL+"&body="+encodeURIComponent(body);
+   if(issueURL.length<=6500){
+     popup.location.replace(issueURL);
+     status("Edição pronta: na aba do GitHub, clique em Submit new issue. A automação validará sua conta e publicará as alterações.");
+     $("#publishstatus").textContent="A edição só será efetivada depois da sua confirmação no GitHub.";
+   }else{
+     popup.location.replace(titleURL);
+     await navigator.clipboard.writeText(body);
+     status("O relatório é extenso: os dados foram copiados. Cole na descrição da solicitação do GitHub e clique em Submit new issue.");
+     $("#publishstatus").textContent="Após colar a descrição na aba do GitHub, confirme o envio.";
+   }
+ }catch(e){
+   status("A abertura do GitHub falhou: "+e.message,true);
+   $("#publishstatus").textContent="Experimente exportar o arquivo JSON e solicitar publicação pelo GitHub.";
+ }finally{$("#btnpublish").disabled=false}
 };
 startup();
 </script>
