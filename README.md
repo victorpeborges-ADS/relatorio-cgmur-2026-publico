@@ -31,3 +31,12 @@ Contagens anuais SEI com recorte até 13/11/2026. Um processo pode ter mais de u
 documento e um andamento fechado na CGMUR não significa processo concluído.
 Metadados e referências do SharePoint foram verificados apenas internamente.
 O relatório público é informativo, não substitui a homologação institucional.
+
+
+## Revisão de design v3 (13/11/2026)
+- Identidade visual editorial institucional independente, sem brasão ou identidade oficial indevida;
+- Navegação por seções, hierarquia tipográfica e indicadores com melhor leitura;
+- Responsividade testada em 320, 390, 768 e 1440 px, com gráficos roláveis sem deslocar a página;
+- Modo claro/escuro persistente por navegador, com estilos próprios para impressão em PDF;
+- Botões de edição ocultos no modo de leitura; foco visível e opção para reduzir movimento;
+- Mantidos o conteúdo, o histórico, a publicação via GitHub autenticado e o PDF editável.

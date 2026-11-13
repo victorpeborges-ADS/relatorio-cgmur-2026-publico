@@ -66,10 +66,17 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 @media(max-width:850px){.dash-two{grid-template-columns:1fr}.chart-bars{gap:7px}.dash-panel{padding:17px}}
 @media print{.dash-two{grid-template-columns:1fr 1fr;gap:11px}.dash-panel{break-inside:avoid;box-shadow:none;padding:14px}.chart-bars{min-height:155px}.bar-col{height:140px}.metric{break-inside:avoid}.bar-rect{max-width:29px}.tiny-restricted-note{border-color:#ccc}}
 </style>
+<link rel="stylesheet" href="design-v3.css">
+<meta name="theme-color" content="#102a45">
+<meta name="description" content="Panorama público e editável das atividades da CGMUR em 2026: indicadores, produção documental, Pró-Cidades, transformação digital e SINIDU.">
 </head>
 <body>
 <nav class="toolbar" aria-label="Ferramentas do relatório">
-<button id="btnedit" class="primary">Editar relatório</button>
+<div class="toolbar-brand" aria-label="Relatório de atividades CGMUR 2026">
+  <span class="mark" aria-hidden="true">CG</span>
+  <span><span class="brand-top">CGMUR · 2026</span><span class="brand-small">Painel público de atividades</span></span>
+</div>
+<button id="btnedit" class="primary" aria-pressed="false">Editar relatório</button>
 <button id="btnprint">Gerar PDF para impressão</button>
 <button id="btnformpdf">Baixar PDF editável</button>
 <button id="btndraft" class="edit-only">Salvar rascunho neste navegador</button>
@@ -80,7 +87,8 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <button id="btnexport" class="edit-only">Exportar JSON</button>
 <label class="edit-only file-label" for="fileimport">Importar JSON</label><input id="fileimport" type="file" accept="application/json,.json">
 <button id="btncancel" class="edit-only">Encerrar edição</button>
-<button id="btnhelp">Ajuda / publicar</button>
+<button id="btntheme" aria-label="Ativar modo escuro" aria-pressed="false">Modo escuro</button>
+<button id="btnhelp" aria-expanded="false" aria-controls="help">Ajuda</button>
 </nav>
 <p id="notice" class="status" role="status">Carregando versão publicada…</p>
 <div id="help" aria-label="Instruções de edição">
@@ -92,19 +100,44 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <p id="publishstatus" role="status"></p>
 </div>
 <header class="hero">
-<div class="eyebrow">Relatório de atividades · 2026</div>
-<h1 data-field="title"></h1><p data-field="subtitle"></p><p class="date" data-field="period"></p>
+<div class="hero-inner">
+  <div class="eyebrow">Relatório de atividades · edição 2026</div>
+  <h1 data-field="title"></h1>
+  <p data-field="subtitle"></p>
+  <p class="date" data-field="period"></p>
+  <div class="hero-metadata" aria-label="Informações do documento">
+    <span class="hero-chip"><span class="dot" aria-hidden="true"></span> Dados até 13/11/2026</span>
+    <span class="hero-chip">Publicação informativa</span>
+    <span class="hero-chip">Acesso aberto ao painel</span>
+  </div>
+</div>
 </header>
+<nav class="section-nav" aria-label="Navegação pelo relatório">
+ <div class="section-nav-inner">
+  <span class="nav-eyebrow">Explorar</span>
+  <a href="#visao-geral">Visão geral</a>
+  <a href="#indicadores">Indicadores</a>
+  <a href="#analises">Análises</a>
+  <a href="#frentes">Frentes de trabalho</a>
+  <a href="#metodologia">Metodologia</a>
+ </div>
+</nav>
 <main class="shell" id="report">
-<section class="intro"><h2 data-field="status"></h2><p data-field="summary"></p><p class="date">Atualização: <time id="updated"></time></p></section>
+<section class="intro" id="visao-geral"><h2 data-field="status"></h2><p data-field="summary"></p><p class="date">Atualização: <time id="updated"></time></p></section>
+<div class="block-heading" id="indicadores">
+  <div><span class="heading-line" aria-hidden="true"></span><h2>Indicadores principais</h2>
+  <p>Visão consolidada da movimentação documental e dos resultados acompanhados em 2026.</p></div>
+</div>
 <div class="metrics" id="metrics"></div>
 
-<h2 class="dashboard-title" data-field="dashboardTitle">Produção e resultados — recorte de 2026</h2>
+<h2 class="dashboard-title" id="analises" data-field="dashboardTitle">Produção e resultados — recorte de 2026</h2>
 <p class="dashboard-sub" data-field="dashboardSubtitle">Dados do SEI CGMUR e evidências documentais. Indicadores consolidados por unidade, sem acesso ao inventário nominal.</p>
 <div class="dash-two">
   <section class="dash-panel">
     <h2 data-field="monthlyTitle"></h2><p class="dash-caption" data-field="monthlyCaption"></p>
-    <div id="monthchart" class="chart-bars" role="img" aria-label="Documentos internos por mês de 2026"></div>
+    <div class="chart-scroll" tabindex="0" aria-label="Gráfico mensal com rolagem horizontal em telas pequenas">
+      <div id="monthchart" class="chart-bars" role="group" aria-label="Documentos internos por mês de 2026"></div>
+    </div>
     <div class="chart-add edit-only"><button id="btnaddmonth">+ Mês ou período</button></div>
   </section>
   <section class="dash-panel">
@@ -130,9 +163,9 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
   </section>
 </div>
 <div class="tiny-restricted-note">A versão pública mantém os indicadores agregados e as evidências qualitativas. A relação individual de processos e os documentos internos continuam disponíveis apenas na versão institucional autorizada.</div>
-<h2 class="dashboard-title" data-field="findingsTitle"></h2>
+<h2 class="dashboard-title" id="frentes" data-field="findingsTitle"></h2>
 <div class="sectiongrid" id="sections"></div>
-<section class="footbox"><h2>Metodologia e limites</h2><p data-field="caveats"></p></section>
+<section class="footbox" id="metodologia"><h2>Metodologia e limites</h2><p data-field="caveats"></p></section>
 <section class="footbox"><h2>Informações de publicação</h2><p data-field="footer"></p></section>
 <p class="meta">Panorama de 2026 · versão pública com indicadores agregados; inventários e documentos internos permanecem restritos.</p>
 </main>
@@ -144,7 +177,7 @@ let model=null,editing=false,original=null,publishedSha=null;
 const $=s=>document.querySelector(s);
 const status=(msg,error=false)=>{const n=$("#notice");n.textContent=msg;n.style.background=error?"#fff0ed":"#e9f7f5";n.style.color=error?"#9b2d24":"#125d5c"};
 function text(tag,value,cls){const n=document.createElement(tag);if(cls)n.className=cls;n.textContent=String(value??"");return n}
-function field(n,key,val){n.dataset.key=key;n.textContent=val??"";n.contentEditable=editing?"true":"false";return n}
+function field(n,key,val){n.dataset.key=key;n.textContent=val??"";n.contentEditable=editing?"true":"false";if(editing)n.setAttribute("aria-label","Editar "+key);else n.removeAttribute("aria-label");return n}
 function control(label,action,cls=""){const b=text("button",label,"edit-only "+cls);b.type="button";b.addEventListener("click",action);return b}
 function copy(o){return JSON.parse(JSON.stringify(o))}
 
@@ -157,7 +190,7 @@ function drawAnalytics(){
   const n=document.createElement("div");n.className="bar-col";
   n.append(field(text("b",x.value,"bar-value"),"value",x.value));
   const bar=document.createElement("div");bar.className="bar-rect";bar.style.height=Math.max(4,Math.round(x.value/max*147))+"px";bar.title=x.label+": "+x.value+" documentos";
-  n.append(bar,field(text("span",x.label,"bar-label"),"label",x.label));
+  n.setAttribute("aria-label",x.label+": "+x.value+" documentos");n.append(bar,field(text("span",x.label,"bar-label"),"label",x.label));
   n.append(control("×",()=>{snapshot();model.monthly.splice(i,1);render()},"danger"));
   mchart.append(n);
  });
@@ -195,6 +228,7 @@ function render(){
   n.append(ctl);sections.append(n)});
  drawAnalytics();
  document.body.classList.toggle("editing",editing);
+ $("#btnedit").setAttribute("aria-pressed",String(editing));
 }
 function snapshot(){
  if(!editing||!model)return;
@@ -327,7 +361,18 @@ async function generateEditablePdf(){
 }
 $("#btnformpdf").onclick=async()=>{const btn=$("#btnformpdf");btn.disabled=true;try{await generateEditablePdf()}catch(e){status("Erro ao gerar PDF editável: "+e.message,true)}finally{btn.disabled=false}};
 
-$("#btnhelp").onclick=()=>{$("#help").classList.toggle("open")};
+$("#btnhelp").onclick=()=>{const open=$("#help").classList.toggle("open");$("#btnhelp").setAttribute("aria-expanded",String(open));};
+function setTheme(theme){
+ const mode=theme==="dark"?"dark":"light";
+ document.documentElement.dataset.theme=mode;
+ const btn=$("#btntheme");btn.textContent=mode==="dark"?"Modo claro":"Modo escuro";
+ btn.setAttribute("aria-pressed",String(mode==="dark"));
+ btn.setAttribute("aria-label",mode==="dark"?"Ativar modo claro":"Ativar modo escuro");
+ try{localStorage.setItem("cgmur-report-theme",mode)}catch(e){}
+}
+$("#btntheme").onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+try{setTheme(localStorage.getItem("cgmur-report-theme")||"light")}catch(e){setTheme("light")}
+
 $("#btndraft").onclick=()=>{snapshot();localStorage.setItem("cgmur-2026-draft",JSON.stringify(model));status("Rascunho salvo SOMENTE neste navegador. Use Publicar para atualizar o site para todos.")};
 $("#btnrestore").onclick=()=>{try{const raw=localStorage.getItem("cgmur-2026-draft");if(!raw)throw Error("Não existe rascunho salvo neste navegador.");if(!confirm("Restaurar o rascunho local substituindo as alterações em edição?"))return;model=validate(JSON.parse(raw));render();status("Rascunho restaurado. Para disponibilizar aos visitantes, use Publicar.")}catch(e){status(e.message,true)}};
 $("#btnexport").onclick=()=>{snapshot();const blob=new Blob([JSON.stringify(model,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="CGMUR_2026_relatorio_editavel.json";a.click();URL.revokeObjectURL(url)};
