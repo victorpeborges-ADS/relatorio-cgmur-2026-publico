@@ -7,7 +7,7 @@ informações pessoais da equipe, nem URLs de SharePoint privado.
 ## Alterar
 Acesse a página e clique em **Editar relatório**. Modifique textos diretamente, inclua
 ou remova seções e indicadores. Use **Salvar rascunho** para guardar o conteúdo
-somente no navegador, **Exportar JSON** para backup e **Publicar alterações para
+somente no navegador; **Restaurar rascunho** permite recuperar esse conteúdo. **Exportar JSON** para backup e **Publicar alterações para
 todos** para atualizar `content.json` no GitHub.
 
 O botão Publicar precisa de um *Fine-grained Personal Access Token* (PAT) do GitHub,

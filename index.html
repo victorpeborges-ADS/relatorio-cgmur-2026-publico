@@ -41,6 +41,7 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <button id="btnedit" class="primary">Editar relatório</button>
 <button id="btnprint">Gerar / atualizar PDF</button>
 <button id="btndraft" class="edit-only">Salvar rascunho neste navegador</button>
+<button id="btnrestore" class="edit-only">Restaurar rascunho</button>
 <button id="btnpublish" class="edit-only accent">Publicar alterações para todos</button>
 <button id="btnaddsection" class="edit-only">+ Acrescentar seção</button>
 <button id="btnaddmetric" class="edit-only">+ Indicador</button>
@@ -131,6 +132,7 @@ $("#btnaddmetric").onclick=()=>{snapshot();model.metrics.push({value:"—",label
 $("#btnprint").onclick=()=>{snapshot();const was=editing;editing=false;render();window.print();editing=was;render()};
 $("#btnhelp").onclick=()=>{$("#help").classList.toggle("open")};
 $("#btndraft").onclick=()=>{snapshot();localStorage.setItem("cgmur-2026-draft",JSON.stringify(model));status("Rascunho salvo SOMENTE neste navegador. Use Publicar para atualizar o site para todos.")};
+$("#btnrestore").onclick=()=>{try{const raw=localStorage.getItem("cgmur-2026-draft");if(!raw)throw Error("Não existe rascunho salvo neste navegador.");if(!confirm("Restaurar o rascunho local substituindo as alterações em edição?"))return;model=validate(JSON.parse(raw));render();status("Rascunho restaurado. Para disponibilizar aos visitantes, use Publicar.")}catch(e){status(e.message,true)}};
 $("#btnexport").onclick=()=>{snapshot();const blob=new Blob([JSON.stringify(model,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="CGMUR_2026_relatorio_editavel.json";a.click();URL.revokeObjectURL(url)};
 $("#fileimport").onchange=async(e)=>{try{const f=e.target.files[0];if(!f)return;const m=validate(JSON.parse(await f.text()));model=m;render();status("JSON importado para edição. Publique para tornar permanente.")}catch(err){status(err.message,true)}e.target.value=""};
 $("#btnpublish").onclick=async()=>{
