@@ -25,7 +25,7 @@
     },
     {
       "id": "debActs",
-      "label": "Projetos de iluminação pública com portarias publicadas de 2023 a 2026",
+      "label": "Projetos com publicação de portaria em 2023–2026 (um ato tornado sem efeito)",
       "value": 26,
       "suffix": ""
     }
@@ -43,7 +43,7 @@
       "label": "Organização e retomada da agenda",
       "summary": "A equipe estruturou interlocuções técnicas no novo Ministério das Cidades e examinou propostas de iluminação pública e possibilidades de concessões/PPPs para cidades inteligentes. Registros de reuniões com Itajaí, Canoas e Rio de Janeiro documentam a atuação de enquadramento e acompanhamento em construção.",
       "actions": "Reuniões técnicas com concessionárias e prefeituras; apresentação de atribuições da CGMU; diálogo com a SPPI sobre parcerias e tecnologias urbanas.",
-      "results": "A rotina técnica de enquadramento ganhou evidências documentais, incluindo a reunião com o Smart RJ em dezembro de 2023. A proposta então apresentada registrou R$ 1,859 bilhão de valor de projeto; seu enquadramento ministerial foi publicado apenas em 2024 e não se confunde com execução em 2023.",
+      "results": "A equipe iniciou diálogo técnico sobre propostas de iluminação pública, inclusive Smart RJ. A apresentação de dezembro de 2023 registra R$ 1,859 bilhão como valor declarado e R$ 710 milhões de debêntures pretendidas; a portaria publicada em 2024 seria tornada sem efeito poucos dias depois. Não constitui captação nem obra concluída.",
       "analytical": 23
     },
     {
@@ -58,7 +58,7 @@
       "label": "Articulação e desenho de instrumentos",
       "summary": "A CGMU ampliou a atuação junto a municípios, aperfeiçoou instrumentos relativos à iluminação pública e passou a mapear sistemas e parceiros para a futura estrutura nacional de informações urbanas.",
       "actions": "Interlocuções com municípios e concessionárias, inclusive Guarulhos; subsídios para o debate de cidades inteligentes e do PPI; mapeamento inicial de sistemas do SINIDU com parceiros técnicos.",
-      "results": "Três portarias de projetos de iluminação pública foram publicadas em 2024, incluindo o Smart RJ, cuja portaria estabeleceu teto de R$ 710 milhões para debêntures. A equipe também avançou no mapeamento de sistemas do SINIDU e em interlocuções técnicas com municípios e concessionárias. Projetos enquadrados antes de 2023 continuaram a demandar acompanhamento.",
+      "results": "Três projetos constam na série de portarias publicadas em 2024; a Portaria nº 408/2024 do Smart RJ, com teto de R$ 710 milhões, foi expressamente tornada sem efeito pela Portaria nº 727/2024, publicada em 23 de julho. O histórico registra a análise e o ato publicado, mas não o considera enquadramento mantido. A equipe também avançou no mapeamento de sistemas do SINIDU e em interlocuções técnicas com municípios e concessionárias.",
       "analytical": 48
     },
     {
@@ -106,7 +106,7 @@
       "year": "2024",
       "acts": 3,
       "projectValue": 237201353.4,
-      "ceiling": 868336972,
+      "ceiling": 158336972.0,
       "plannedPoints": 153659,
       "quantified": 2,
       "cases": 3
@@ -136,9 +136,9 @@
       "tag": "01 · Iluminação pública e investimentos",
       "title": "Projetos melhor instruídos e acompanháveis",
       "action": "Análise de propostas e requisitos, reuniões com municípios e concessionárias, subsídios ao enquadramento ministerial e acompanhamento técnico ao longo da execução.",
-      "result": "De 2023 a outubro de 2026, 26 projetos receberam portarias; em 25 registros o valor do projeto está preenchido (R$ 1,73 bilhão). A Portaria MCID nº 408/2024 confirma ainda R$ 710 milhões de teto de debêntures para o Smart RJ, não lançados na planilha: o teto total do período passa a R$ 1,562 bilhão. A apresentação técnica anterior do Smart RJ informa valor de projeto de R$ 1,859 bilhão, ainda sujeito à conciliação com a carteira. A planilha explicita aproximadamente 800,6 mil pontos previstos para modernização em 23 registros com valores positivos.",
+      "result": "A planilha de 22/10/2026 contém 37 projetos: 26 com portaria publicada entre 2023 e 2026 (uma tornada sem efeito), oito com portarias anteriores e três sem publicação registrada. Os 25 registros com valor declarado no recorte 2023–2026 somam R$ 1.734.421.879,90. Os tetos preenchidos totalizam R$ 852.104.594,71, sem adicionar o teto de R$ 710 milhões da Portaria nº 408/2024, que foi tornada sem efeito. A coluna física soma 800.550,98 em 23 registros positivos, incluindo um valor fracionário a corrigir.",
       "evidence": "Apresentações técnicas de Itajaí, Canoas e Smart RJ (2023); Guarulhos (2024); painel de portarias atualizado em 22/10/2026.",
-      "boundary": "O teto enquadrado é um limite regulatório, não emissão efetiva. O somatório financeiro de R$ 1,73 bilhão exclui o valor do Smart RJ por ausência no campo oficial; acrescentar seus R$ 1,859 bilhão, extraídos de apresentação anterior, resulta apenas em cenário de sensibilidade. Pontos existentes ou com LED instalado não se confundem com pontos previstos para modernização; as metas físicas não comprovam obras concluídas."
+      "boundary": "O total de R$ 852,10 milhões é a soma nominal dos tetos preenchidos na planilha; não comprova a vigência de cada ato nem captação. Smart RJ deve figurar como proposta analisada e ato sem efeito; a apresentação de 2023 com R$ 1,859 bilhão não pode integrar automaticamente o total de projetos enquadrados. O dado físico contém um número fracionário para Itajaí e não representa pontos efetivamente modernizados."
     },
     {
       "id": "digital",
@@ -190,16 +190,16 @@
   },
   "notes": {
     "comparability": "O recorte de 2026 vai até 13/11; 2023–2025 são exercícios completos. No intervalo comparável janeiro–outubro, o SEI registra 210, 252, 461 e 500 documentos internos, respectivamente. A variação 2026/2025 em meses equivalentes é de +8,5%; não comparar diretamente 525 (2026 parcial) com 571 (2025 integral) para inferir queda de produtividade.",
-    "limitations": "As estatísticas do SEI dependem do perfil e unidade consultados, e não asseguram cobertura integral da COAMU. As 35 linhas da planilha de debêntures de outubro e os 37 projetos do balanço de setembro não estão reconciliados. O Smart RJ tem publicação de portaria mas lacunas financeiras e físicas na planilha de outubro; outras linhas têm datas/campos a validar. Pontos previstos e parques existentes não são obras concluídas. O SharePoint dispõe de material com referência a 2023, mas os metadados de criação da biblioteca começam em 2024.",
-    "attribution": "O Ministério e a CGMU/CGMUR participam de etapas distintas: instrução e acompanhamento técnico, ato ministerial de enquadramento, eventual emissão de títulos pela concessionária, contratação e realização física. Não se deve somar investimento proposto em Pró-Cidades, valor de projeto de iluminação, teto de debêntures, emissão e orçamento de TED. Quando houver documentação com valores para o mesmo empreendimento em momentos diferentes, a soma dependerá de conciliação do escopo.",
+    "limitations": "A extração SEI reflete os registros disponíveis no perfil da unidade CGMUR e não assegura cobertura integral da COAMU. A planilha principal de outubro contém 37 projetos, mesmo número citado no balanço de setembro, mas a identidade e situação de cada projeto entre as fotografias não foram reconciliadas. Um dos 26 atos publicados entre 2023 e 2026 (Smart RJ, 408/2024) foi tornado sem efeito (727/2024); o limite de R$ 710 milhões não compõe o total de tetos da planilha. Outros atos podem ter vencido ou sido objeto de desistência e precisam de verificação específica. A coluna física contém 19.741,98 pontos para Itajaí, incompatível com contagem de unidades inteiras. O SharePoint tem dados sobre 2023, mas seus metadados de criação começam em 2024.",
+    "attribution": "Os quantitativos de trabalho técnico e os atos ministeriais são indicadores distintos; 26 registros de publicação não significam 26 enquadramentos vigentes. Emissão de título, contrato e modernização são etapas posteriores. Não somar valor total de projeto, financiamento pretendido, teto de emissão, emissões, TED ou parque existente. A estimativa de pontos não comprova execução física. Dados do Pró-Cidades podem conter reapresentação de Foz do Iguaçu; a base geral tem 210 linhas mas 209 IDs distintos.",
     "sourceSEI": "SEI, Estatísticas da Unidade CGMUR-MCID: consultas de 01/01 a 31/12/2023, 2024 e 2025; de 01/01 a 13/11/2026 (extração de 13/11/2026).",
     "sourceSharePoint": "SharePoint CGMU/General: inventário de 1.494 arquivos, análise focalizada de 19 documentos históricos na primeira rodada e 24 complementares nesta curadoria, além das 22 evidências já examinadas para 2026. A data de criação da cópia no SharePoint não equivale à data de realização da atividade. Foram cotejados relatórios de vistorias, notas técnicas de acompanhamento do SINIDU e documentos de cooperação.",
-    "sourceDeb": "Planilhas institucionais de debêntures de 22/10/2026 e arquivos de apoio ao Power BI; apresentação técnica da CGMU ao Smart RJ (14/12/2023); Portaria MCID nº 408/2024, publicada no DOU em 18/07/2024, com teto enquadrado de R$ 710 milhões. A fonte principal contém 35 registros; 26 portarias de 2023–2026, seis anteriores e três sem data de publicação. O balanço de setembro citava 37, com outro retrato e critérios a reconciliar.",
+    "sourceDeb": "Planilha institucional atualizada em 22/10/2026 (37 projetos identificados); apresentação de Smart RJ utilizada pela CGMU em 14/12/2023; Portaria MCID nº 408/2024, publicada em 18/07/2024, e Portaria MCID nº 727/2024, publicada em 23/07/2024, que tornou a primeira sem efeito. Série histórica de 26 publicações de 2023–2026, incluindo o ato cancelado; oito publicações anteriores e três projetos sem data de publicação.",
     "sourceProc": "Painel Pró-Cidades visão geral, carteira CGMUR atualizada em 23/09/2026, com 21 registros de processos M2 de 2025–2026; dois registros de Foz do Iguaçu exigem conciliação."
   },
   "curadoria": {
     "title": "O que mudou após a revisão das bases",
-    "intro": "O cruzamento de estatísticas anuais do SEI, apresentações técnicas, notas de acompanhamento e planilhas de projetos mostrou que a dimensão do trabalho não se encerra no número de documentos produzidos ou de portarias publicadas. A leitura precisa separar esforço técnico, estoque da carteira, limites financeiros e execução.",
+    "intro": "A conferência cruzada de documentos, atos normativos e tabelas do SEI revelou divergências importantes entre publicação e vigência de portarias, contagens de projetos e classificação de registros no BI. Os resultados agora diferenciam o que é confirmado por fonte, o que exige qualificação e o que permanece pendente.",
     "metrics": [
       {
         "label": "Registros documentais no SEI",
@@ -212,9 +212,9 @@
         "detail": "Diferentes tipos de notas técnicas e pareceres da unidade no recorte, inclusive notas conjuntas."
       },
       {
-        "label": "Registros na carteira de debêntures",
-        "value": "35",
-        "detail": "26 portarias de 2023–2026, seis anteriores e três sem publicação informada na planilha."
+        "label": "Registros identificados na planilha de debêntures",
+        "value": "37",
+        "detail": "26 com portaria publicada entre 2023–2026 (uma sem efeito); oito anteriores; três sem publicação registrada."
       },
       {
         "label": "Oficinas de desenho SINIDU+Clima",
@@ -222,16 +222,16 @@
         "detail": "Imersões e pactuação documentadas; a Meta 1 foi considerada concluída em nota técnica."
       }
     ],
-    "financialHeadline": "Smart RJ: lacuna de valor e teto na série histórica",
-    "financialText": "A carteira de 26 projetos com portarias de 2023–2026 apresentava R$ 1,734 bilhão de valores de projetos em 25 registros preenchidos. A apresentação da CGMU ao Smart RJ (14/12/2023) declara R$ 1,859 bilhão para o projeto, mas a planilha de outubro de 2026 mantém o campo vazio. A soma hipotética resultaria em R$ 3,593 bilhões; trata-se de cenário analítico não homologado, dependente de conciliação de escopo e atualização do valor.",
-    "ceilingText": "O teto de debêntures possui evidência normativa mais forte: a Portaria MCID nº 408/2024 registra R$ 710 milhões para o Smart RJ. Sua inclusão eleva o total dos limites enquadrados para os 26 atos de 2023–2026 a R$ 1.562.104.594,71. Esse valor não é captação efetiva nem gasto público.",
-    "pointsText": "O campo de pontos a modernizar contém quantidades positivas em apenas 23 das 26 entradas com portarias do período, somando aproximadamente 800.551 pontos previstos. No Smart RJ o campo está vazio; o material de 2023 indica 457 mil pontos já com LED e possível expansão da rede até 532 mil — grandezas diferentes das modernizações futuras. Guarulhos tem zero nessa coluna, apesar de registrar parque de 65 mil pontos. Alegrete não tem quantificação de modernização. A curadoria não somou esses parques à meta de substituições.",
-    "qualityTitle": "Por que não é seguro divulgar um total financeiro único",
-    "qualityText": "Há 35 registros na planilha de outubro e 37 projetos citados em balanço de setembro, com cortes e critérios não explicitamente reconciliados; um projeto de 2024 possui valor e teto em branco na planilha principal; uma planilha auxiliar atribui a Campinas a UF errada, e outra linha possui data de protocolo incompatível. Os números corrigidos são apresentados por fonte, estágio e grau de confirmação.",
+    "financialHeadline": "Smart RJ: proposta examinada, mas enquadramento de 2024 tornado sem efeito",
+    "financialText": "A apresentação à CGMU em dezembro de 2023 menciona R$ 1,859 bilhão de valor de projeto e R$ 710 milhões de debêntures pretendidas. A planilha atual mantém os campos do Smart RJ em branco. A Portaria nº 408/2024 foi publicada em 18 de julho, mas tornou-se sem efeito pela Portaria nº 727/2024, publicada em 23 de julho. Não é correto somar o empreendimento ao estoque de projetos com enquadramento mantido nem apresentar seus R$ 710 milhões como captação autorizada.",
+    "ceilingText": "A soma dos tetos preenchidos para as 26 publicações de portarias de 2023–2026 é R$ 852.104.594,71. O antigo valor de R$ 1.562.104.594,71 estava incorreto porque adicionava R$ 710 milhões de ato posteriormente tornado sem efeito. A soma de R$ 852,10 milhões é uma fotografia nominal da planilha, NÃO uma certificação da vigência dos demais atos ou de debêntures efetivamente emitidas.",
+    "pointsText": "Na planilha de 22/10/2026, a soma bruta da coluna de modernização é 800.550,98 para 23 projetos com valor positivo. Em Itajaí, a quantidade aparece como 19.741,98 pontos, valor incompatível com uma contagem de unidades inteiras; corrigir na fonte. Os demais casos sem valor positivo de modernização são Smart RJ (não informado), Guarulhos (zero apesar de parque de 65 mil) e Alegrete (não informado). Parque atual ou LED já existente não são modernizações concluídas pela equipe.",
+    "qualityTitle": "Situação jurídica, universo de projetos e confiabilidade dos totais",
+    "qualityText": "A tabela principal contém 37 registros de projetos, e o balanço de setembro também menciona 37; não há divergência numérica, mas falta comparar nominalmente a composição dos retratos. Dentre as 26 publicações de 2023–2026, uma foi expressamente tornada sem efeito. A base auxiliar apresenta ainda inconsistências de UF e data de protocolo. Valores do Pró-Cidades e outras iniciativas só são apresentados com seu respectivo conceito, fonte e período.",
     "siniduTitle": "Contribuição operacional do SINIDU+Clima",
     "siniduText": "A nota de acompanhamento documenta quatro oficinas/imersões e pactuação, relatórios de levantamento de requisitos, análise de plataformas e avaliação dos módulos propostos. A manifestação técnica considera concluída a Meta 1 — Desenho do Sistema. O ACT prevê três fases e treze entregas; a primeira versão utilizável é projetada para dezembro de 2027, sem evidência de sistema nacional plenamente operacional no período 2023–2026.",
     "visitsTitle": "Vistorias e diálogo territorial documentados",
     "visitsText": "Foram localizados relatórios de vistorias técnicas em Itapecerica da Serra e Sumaré (2025), Ribeirão Preto e Fazenda Rio Grande (2026), além de participação institucional associada a atividades em São Paulo e Curitiba. Essas ações não aparecem de forma explícita na contagem de portarias, mas mostram como a equipe verifica condições de projetos e dialoga com prefeituras e concessionárias.",
-    "sourceNote": "Bases examinadas: Estatísticas da Unidade do SEI (2023–13/11/2026); planilha institucional de debêntures de 22/10/2026 e arquivos auxiliares; apresentação Smart RJ de 14/12/2023; Portaria MCID nº 408/2024 (DOU, 18/07/2024); relatórios de vistorias e notas técnicas SINIDU do SharePoint."
+    "sourceNote": "Fontes: Estatísticas da Unidade CGMUR-MCID (2023–13/11/2026); planilha institucional de debêntures de 22/10/2026; apresentação à Smart RJ de 14/12/2023; Portarias MCID nº 408/2024 (DOU 18/07) e nº 727/2024 (DOU 23/07), que tornou a anterior sem efeito; painel Pró-Cidades de setembro; relatórios de vistorias e notas do SINIDU. O BI Pró-Cidades possui 210 linhas mas 209 IDs de proposta distintos."
   }
 }
