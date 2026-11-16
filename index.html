@@ -65,6 +65,16 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 .tiny-restricted-note{font-size:12px;line-height:1.5;background:#eff7f8;color:#476779;padding:13px 17px;border-left:3px solid #15a699;border-radius:6px;margin:8px 0 18px}
 @media(max-width:850px){.dash-two{grid-template-columns:1fr}.chart-bars{gap:7px}.dash-panel{padding:17px}}
 @media print{.dash-two{grid-template-columns:1fr 1fr;gap:11px}.dash-panel{break-inside:avoid;box-shadow:none;padding:14px}.chart-bars{min-height:155px}.bar-col{height:140px}.metric{break-inside:avoid}.bar-rect{max-width:29px}.tiny-restricted-note{border-color:#ccc}}
+/* Seletor de edições: visível sem rolar o menu de seções. */
+.edition-switcher{background:var(--surface);border-bottom:1px solid var(--line);position:relative;z-index:4}
+.edition-switcher-inner{max-width:calc(var(--measure,1160px) + 40px);margin:0 auto;padding:10px 20px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.edition-switcher .edition-label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--sub);font-weight:800;margin-right:8px}
+.edition-switcher a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 16px;text-decoration:none;font-size:13px;font-weight:760;line-height:1.35;color:var(--sub);border-radius:9px;border:1px solid var(--line);background:var(--surface-soft)}
+.edition-switcher a[aria-current="page"]{background:var(--brand,#0f3453);border-color:var(--brand,#0f3453);color:#fff}
+.edition-switcher a:not([aria-current="page"]):hover{background:var(--surface-raised);color:var(--blue)}
+.edition-switcher a:focus-visible{outline:3px solid var(--outline,#097d9e);outline-offset:2px}
+@media(max-width:520px){.edition-switcher-inner{padding:11px 14px;gap:7px}.edition-switcher .edition-label{width:100%;margin:0 0 2px}.edition-switcher a{flex:1 1 125px;padding:10px 8px;font-size:12px;text-align:center}}
+@media print{.edition-switcher{display:none!important}}
 </style>
 <link rel="stylesheet" href="design-v3.css">
 <link rel="stylesheet" href="impact-v1.css">
@@ -91,6 +101,13 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <button id="btncancel" class="edit-only">Encerrar edição</button>
 <button id="btntheme" aria-label="Ativar modo escuro" aria-pressed="false">Modo escuro</button>
 <button id="btnhelp" aria-expanded="false" aria-controls="help">Ajuda</button>
+</nav>
+<nav class="edition-switcher" aria-label="Escolher edição do relatório">
+ <div class="edition-switcher-inner">
+  <span class="edition-label">Edições do relatório</span>
+  <a href="index.html" aria-current="page">2026 · Anual</a>
+  <a href="historico-2023-2026.html">2023–2026 · Histórico</a>
+ </div>
 </nav>
 <p id="notice" class="status" role="status">Carregando versão publicada…</p>
 <div id="help" aria-label="Instruções de edição">
@@ -124,7 +141,6 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
   <a href="#procidades-carteira">Pró-Cidades</a>
   <a href="#frentes">Frentes de trabalho</a>
   <a href="#metodologia">Metodologia</a>
-  <a href="historico-2023-2026.html" style="background:#e6f2f2;color:#0b7377;font-weight:850">Histórico 2023–2026</a>
  </div>
 </nav>
 <main class="shell" id="report">
