@@ -105,8 +105,8 @@ button.danger{border-color:#efc5bf;color:#a03228}.edit-only{display:none}.editin
 <nav class="edition-switcher" aria-label="Escolher edição do relatório">
  <div class="edition-switcher-inner">
   <span class="edition-label">Edições do relatório</span>
-  <a href="index.html" aria-current="page">2026 · Anual</a>
-  <a href="historico-2023-2026.html">2023–2026 · Histórico</a>
+  <a href="index.html?nav=20261116" data-edition-link aria-current="page">2026 · Anual</a>
+  <a href="historico-2023-2026.html?nav=20261116" data-edition-link>2023–2026 · Histórico</a>
  </div>
 </nav>
 <p id="notice" class="status" role="status">Carregando versão publicada…</p>
@@ -810,5 +810,23 @@ $("#btnpublish").onclick=async()=>{
  }finally{$("#btnpublish").disabled=false}
 };
 startup();
+</script>
+<script>
+/* CGMUR_NAV_NO_CACHE_V2 */
+// Ao mudar de edicao, solicite um URL novo para nao recuperar o HTML antigo.
+document.addEventListener('click', function(event) {
+  const element = event.target;
+  const link = element && element.closest ? element.closest('a[data-edition-link]') : null;
+  if (!link || event.defaultPrevented || event.button !== 0 ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const destination = new URL(link.href, window.location.href);
+  destination.searchParams.set('nav', Date.now().toString(36));
+  window.location.assign(destination.href);
+});
+// Evita restauracao de uma versao anterior pelo cache de navegacao (voltar/avancar).
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) window.location.reload();
+});
 </script>
 </body></html>

@@ -15,8 +15,8 @@
 </nav>
 <div id="status" class="status" role="status"></div>
 <div class="tabs" aria-label="Edições do relatório">
- <a href="index.html">Edição anual · 2026</a>
- <a href="historico-2023-2026.html" class="active" aria-current="page">Edição histórica · 2023–2026</a>
+ <a href="index.html?nav=20261116" data-edition-link>Edição anual · 2026</a>
+ <a href="historico-2023-2026.html?nav=20261116" data-edition-link class="active" aria-current="page">Edição histórica · 2023–2026</a>
 </div>
 <header class="hero"><div class="inner"><div class="eyebrow">RELATÓRIO INSTITUCIONAL · SÉRIE HISTÓRICA</div><h1 id="heroTitle"></h1><p id="heroSubtitle"></p><p class="period" id="period"></p></div></header>
 <main class="container">
@@ -114,4 +114,22 @@ $('#publish').onclick=async()=>{
 $('#theme').onclick=()=>{const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('#theme').textContent=dark?'Modo claro':'Modo escuro';$('#theme').setAttribute('aria-pressed',String(dark));try{localStorage.setItem('cgmur-history-theme',dark?'dark':'light')}catch(e){}};
 try{if(localStorage.getItem('cgmur-history-theme')==='dark')$('#theme').click()}catch(e){}
 (async()=>{try{const r=await fetch(PATH+'?v=20261113');if(!r.ok)throw Error('HTTP '+r.status);model=await r.json();validate(model);original=copy(model);render()}catch(e){displayMessage('Não foi possível carregar os dados: '+e.message,true)}})();
-</script></body></html>
+</script><script>
+/* CGMUR_NAV_NO_CACHE_V2 */
+// Ao mudar de edicao, solicite um URL novo para nao recuperar o HTML antigo.
+document.addEventListener('click', function(event) {
+  const element = event.target;
+  const link = element && element.closest ? element.closest('a[data-edition-link]') : null;
+  if (!link || event.defaultPrevented || event.button !== 0 ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const destination = new URL(link.href, window.location.href);
+  destination.searchParams.set('nav', Date.now().toString(36));
+  window.location.assign(destination.href);
+});
+// Evita restauracao de uma versao anterior pelo cache de navegacao (voltar/avancar).
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) window.location.reload();
+});
+</script>
+</body></html>
